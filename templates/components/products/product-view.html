@@ -10,7 +10,6 @@
 
     <section class="productView-details">
         <div class="productView-product">
-            <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
 
             <h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
                 <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
@@ -141,15 +140,16 @@
                     </div>
                 {{/if}}
 
-                {{#each product.custom_fields}}
+                <!--{{#each product.custom_fields}}
                     <dt class="productView-info-name">{{name}}:</dt>
                     <dd class="productView-info-value">{{{value}}}</dd>
-                {{/each}}
+                {{/each}}-->
             </dl>
         </div>
     </section>
 
     <section class="productView-images" data-image-gallery>
+        <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
         <figure class="productView-image"
                 data-image-gallery-main
                 data-zoom-image="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
@@ -188,7 +188,14 @@
                     {{#each product.customizations}}
                         {{{dynamicComponent 'components/products/customizations'}}}
                     {{/each}}
-                <div data-product-option-change style="display:none;">
+                <div data-product-option-change style="display:none;" data-slick='{
+        "arrows": true,
+        "mobileFirst": true,
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+        "autoplay": false,
+        "infinite": false
+    }'>
                     {{#each product.options}}
                         {{{dynamicComponent 'components/products/options'}}}
                     {{/each}}

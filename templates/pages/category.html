@@ -21,14 +21,13 @@ category:
     <img src="{{getImage category.image 'zoom_size'}}">
 {{/if}}
 <h1 class="page-heading">{{category.name}}</h1>
-{{{category.description}}}
 {{{snippet 'categories'}}}
 <div class="page">
-    <aside class="page-sidebar" id="faceted-search-container">
+    <aside class="page-sidebar" id="faceted-search-container" style="display:none">
         {{> components/category/sidebar}}
     </aside>
 
-    <main class="page-content" id="product-listing-container">
+    <main class="page-content full-width" id="product-listing-container">
         {{#if category.products}}
             {{> components/category/product-listing}}
         {{else}}
@@ -37,5 +36,10 @@ category:
     </main>
 </div>
 
+{{{category.description}}}
+
 {{/partial}}
+
 {{> layout/base}}
+
+

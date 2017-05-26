@@ -42,4 +42,6 @@ export default class Category extends CatalogPage {
             }, 100);
         });
     }
+
 }
+

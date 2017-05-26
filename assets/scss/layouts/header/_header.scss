@@ -46,7 +46,7 @@
     }
 
     @include breakpoint("medium") {
-        margin: (spacing("double") + spacing("base")) auto (spacing("double") + spacing("single"));
+        //margin: (spacing("double") + spacing("base")) auto (spacing("double") + spacing("single"));
         padding: 0;
 
         .header.fixed & {
