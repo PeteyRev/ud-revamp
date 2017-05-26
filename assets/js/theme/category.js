@@ -45,3 +45,8 @@ export default class Category extends CatalogPage {
 
 }
 
+$("img.lazy").each(function(){
+    $(this).addClass('lazyload');
+    var data = $(this).attr('data-original');
+    $(this).attr('data-src',data)
+});

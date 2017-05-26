@@ -58,10 +58,6 @@
             </div>
             {{product.detail_messages}}
             <dl class="productView-info">
-                {{#if product.sku}}
-                    <dt class="productView-info-name">{{lang 'products.sku'}}</dt>
-                    <dd class="productView-info-value" data-product-sku>{{product.sku}}</dd>
-                {{/if}}
                 {{#if product.upc}}
                     <dt class="productView-info-name">{{lang 'products.upc'}}</dt>
                     <dd class="productView-info-value" data-product-upc>{{product.upc}}</dd>
@@ -150,6 +146,10 @@
 
     <section class="productView-images" data-image-gallery>
         <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
+        {{#if product.sku}}
+            <dt class="productView-info-name">{{lang 'products.sku'}}</dt>
+            <dd class="productView-info-value" data-product-sku>{{product.sku}}</dd>
+        {{/if}}
         <figure class="productView-image"
                 data-image-gallery-main
                 data-zoom-image="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
