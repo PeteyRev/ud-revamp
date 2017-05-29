@@ -7,9 +7,10 @@
 //
 // -----------------------------------------------------------------------------
 .socialLinks {
+    text-align:left;
     @include clearfix;
     @include u-listReset; // 2
-    line-height: lineHeight("largest");
+    // line-height: lineHeight("largest");
 
     .icon { // 1
         @include square($socialLinks-iconSize);
@@ -61,4 +62,14 @@
     svg {
         fill: $socialLinks-alt-iconColor;
     }
+}
+
+//UD Custom - removed because messing up layout, not really needed right now
+
+.addthis_toolbox a.at300b, .addthis_toolbox a.at300m {
+    width: 1.42857rem !important;
+}
+
+.pin_it_iframe_widget, li.socialLinks-item.socialLinks-item--google_plusone {
+    display: none !important;
 }

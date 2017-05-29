@@ -68,3 +68,14 @@ export default class Product extends PageManager {
         }
     }
 }
+
+
+$("img.lazy, img.learn-lazy").each(function(){
+    $(this).addClass('lazyload');
+    var data = $(this).attr('data-original');
+    $(this).attr('data-src',data)
+});
+
+$(window).load(function(){
+  $('.product-slider').css('opacity',1);
+});

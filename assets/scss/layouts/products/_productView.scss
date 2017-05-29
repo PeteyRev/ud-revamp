@@ -29,7 +29,8 @@
     padding-right: spacing("base");
 
     @include breakpoint("medium") {
-        width: grid-calc(6, $total-columns);
+        // width: grid-calc(6, $total-columns);
+        width: 59%;
     }
 }
 
@@ -41,7 +42,8 @@
     @include breakpoint("medium") {
         clear: right;
         float: right;
-        width: grid-calc(6, $total-columns);
+        // width: grid-calc(6, $total-columns);
+        width: 41%;
     }
 }
 
@@ -51,8 +53,114 @@
     padding-right: spacing("base");
 
     @include breakpoint("large") {
-        clear: right;
-        float: right;
-        width: grid-calc(6, $total-columns);
+        // clear: right;
+        // float: right;
+        // width: grid-calc(6, $total-columns);
     }
 }
+
+//custom edits
+$box-shadow:0 0 9px 0 rgba(58, 58, 58, 0.35);
+$box-radius: 3px;
+
+.sku-wrapper > div {
+    display: inline-block;
+}
+
+.form-options-wrapper {
+    padding: 1rem 1rem 0 1rem;
+    height: 402px;
+    overflow-x: hidden;
+}
+
+.product-cart-wrapper{
+    box-shadow: $box-shadow;
+    border-radius: $box-radius;
+}
+
+.product-slider {
+    height: 450px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: .7s ease all;
+}
+
+.product-slider .form-option {
+    display: block;
+    margin-bottom: 1rem;
+    height: 99px;
+    margin-right:0rem;
+}
+
+.form-option-swatch-txt, .product-list-txt {
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    width: 60%;
+    text-align: right;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.productView-description .tabs-contents {
+    box-shadow: $box-shadow;
+    border-radius: $box-radius;
+}
+
+.product-thumbnail-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.productView-thumbnail img {
+    display: inline-block;
+}
+
+.product-slider .top.form-label {
+    padding: 1rem;
+    margin-bottom: 0rem;
+    border-bottom: $productOptions-list-border;
+}
+
+span.learn-more-icon {
+    float: right;
+}
+
+.product-arrows {
+    height: 60px;
+    position: relative;
+    border-top: $productOptions-list-border;
+}
+
+.product-arrows .slick-prev {
+    left: 0;
+    background-color: transparent;
+}
+
+.product-arrows .slick-next {
+    right: 0;
+    background-color: transparent;
+}
+
+.options-map-button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    zoom: 103%;
+}
+
+.product-bottom-cart-add{
+    float:right;
+}
+
+.product-wishlist{
+    float:left;
+}
+
+

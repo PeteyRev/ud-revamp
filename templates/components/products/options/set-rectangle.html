@@ -1,11 +1,13 @@
 <div class="form-field" data-product-attribute="set-rectangle">
-    <label class="form-label form-label--alternate form-label--inlineSmall">
+    <label class="top form-label form-label--alternate form-label--inlineSmall">
         {{this.display_name}}:
         <span data-option-value></span>
         {{#if required}}
             <small>{{lang 'common.required'}}</small>
         {{/if}}
+        <span class="learn-more-icon"><a href="#" data-reveal-id="{{this.display_name}}">Learn More</a></span>
     </label>
+    <div class="form-options-wrapper">
     {{#each this.values}}
         <input
             class="form-radio"
@@ -16,7 +18,8 @@
             {{#if selected}}checked{{/if}}
             {{#if ../required}}required{{/if}}>
         <label class="form-option" for="attribute_{{id}}" data-product-attribute-value="{{id}}">
-            <span class="form-option-variant">{{this.label}}</span>
+            <span class="form-option-variant form-option-swatch-txt">{{this.label}}</span>
         </label>
     {{/each}}
+    </div>
 </div>

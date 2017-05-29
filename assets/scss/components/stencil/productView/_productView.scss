@@ -14,9 +14,9 @@
 // Images
 // -----------------------------------------------------------------------------
 
-.productView-images {
-    margin-bottom: spacing("double");
-}
+// .productView-images {
+//     // margin-bottom: spacing("double");
+// }
 
 .productView-image {
     align-items: center;
@@ -88,7 +88,8 @@
 .productView-product {
     @include breakpoint("medium") {
         border-bottom: container("border");
-        padding-bottom: spacing("single") + spacing("third");
+        // padding-bottom: spacing("single") + spacing("third");
+        padding-top: .1rem;
     }
 
     > :last-child {
@@ -101,7 +102,7 @@
     margin: -(spacing("half")) 0 spacing("quarter");
 
     @include breakpoint("medium") {
-        margin-top: spacing("single");
+        // margin-top: spacing("single");
     }
 
     @include breakpoint("large") {
@@ -154,7 +155,6 @@
 
 .productView-reviewLink {
     display: inline-block;
-    margin-left: spacing("half");
     vertical-align: middle;
 
     + .productView-reviewLink {
@@ -163,7 +163,7 @@
 
         @include breakpoint("small") {
             display: inline-block;
-            margin-left: spacing("half");
+            // margin-left: spacing("half");
         }
     }
 
@@ -321,21 +321,21 @@
 // -----------------------------------------------------------------------------
 
 .productOptions-list {
-    border: $productOptions-list-border;
     list-style: none;
     margin: 0;
 }
 
 .productOptions-list-item {
-    padding: $productOptions-list-item-padding;
-
-    + .productOptions-list-item {
-        border-top: $productOptions-list-item-borderTop;
-    }
+    position: relative;
+    height:99px;
+    border: $productOptions-list-border;
+    margin-bottom: 1rem;
 
     .form-label {
-        text-align: left;
-        top: -2px; // 1
+        top: 0;
+        left: 0px;
+        position: absolute;
+        height: 100%;
     }
 }
 
@@ -346,7 +346,8 @@
 }
 
 .productOptions-list-item-figure {
-    width: $productOptions-list-item-figure-width;
+    // width: $productOptions-list-item-figure-width;
+    width: 8rem;
 }
 
 .productOptions-list-item-content {
