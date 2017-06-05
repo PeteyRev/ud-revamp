@@ -60,6 +60,13 @@
 }
 
 //custom edits
+
+//remove this shit after you fix vid gallery
+section.toggle.videoGallery {
+    clear: both;
+}
+
+
 $box-shadow:0 0 9px 0 rgba(58, 58, 58, 0.35);
 $box-radius: 3px;
 
@@ -92,7 +99,7 @@ $box-radius: 3px;
     margin-right:0rem;
 }
 
-.form-option-swatch-txt, .product-list-txt {
+.product-option-txt {
     font-size: 15px;
     position: absolute;
     top: 50%;
@@ -119,6 +126,7 @@ $box-radius: 3px;
 }
 
 .product-slider .top.form-label {
+    cursor: auto;
     padding: 1rem;
     margin-bottom: 0rem;
     border-bottom: $productOptions-list-border;
@@ -162,5 +170,122 @@ span.learn-more-icon {
 .product-wishlist{
     float:left;
 }
+
+li.productOptions-list-item:hover {
+    border-color: #989898;
+    transition: all 0.15s ease;
+}
+
+.form-radio:checked + .form-label {
+    border: 1px solid #4f4f4f;
+    box-shadow: 0 0 0 1px #4f4f4f;
+}
+
+.productOptions-list .form-radio + .form-label::before, .productOptions-list .form-radio + .form-label::after {
+    display:none;
+}
+
+ul.cart-review-slides  {
+    list-style-type: none;
+    margin:0;
+    li{
+        border-bottom: 1px solid;
+        cursor: pointer;
+    }
+    li:hover{
+        color: stencilColor("color-textSecondary--hover");
+    }
+    .review-value{
+        float:right;
+    }
+}
+
+//img builder
+
+.desk-build-images {
+    position: relative;
+
+     > div {
+    margin: 0 auto;
+    width: 100%;
+    top: 0;
+    }
+    .absolute img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+}
+
+.hide {
+    display: none!important;
+}
+
+//img builder zindex
+ img.active {
+    z-index: 1;
+}
+
+.grommet-wrapper,
+.desktop-wrapper {
+    z-index: 4;
+    opacity: 1
+}
+
+.keyboard-wrapper, .absolute.arm-wrapper {
+    z-index: 3
+}
+
+
+.chair-arm-fabric
+ {
+    z-index: 3;
+}
+
+.cpu-wrapper, .gest-shell, .gest-wrap, .gest-base-wrapper, .gest-lumbar-wrapper, .fabric-wrapper,
+.chair-base-wrapper
+ {
+    z-index: 2 !important;
+}
+
+.monitor-wrapper, .freedom-no-hr {
+    z-index: 4;
+}
+.casters-wrapper-4,
+.frame-wrapper,
+
+.chair-casters-wrapper, .drawer-wrapper, .kpd-wrapper-3 {
+    z-index: 2;
+}
+
+.corner-sleeve,
+.light-wrapper {
+    z-index: 4;
+}
+
+.kpd-wrapper, .casters-wrapper {
+    z-index: 1;
+}
+
+//tabs
+
+#tab-description {
+    padding-top: 0;
+}
+
+.left-txt-section {
+    padding-left: 6rem;
+}
+.right-txt-section {
+    padding-right: 6rem;
+}
+
+
+//helper functions
+
+.absolute {
+    position: absolute;
+}
+
 
 

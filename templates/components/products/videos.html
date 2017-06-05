@@ -42,5 +42,30 @@
         {{/each}}
         </ul>
     </div>
+    
+<a href="/new-uplift-reclaimed-wood-stand-up-desk/" data-reveal-id="ModalVideoGallery">video modal</a>
+
+<div id="ModalVideoGallery" class="modal" data-reveal>
+    <div class="video-slider" data-slick='{
+        "dots":true,
+        "mobileFirst": true,
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+        "autoplay": false,
+        "infinite": false,
+        "draggable": false
+    }'>
+        {{#each this.list}}
+            <div class="youtube" id="{{id}}" style="width: 740px; height: 416px;">
+                <div class="video-body">
+                    <h5 class="video-title">{{title_long}}</h5>
+                    <p class="video-description">{{description_short}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
 
 </section>
+
+

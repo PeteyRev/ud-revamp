@@ -8,7 +8,7 @@
         {{/if}}
         <span class="learn-more-icon"><a href="#{{this.display_name}}">Learn More</a></span>
     </label>
-    <div class="form-options-wrapper">
+    <div class="form-options-wrapper" data-optionset="{{this.display_name}}">
     {{#if values.0.image}}
         <ul class="productOptions-list">
             {{#unless required}}
@@ -19,7 +19,7 @@
                            value="0"
                            id="attribute_0_{{id}}"
                            {{#if defaultValue '==' 0}}checked{{/if}} required>
-                    <label class="form-label" for="attribute_0_{{id}}">No {{this.display_name}}</label>
+                    <label class="form-label" for="attribute_0_{{id}}"><div class="product-option-txt">No {{this.display_name}}</div></label>
                 </li>
             {{/unless}}
             {{#each values}}
@@ -38,7 +38,7 @@
                             id="attribute_{{id}}"
                             {{#if selected}}checked{{/if}}
                             {{#if ../required}}required{{/if}}>
-                        <label data-product-attribute-value="{{id}}" class="form-label" for="attribute_{{id}}"><div class="product-list-txt">{{label}}</div></label>
+                        <label data-product-attribute-value="{{id}}" class="form-label" for="attribute_{{id}}"><div class="product-option-txt">{{label}}</div></label>
                     </div>
                 </li>
             {{/each}}
@@ -62,7 +62,7 @@
                 id="attribute_{{id}}"
                 {{#if selected}}checked{{/if}}
                 {{#if ../required}}required{{/if}}>
-            <label data-product-attribute-value="{{id}}" class="form-label" for="attribute_{{id}}"><div class="product-list-txt">{{label}}</div></label>
+            <label data-product-attribute-value="{{id}}" class="form-label" for="attribute_{{id}}"><div class="product-option-txt">{{label}}</div></label>
         {{/each}}
     {{/if}}
     </div>

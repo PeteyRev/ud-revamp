@@ -8,7 +8,7 @@
         {{/if}}
         <span class="learn-more-icon"><a href="#{{this.display_name}}">Learn More</a></span>
     </label>
-    <div class="form-options-wrapper">
+    <div class="form-options-wrapper" data-optionset="{{this.display_name}}">
     {{#each this.values}}
         <input class="form-radio" type="radio" name="attribute[{{../id}}]" value="{{id}}" id="attribute_{{id}}" {{#if selected}}checked{{/if}} {{#if ../required}}required{{/if}}>
         <label class="form-option form-option-swatch" for="attribute_{{id}}" data-product-attribute-value="{{id}}">
@@ -34,7 +34,7 @@
                     <span class="form-option-image" style="background-image: url('{{getImage image 'core-swatch'}}');"></span>
                 </span>-->
             {{/if}}
-            <div class="form-option-swatch-txt">{{this.label}}</div>
+            <div class="product-option-txt">{{this.label}}</div>
         </label>
     {{/each}}
     </div>
