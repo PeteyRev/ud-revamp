@@ -90,11 +90,16 @@ export default function videoGallery() {
 
 //Appends titles to video carousel buttons
 $(window).load(function(){
-
+    
+    var videoTitles = [];
     $('.video-title').each(function(){
         var slideTitle = $(this).text();
-
+        videoTitles.push(slideTitle)
     });
+
+    $('.video-carousel-buttons ul li').each(function(index){
+        $(this).append(videoTitles[index]);
+    })
 
 });
 

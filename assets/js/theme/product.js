@@ -229,4 +229,3 @@ $('#form-action-addToCartFast').on('click',function(){
 		}
 
     });
-

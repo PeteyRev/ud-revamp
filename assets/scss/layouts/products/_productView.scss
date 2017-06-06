@@ -72,6 +72,7 @@ $box-radius: 3px;
 
 .sku-wrapper > div {
     display: inline-block;
+    margin-bottom: 0.2rem;
 }
 
 .form-options-wrapper {
@@ -123,6 +124,8 @@ $box-radius: 3px;
 
 .productView-thumbnail img {
     display: inline-block;
+    box-shadow: $box-shadow;
+    border-radius: $box-radius;
 }
 
 .product-slider .top.form-label {
@@ -241,6 +244,26 @@ p{
 }
 }
 
+.absolute.desktop-hover {
+    left: 50%;
+    top: 33%;
+    transform: translate(-50%, -50%);
+    height: 120px;
+    width: 38%;
+    z-index: 6;
+}
+
+.desktop-wrapper .active {
+    -webkit-transition: .6s ease;
+    transition: .6s ease;
+}
+
+.desktop-hover:hover+.desktop-wrapper .active {
+    opacity: 0.5;
+    -webkit-transition: .6s ease;
+    transition: .6s ease;
+}
+
 .hide {
     display: none!important;
 }
@@ -302,6 +325,12 @@ p{
 }
 .right-txt-section {
     padding-right: 6rem;
+}
+
+//video gallery
+
+.video-3d-links {
+    text-align: center;
 }
 
 

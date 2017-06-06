@@ -90,9 +90,10 @@
         bottom:0;
     }
     li{
-        display:block;
+        display:inline-block;
         width: 100%;
         color:#fff;
+        line-height: 1.2;
     }
     li.slick-active{
         color:blue;
