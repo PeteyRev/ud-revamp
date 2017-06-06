@@ -78,6 +78,13 @@ $("img.lazy, img.learn-lazy").each(function(){
     $(this).attr('data-src',data)
 });
 
+//video gallery stuff init
+    $('.productView-thumbnail').on('click',function(){
+        var imgSlide = $(this).data('slick-index')
+        console.log(imgSlide)
+        $( '.product-image-gallery' ).slick('slickGoTo', imgSlide);
+    });
+
 
 //slider actions for options map and review list
 var totalCartSlides = $('.product-slider .form-field').length;
@@ -154,17 +161,6 @@ $('#form-action-addToCartFast').on('click',function(){
 	});
 
 
-
-
-
-
-
-
-
-
-
-
-
 	////////////////////////////////////////
 	//CART AND DESK IMAGE BUILDER FUNCTION//
 	////////////////////////////////////////
@@ -187,7 +183,6 @@ $('#form-action-addToCartFast').on('click',function(){
 		$deskImgSet.each(function () {
 			var divSet = $(this).data('set');
 			if (imgSet === divSet) {
-                console.log('yes')
 				$('img', this).each(function () {
 					var $this = $(this);
 					$this.removeClass('active').addClass('hide');
@@ -234,3 +229,4 @@ $('#form-action-addToCartFast').on('click',function(){
 		}
 
     });
+

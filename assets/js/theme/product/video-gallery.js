@@ -82,3 +82,20 @@ export default function videoGallery() {
 			});
 		});
 	});
+
+//fixes width issue on init
+    $('.testvideo').on('click',function(){
+        $('.slick-dots .slick-active button').click();
+    });
+
+//Appends titles to video carousel buttons
+$(window).load(function(){
+
+    $('.video-title').each(function(){
+        var slideTitle = $(this).text();
+
+    });
+
+});
+
+

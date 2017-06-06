@@ -117,7 +117,7 @@ $box-radius: 3px;
 }
 
 .product-thumbnail-wrapper {
-    width: 80%;
+    width: 57%;
     margin: 0 auto;
 }
 
@@ -198,6 +198,30 @@ ul.cart-review-slides  {
     .review-value{
         float:right;
     }
+}
+
+//img gallery
+
+div#ProductImageGallery {
+    width: 63.3%;
+    background: transparent;
+}
+
+.product-image-gallery {
+    margin-bottom:0;
+    .slick-prev {
+    left: 1.64286rem;
+}
+.slick-next {
+    right: 1.64286rem;
+}
+.slick-dots{
+    display:none;
+}
+p{
+     margin: .3rem 0 0 0;
+     color: #fff;   
+}
 }
 
 //img builder

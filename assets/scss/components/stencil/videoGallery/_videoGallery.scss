@@ -57,3 +57,64 @@
     font-size: fontSize("base");
     margin-bottom: 0;
 }
+
+//Customizations
+
+#ModalVideoGallery {
+    background-color: transparent;
+    width:50%;
+        button {
+        display:none;
+    }
+}
+
+.video-slider {
+    margin-bottom: 0;
+    .video-body {
+    margin-top: 1rem;
+    h5 {
+    color:#fff;
+    }
+    }
+}
+
+.video-carousel-buttons {
+    position: relative;
+    h4 {
+    color: #fff;
+    margin-top: 0;
+}
+    ul{
+        position:relative;
+        text-align: left;
+        bottom:0;
+    }
+    li{
+        display:block;
+        width: 100%;
+        color:#fff;
+    }
+    li.slick-active{
+        color:blue;
+    }
+
+}
+
+.youtube {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.play {
+    background: url(//cdn6.bigcommerce.com/s-492apnl0xy/templates/__custom/images/PlayButtonNormal.svg?t=1496440839) no-repeat center center;
+    background-size: 64px 64px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}

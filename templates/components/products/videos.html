@@ -1,5 +1,5 @@
 <section class="toggle videoGallery" data-video-gallery>
-    <h4 class="toggle-title">
+    <!--<h4 class="toggle-title">
         {{lang 'products.videos.header'}}
         <a href="#videoGallery-content" class="toggleLink is-open" data-collapsible>
             <span class="toggleLink-text toggleLink-text--on">
@@ -41,27 +41,32 @@
             </li>
         {{/each}}
         </ul>
-    </div>
+    </div>-->
     
-<a href="/new-uplift-reclaimed-wood-stand-up-desk/" data-reveal-id="ModalVideoGallery">video modal</a>
+<a href="/new-uplift-reclaimed-wood-stand-up-desk/" class="testvideo" data-reveal-id="ModalVideoGallery">video modal</a>
 
-<div id="ModalVideoGallery" class="modal" data-reveal>
-    <div class="video-slider" data-slick='{
+<div id="ModalVideoGallery" class="modal row collapse" data-reveal>
+    <div class="video-carousel-buttons small-12 large-3 columns">
+        <h4>Choose Your Video</h4>
+    </div>
+    <div class="video-slider small-12 large-9 columns" data-slick='{
         "dots":true,
+        "arrows":false,
         "mobileFirst": true,
         "slidesToShow": 1,
         "slidesToScroll": 1,
         "autoplay": false,
         "infinite": false,
-        "draggable": false
+        "draggable": false,
+        "appendDots": ".video-carousel-buttons"
     }'>
         {{#each this.list}}
-            <div class="youtube" id="{{id}}" style="width: 740px; height: 416px;">
-                <div class="video-body">
-                    <h5 class="video-title">{{title_long}}</h5>
-                    <p class="video-description">{{description_short}}</p>
-                </div>
+        <div>
+            <div class="youtube" id="{{id}}" style="width: 100%; height: 416px;"></div>
+            <div class="video-body">
+                <h5 class="video-title">{{title_long}}</h5>
             </div>
+        </div>
         {{/each}}
     </div>
 </div>
