@@ -6,7 +6,7 @@
         {{#if required}}
             <small>{{lang 'common.required'}}</small>
         {{/if}}
-        <span class="learn-more-icon"><a href="#{{this.display_name}}">Learn More</a></span>
+        <span class="learn-more-icon"><a href="#" data-reveal-id="{{this.display_name}}">Learn More</a></span>
     </label>
     <div class="form-options-wrapper" data-optionset="{{this.display_name}}">
     {{#each this.values}}
@@ -34,6 +34,7 @@
                     <span class="form-option-image" style="background-image: url('{{getImage image 'core-swatch'}}');"></span>
                 </span>-->
             {{/if}}
+            <div class="learn-more-icon"><a href="#" data-reveal-id="{{../this.display_name}}">learn more</a></div>
             <div class="product-option-txt">{{this.label}}</div>
         </label>
     {{/each}}

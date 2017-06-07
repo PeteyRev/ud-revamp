@@ -84,8 +84,11 @@ export default function videoGallery() {
 	});
 
 //fixes width issue on init
-    $('.testvideo').on('click',function(){
+    $('.testvideo').on('click',function(){     
         $('.slick-dots .slick-active button').click();
+        setTimeout(function(){
+            $('.video-slider, .video-carousel-buttons ').css('opacity', 1);
+        },500)
     });
 
 //Appends titles to video carousel buttons

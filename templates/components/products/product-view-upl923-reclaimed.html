@@ -294,13 +294,13 @@
                 <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
             </li>
             <li class="tab">
-                <a class="tab-title" href="#tab-specifications">Specifications</a>
+                <a class="tab-title" href="#tab-specs-assembly">Specifications / Assembly</a>
             </li>
             <li class="tab">
                 <a class="tab-title" href="#tab-options">Options</a>
             </li>
             <li class="tab">
-                <a class="tab-title" href="#tab-shipping">Shipping</a>
+                <a class="tab-title" href="#tab-faq">F.A.Q.</a>
             </li>
             {{#if product.warranty}}
                 <li class="tab">
@@ -309,10 +309,8 @@
             {{/if}}
         </ul>
         <div class="tabs-contents">
-            <div class="tab-content is-active" id="tab-description">
-                {{{product.description}}}
-                {{{snippet 'product_description'}}}
-            </div>
+           {{{product.description}}}
+           {{{snippet 'product_description'}}}
            {{#if product.warranty}}
                <div class="tab-content" id="tab-warranty">
                    {{{product.warranty}}}

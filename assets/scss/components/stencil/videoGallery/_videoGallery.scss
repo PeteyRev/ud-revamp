@@ -69,6 +69,7 @@
 }
 
 .video-slider {
+    opacity:0;
     margin-bottom: 0;
     .video-body {
     margin-top: 1rem;
@@ -79,6 +80,7 @@
 }
 
 .video-carousel-buttons {
+    opacity:0;
     position: relative;
     h4 {
     color: #fff;
@@ -96,7 +98,7 @@
         line-height: 1.2;
     }
     li.slick-active{
-        color:blue;
+        color: stencilColor("color-textLink");
     }
 
 }

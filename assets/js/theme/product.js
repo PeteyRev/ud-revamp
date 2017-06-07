@@ -81,8 +81,10 @@ $("img.lazy, img.learn-lazy").each(function(){
 //video gallery stuff init
     $('.productView-thumbnail').on('click',function(){
         var imgSlide = $(this).data('slick-index')
-        console.log(imgSlide)
         $( '.product-image-gallery' ).slick('slickGoTo', imgSlide);
+        setTimeout(function(){
+            $('.product-image-gallery').css('opacity', 1);
+        },600)
     });
 
 
@@ -101,11 +103,17 @@ $('.cart-review-slides li').on('click',function(){
 //cleaner load so it doesnt look fragmented
 $(window).load(function(){
   $('.product-slider').css('opacity',1);
+  //removes whitespace from learn more links since IDs cannot have them
+$('.learn-more-icon a').each(function(){
+    var shortLm = $(this).attr('data-reveal-id');
+    shortLm = shortLm.replace(/ /g,'')
+    $(this).attr('data-reveal-id',shortLm);
+});
 });
 
 //Appends Option selections to cart list
 $('.product-slider .form-field input').change(function() {
-        var optionVal = $(this).next().text();
+        var optionVal = $(this).next().find('.product-option-txt').text();
         var optionSet = $(this).closest('.form-options-wrapper').data('optionset')
         
         $('ul.cart-review-slides li').each(function(){
@@ -128,7 +136,7 @@ $('#form-action-addToCartFast').on('click',function(){
 })
 
 
-
+///BUILDER Functions
 
 	//Removes SKUS and and adds data attributes for wishlist and builder
 	$(".product-option-txt").each(function () {
@@ -151,14 +159,13 @@ $('#form-action-addToCartFast').on('click',function(){
 			$(this).attr('data-sku', nameSku);
 		}
 
-
-
 		var shortOptionName = $(this).text().substr($(this).text().indexOf("|") + 1);
 		$(this).text(shortOptionName);
         var shortOptionName = $(this).text().substr($(this).text().indexOf(":") + 1);
 		$(this).text(shortOptionName);
 
 	});
+
 
 
 	////////////////////////////////////////
@@ -229,3 +236,4 @@ $('#form-action-addToCartFast').on('click',function(){
 		}
 
     });
+
