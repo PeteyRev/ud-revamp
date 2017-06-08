@@ -150,6 +150,7 @@ span.learn-more-icon {
     height: 60px;
     position: relative;
     border-top: $productOptions-list-border;
+    background-color: #fff;
 }
 
 .product-arrows .slick-prev {
@@ -197,13 +198,14 @@ li.productOptions-list-item:hover {
 
 ul.cart-review-slides  {
     list-style-type: none;
-    margin:0;
+    margin: 0 0 2rem;
     li{
         border-bottom: 1px solid;
         cursor: pointer;
+        padding: .2rem 0;
     }
     li:hover{
-        color: stencilColor("color-textSecondary--hover");
+        color: stencilColor("color-textLink");
     }
     .review-value{
         float:right;
@@ -239,6 +241,8 @@ p{
 
 .desk-build-images {
     position: relative;
+    float: right;
+    width:100%;
 
      > div {
     margin: 0 auto;
@@ -250,6 +254,23 @@ p{
     left: 50%;
     transform: translateX(-50%);
 }
+}
+
+#sel-not-shown {
+    position: absolute;
+    margin-top: .5rem;
+    float: left;
+    width: 200px;
+    overflow: hidden;
+    -webkit-transition: .6s ease;
+    transition: .6s ease;
+    text-align: left;
+    padding: 10px;
+    background: #f6f7f7;
+    h5 {
+        margin:0;
+        font-size:14px;  
+    }
 }
 
 .absolute.desktop-hover {
@@ -369,6 +390,7 @@ article.productView-description {
 
 .video-3d-links {
     text-align: center;
+    clear: both;
 }
 
 //learn mores

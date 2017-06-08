@@ -238,14 +238,14 @@
                     <div class="product-review-slide">
                         <label class="top form-label">Order Review</label>
                         <div class="form-options-wrapper">
+                            {{#if product.can_purchase}}
+                                {{> components/products/add-to-cart}}
+                            {{/if}}
                             <ul class="cart-review-slides">
                                 {{#each product.options}}
                                     <li data-slide="{{@index}}" ><span class="review-key">{{display_name}}</span><span class="review-value"></span></li>
                                 {{/each}}
                             </ul>
-                            {{#if product.can_purchase}}
-                                {{> components/products/add-to-cart}}
-                            {{/if}}
                         </div>
                     </div>
                 </div>

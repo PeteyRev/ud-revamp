@@ -112,7 +112,7 @@ $('.learn-more-icon a').each(function(){
 });
 
 //Appends Option selections to cart list
-$('.product-slider .form-field input').change(function() {
+$('.product-slider .form-field .form-radio').change(function() {
         var optionVal = $(this).next().find('.product-option-txt').text();
         var optionSet = $(this).closest('.form-options-wrapper').data('optionset')
         
@@ -124,10 +124,6 @@ $('.product-slider .form-field input').change(function() {
         })
 });
 
-//clicks first option in each opt set, and sets review slide key value
-$('.form-options-wrapper').each(function(){
-    $(this).find('input:first').click()
-});
 
 //fast add
 
@@ -153,33 +149,34 @@ $('#form-action-addToCartFast').on('click',function(){
 		if ($(this).text().indexOf('|') >= 0) {
 			var nameSku = $(this).text().split('|', 1)[0].trim();
 			$(this).attr('data-sku', nameSku);
+            var shortOptionName = $(this).text().substr($(this).text().indexOf("|") + 1);
+		    $(this).text(shortOptionName);
 		}
 		if ($(this).text().indexOf(':') >= 0) {
 			var nameSku = $(this).text().split(':', 1)[0].trim();
 			$(this).attr('data-sku', nameSku);
+            var shortOptionName = $(this).text().substr($(this).text().indexOf(":") + 1);
+		    $(this).text(shortOptionName);
 		}
-
-		var shortOptionName = $(this).text().substr($(this).text().indexOf("|") + 1);
-		$(this).text(shortOptionName);
-        var shortOptionName = $(this).text().substr($(this).text().indexOf(":") + 1);
-		$(this).text(shortOptionName);
 
 	});
 
-
+//clicks first option in each opt set, and sets review slide key value
+$('.form-options-wrapper').each(function(){
+    $(this).find('input:first').click()
+});
 
 	////////////////////////////////////////
 	//CART AND DESK IMAGE BUILDER FUNCTION//
 	////////////////////////////////////////
 
-	var $optionInput = $('.form-options-wrapper input');
+	var $optionInput = $('.form-options-wrapper .form-radio');
 
     //this finds the sku for that option (swatch/rectangle or product list type) and the option set name
 	$optionInput.on('click', function () {
 		var $this = $(this);
         var imgSet = $(this).closest('.form-options-wrapper').data('optionset');
         var newSelection = $this.next().find('.product-option-txt').data('sku');
-        
 
 		//  gets the current width and depth of the desk builder so it knows what size to match
 		var curWidth = $('.desktop-wrapper .active').attr('data-width');
@@ -202,7 +199,7 @@ $('#form-action-addToCartFast').on('click',function(){
                         }
 						$this.removeClass('hide').addClass('active');
 					}
-					if (newSelection.indexOf('No') >= 0) {
+					if (newSelection === 0) {
 						$this.removeClass('active').addClass('hide');
 					}
 				});
@@ -233,6 +230,52 @@ $('#form-action-addToCartFast').on('click',function(){
 					}
 				});
 			});
+		}
+
+        ///////////////////////////////////
+		//SELECTED BUT NOT SHOWN FUNCTION//
+		///////////////////////////////////
+		var $selNoShowContainer = $('#sel-not-shown ul');
+		var $selNoShowItems = $('#sel-not-shown ul li');
+
+		//handles mat placement
+		if (imgSet.indexOf('Promo') >= 0 && newSelection.indexOf('145') >= 0) {
+            console.log(newSelection)
+			$('.Promo.Item').remove();
+			$('.Promo.Item img').removeClass('hide').addClass('active');
+			if ($('#sel-not-shown ul li').length >= 1 && $(window).width() >= 1200) {
+				$('.desk-build-images').css('width', '75%');
+			} else {
+				$('.desk-build-images').css('width', '100%');
+			}
+		}
+
+		if ((imgSet.indexOf('Wire') >= 0 || imgSet.indexOf('Treadmill') >= 0 || imgSet.indexOf('Care') >= 0 || imgSet.indexOf('Chair') >= 0 || imgSet.indexOf('Warranty') >= 0 || imgSet.indexOf('Promo') >= 0 || imgSet.indexOf('organizer') >= 0) && newSelection != "UPL145~unboxed") {
+
+			var name = $(this).next().find('.product-option-txt').text();
+			if (!$selNoShowItems.hasClass(imgSet) && (name.indexOf('No') < 0 || name.indexOf('Standard') < 0)) {
+				$selNoShowContainer.append('<li class=' + '"' + imgSet + '"' + '>' + name + '</li>');
+			}
+			if ($selNoShowItems.hasClass(imgSet)) {
+				$selNoShowItems.each(function () {
+					if ($(this).hasClass(imgSet)) {
+						$(this).html(name);
+					}
+				});
+			}
+			if (name.indexOf('No') >= 0 || name.indexOf('Standard') >= 0) {
+				$('#sel-not-shown ul li').each(function () {
+					if ($(this).hasClass(imgSet)) {
+						$(this).remove();
+					}
+				});
+			}
+            //this shows the selected but none feature only on bigger sized device windows
+			if ($('#sel-not-shown ul li').length >= 1 && $(window).width() >= 1200) {
+				$('.desk-build-images').css('width', '75%');
+			} else {
+				$('.desk-build-images').css('width', '100%');
+			}
 		}
 
     });
