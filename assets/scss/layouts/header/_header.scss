@@ -14,16 +14,15 @@
 
 .header {
     background-color: $header-bg;
-    border-bottom: container("border");
     position: fixed;
     top: 0;
     width: 100%;
     z-index: zIndex("low");
+    padding: .5rem 0;
+    transition: all .4s ease-out;
 
     @include breakpoint("medium") {
-        border-bottom: container("border");
         overflow: visible;
-        position: relative;
     }
 
     &.is-open {
@@ -34,6 +33,11 @@
         }
     }
 }
+
+    .off-screen {
+        top: -82px;
+    }
+
 
 .header-logo {
     font-size: 0;   // 1
@@ -47,8 +51,8 @@
 
     @include breakpoint("medium") {
         //margin: (spacing("double") + spacing("base")) auto (spacing("double") + spacing("single"));
-        padding: 0;
-
+        padding: 1rem;
+        float: left;
         .header.fixed & {
             background-color: color("greys", "lightest");
             margin: 0;

@@ -16,16 +16,18 @@
     @include verticalPositionMiddle("absolute");
     right: 0;
     top: 26px; // 2
-    width: 100%; // 4
+    // width: 100%; // 4
+    float: right;
     z-index: zIndex("lowest"); // 5.
 
     @include breakpoint("medium") {
-        padding: 0 spacing("single");
+        padding: 0.6rem 0 0;
         position: relative;
         right: auto;
         top: auto;
         transform: none;
         z-index: zIndex("high");
+        margin-right: remCalc($header-toggle-width * 1.5);
     }
 
     .dropdown-menu {

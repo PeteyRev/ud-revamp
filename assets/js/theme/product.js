@@ -103,12 +103,13 @@ $('.cart-review-slides li').on('click',function(){
 //cleaner load so it doesnt look fragmented
 $(window).load(function(){
   $('.product-slider').css('opacity',1);
-  //removes whitespace from learn more links since IDs cannot have them
-$('.learn-more-icon a').each(function(){
-    var shortLm = $(this).attr('data-reveal-id');
-    shortLm = shortLm.replace(/ /g,'')
-    $(this).attr('data-reveal-id',shortLm);
-});
+  	//removes whitespace from learn more links since IDs cannot have them
+	$('.learn-more-icon a, .options-tab-list a').each(function(){
+		var shortLm = $(this).attr('data-reveal-id');
+		shortLm = shortLm.replace(/ /g,'')
+		$(this).attr('data-reveal-id',shortLm);
+	});
+	$('.options-tab-list').appendTo('.options-link-wrapper')
 });
 
 //Appends Option selections to cart list
@@ -279,4 +280,21 @@ $('.form-options-wrapper').each(function(){
 		}
 
     });
+
+
+//starts product tour
+
+const productTour = () =>{
+	$('#ProductTour, .product-tour-step').toggle();
+	$('body').toggleClass('fixed-product-tour');
+
+}
+
+$('#StartTour').on('click', () => {
+	productTour();
+});
+
+$('#ProductTour, .product-tour-step').on('click', () =>{
+	productTour();
+});
 

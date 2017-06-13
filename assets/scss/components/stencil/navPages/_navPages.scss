@@ -78,7 +78,7 @@
         background: none;
         font-size: 0; // 1
         overflow-y: visible;
-        padding: 0;
+        padding: 0.8rem 0 0;
         text-align: center;
     }
 
@@ -107,7 +107,7 @@
     margin: 0;
 
     @include breakpoint("medium") {
-        display: inline-block;
+        // display: inline-block;
         float: none;
     }
 

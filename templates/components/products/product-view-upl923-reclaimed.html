@@ -15,7 +15,7 @@
             <div class="sku-wrapper">
                 <div class="productView-info-name">{{lang 'products.sku'}}</div>
                 <div class="productView-info-value" data-product-sku>{{product.sku}}</div>
-                <div class="product-tour">| Take Tour</div>
+                <div class="product-tour">| <a href="#" id="StartTour">Take Tour</a></div>
             </div>
         {{/if}}
 
@@ -215,6 +215,14 @@
             {{#if product.release_date }}
                 <p>{{product.release_date}}</p>
             {{/if}}
+
+            <div class="product-tour-step step-3">
+                <p>Watch Your Product as it changes</p>
+                <svg class="tour-arrow-3">
+                    <use xlink:href="#icon-arrow-3" />
+                </svg>
+            </div>
+
             <form class="form" method="post" action="{{product.cart_url}}" enctype="multipart/form-data"
                   data-cart-item-add>
                 <input type="hidden" name="action" value="add">
@@ -249,7 +257,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-arrows"><button type="button" class="button button--primary options-map-button">Options Map</button></div>
+                <div class="product-arrows">
+
+                    <div class="product-tour-step step-4">
+                        <p>Watch Your Product as it changes</p>
+                        <svg class="tour-arrow-4">
+                            <use xlink:href="#icon-arrow-5" />
+                        </svg>
+                    </div>
+
+                    <div class="product-tour-step step-5">
+                        <p>Watch Your Product as it changes</p>
+                        <svg class="tour-arrow-5">
+                            <use xlink:href="#icon-arrow-6" />
+                        </svg>
+                    </div>
+
+                    <button type="button" class="button button--primary options-map-button">Options Map</button>
+                </div>
             </div>
             </div>
                 {{#if product.event_date}}
@@ -269,21 +294,31 @@
                     {{/if}}
                 {{/if}}
             </form>
-            {{#if settings.show_wishlist}}
-                <form class="form product-wishlist" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
-                    <div class="form-action">
-                        <input type="hidden" name="variation_id" value="">
-                        <input class="button" type="submit" value="{{lang 'account.wishlists.add_item'}}">
+
+            <div class="cart-bottom-btns">
+                <div class="alertBox productAttributes-message" style="display:none">
+                    <div class="alertBox-column alertBox-icon">
+                        <icon glyph="ic-success" class="icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></icon>
                     </div>
-                </form>
-            {{/if}}
-            {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-            <div class="form-action product-bottom-cart-add">
-                <input id="form-action-addToCartFast" name="Fast-Add" data-wait-message="{{lang 'products.adding_to_cart'}}" class="button button--primary" type="submit"
-                    value="{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}">
+                    <p class="alertBox-column alertBox-message"></p>
+                </div>
+
+                {{#if settings.show_wishlist}}
+                    <form class="form product-wishlist" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
+                        <div class="form-action">
+                            <input type="hidden" name="variation_id" value="">
+                            <input class="button" type="submit" value="{{lang 'account.wishlists.add_item'}}">
+                        </div>
+                    </form>
+                {{/if}}
+                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                <div class="form-action product-bottom-cart-add">
+                    <input id="form-action-addToCartFast" name="Fast-Add" data-wait-message="{{lang 'products.adding_to_cart'}}" class="button button--primary" type="submit"
+                        value="{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}">
+                </div>
+                {{{snippet 'product_addtocart'}}}
+                {{/or}}
             </div>
-            {{{snippet 'product_addtocart'}}}
-            {{/or}}
         </div>
         {{{snippet 'product_details'}}}
     </section>
@@ -318,6 +353,14 @@
            {{/if}}
         </div>
     </article>
+</div>
+
+<div class="hide">
+    <ul class="options-tab-list">
+        {{#each product.options}}
+        <li><a href="#" data-reveal-id="{{display_name}}">{{display_name}}</a></li>
+        {{/each}}
+    </ul>
 </div>
 
 <div id="previewModal" class="modal modal--large" data-reveal>
