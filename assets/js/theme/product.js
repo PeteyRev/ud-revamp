@@ -286,6 +286,7 @@ $('.form-options-wrapper').each(function(){
 
 const productTour = () =>{
 	$('#ProductTour, .product-tour-step').toggle();
+	$('#ProductTour, .product-tour-step').toggleClass('opacity-1');
 	$('body').toggleClass('fixed-product-tour');
 
 }
@@ -298,3 +299,9 @@ $('#ProductTour, .product-tour-step').on('click', () =>{
 	productTour();
 });
 
+const runOncePerDay = () => {
+		var today = new Date().toLocaleDateString();
+		if (localStorage.yourapp_today == today) return;
+		localStorage.yourapp_today = today;
+		productTour();
+	}

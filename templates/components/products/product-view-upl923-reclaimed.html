@@ -23,7 +23,11 @@
 
         {{> components/products/upl923-reclaimed-builder-images}}
 
-        <div class="video-3d-links"><a href="/new-uplift-reclaimed-wood-stand-up-desk/" class="testvideo" data-reveal-id="ModalVideoGallery">video modal</a></div>
+        {{#if product.videos.list.length}}
+            <div class="video-3d-links">
+                <a href="/new-uplift-reclaimed-wood-stand-up-desk/" class="testvideo" data-reveal-id="ModalVideoGallery">video modal</a>
+             </div>
+        {{/if}}
 
         <div class="product-thumbnail-wrapper">
             <div class="productView-thumbnails" data-slick='{
@@ -217,7 +221,7 @@
             {{/if}}
 
             <div class="product-tour-step step-3">
-                <p>Watch Your Product as it changes</p>
+                <p>Learn more about each option</p>
                 <svg class="tour-arrow-3">
                     <use xlink:href="#icon-arrow-3" />
                 </svg>
@@ -260,14 +264,14 @@
                 <div class="product-arrows">
 
                     <div class="product-tour-step step-4">
-                        <p>Watch Your Product as it changes</p>
+                        <p>Click the next button to move to the next option</p>
                         <svg class="tour-arrow-4">
                             <use xlink:href="#icon-arrow-5" />
                         </svg>
                     </div>
 
                     <div class="product-tour-step step-5">
-                        <p>Watch Your Product as it changes</p>
+                        <p>Select to see the list of options, and click each option to explore</p>
                         <svg class="tour-arrow-5">
                             <use xlink:href="#icon-arrow-6" />
                         </svg>
@@ -362,6 +366,7 @@
         {{/each}}
     </ul>
 </div>
+
 
 <div id="previewModal" class="modal modal--large" data-reveal>
     <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">

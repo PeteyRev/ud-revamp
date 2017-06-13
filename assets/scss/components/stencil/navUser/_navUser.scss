@@ -211,6 +211,60 @@
     z-index: 1;
 }
 
+//custom menu modal
+
+.nav-shop-left {
+        background: #f6f8fc;
+        position:relative;
+
+        >.row{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
+             width: 100%;
+             text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+
+            li {
+                padding-bottom: 1rem;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+}
+.nav-shop-right {
+    h2, p {
+        text-align: right;
+    }
+    .nav-buttons-wrapper {
+        text-align: right;
+        margin-bottom: 2rem;
+    }
+    .youtube {
+        display: inline-block;
+        width: 598px;
+        height: 336px;
+        box-shadow: 0 0 9px 0 rgba(58, 58, 58, 0.35);
+        border-radius: 3px;
+    }
+    .nav-vid {
+        margin-bottom: 1rem;
+        text-align: right;
+    }
+}
+
+
+
 // Quick search
 // -----------------------------------------------------------------------------
 //

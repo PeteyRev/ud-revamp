@@ -70,6 +70,11 @@ $box-radius: 3px;
     overflow-x: hidden;
 }
 
+.form-checkbox, .form-radio {
+    position:relative !important;
+    visibility: hidden;
+}
+
 .product-cart-wrapper {
     box-shadow: $box-shadow;
     border-radius: $box-radius;
@@ -109,6 +114,7 @@ $box-radius: 3px;
 .product-thumbnail-wrapper {
     width: 57%;
     margin: 0 auto;
+    clear: both;
 }
 
 .productView-thumbnail img {
@@ -214,7 +220,7 @@ ul.cart-review-slides {
 
 //img gallery
 div#ProductImageGallery {
-    width: 63.3%;
+    width: 63.5%;
     background: transparent;
 }
 
@@ -241,6 +247,8 @@ div#ProductImageGallery {
     position: relative;
     float: right;
     width: 100%;
+    margin-bottom: 2rem;
+    transition: .4s ease all;
     >div {
         margin: 0 auto;
         width: 100%;
@@ -357,6 +365,8 @@ article.productView-description {
         background-color: #454545;
         margin: 0 1rem;
         text-align: center !important;
+        border-top-left-radius: $box-radius;
+        border-top-right-radius: $box-radius;
     }
     .tab.is-active {
         border: none !important;
@@ -412,6 +422,7 @@ table.spec-table {
 .video-3d-links {
     text-align: center;
     clear: both;
+    margin-bottom: 1rem;
 }
 
 //learn mores
@@ -459,6 +470,11 @@ table.spec-table {
     text-align: center;
 }
 
+div#cart-preview-dropdown {
+    left: 0px !important;
+    top: 55px !important;
+}
+
 //tour
 #ProductTour {
     position: fixed;
@@ -469,6 +485,12 @@ table.spec-table {
     left: 0px;
     top: 0;
     display: none;
+    opacity:0;
+    transition: .5s ease all;
+}
+
+.opacity-1 {
+    opacity:1 !important;
 }
 
 .fixed-product-tour {
@@ -484,65 +506,87 @@ table.spec-table {
     color: #fff;
     z-index: 999999;
     display: none;
+    opacity:0;
+    transition: .7s ease all;
     p {
         font-size: 19px;
     }
 }
 
+.step-0 {
+    right: -172px;
+    top: 242px;
+
+    p{
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
 .step-1 {
     top: 134px;
-    left: 15%;
-    width: 20%;
+    left: 6%;
+    width: 24%;
 }
 .tour-arrow-1 {
-    width: 190px;
+    width: 200px;
     height: 40px;
+    position: absolute;
+    right: -81px;
+    bottom: -17px;
 }
 
 .step-2 {
     right: -5%;
-    width: 15%;
-    top: -83px;
+    width: 26%;
+    top: 52px;
 }
 
 .tour-arrow-2 {
     width: 150px;
     height: 40px;
     position: absolute;
-    top: 0;
+    top: -33px;
+    right: -56px;
 }
 
 .step-3 {
-    right: 8%;
-    top: 80px;
-    width: 14%;
+    right: 12%;
+    top: 51px;
+    width: 10%;
 }
 
 .tour-arrow-3 {
     width: 112px;
     height: 59px;
-    float: right;
+    position: absolute;
+    right: -62px;
+    top: 42px;
 }
 
 .step-4 {
-    right: 0;
-    top: -84px;
+    right: 18px;
+    top: -165px;
+    width: 40%;
 }
 
 .tour-arrow-4 {
     width: 100px;
     right: 0;
     position: absolute;
-    top: 1px;
+    top: 41px;
+
 }
 
 .step-5 {
-    left: -70px;
+    left: -145px;
+    width: 50%;
+    top: 62px;
 }
 
 .tour-arrow-5 {
     width: 100px;
     position: absolute;
-    right: 0;
-    top: 10px;
+    right: -105px;
+    top: -53px;
 }
