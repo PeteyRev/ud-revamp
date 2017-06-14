@@ -97,3 +97,8 @@ export default function menuFactory(selector = `[data-${PLUGIN_KEY}]`) {
         }
         lastScroll = thisScroll;
     });
+
+    //workaround since nav shop is not initializing menu modal
+    $('#ShopOpenNav').on('click', function() {
+         $('#ShopMenu').foundation('reveal','open');
+    });
