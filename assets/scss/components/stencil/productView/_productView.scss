@@ -241,12 +241,14 @@
 // -----------------------------------------------------------------------------
 
 .productView-options {
+    opacity:0;
     @include clearfix;
     margin-bottom: spacing("single");
     text-align: center;
 
     @include breakpoint("small") {
         text-align: left;
+        height: 510px;
     }
 
     .form-input[type="number"] {

@@ -91,10 +91,12 @@ $("img.lazy, img.learn-lazy").each(function(){
 //slider actions for options map and review list
 var totalCartSlides = $('.product-slider .form-field').length;
 $('.options-map-button').on('click',function(){
-    $( '.product-slider' ).slick('slickGoTo', totalCartSlides);
+    // $( '.product-slider' ).slick('slickGoTo', totalCartSlides);
+	$('.options-map-wrapper').toggleClass('options-map-show');
+	$('.options-map-button').html($('.options-map-button').text() == 'Hide Map' ? 'Options Map' : 'Hide Map');
 });
 
-$('.cart-review-slides li').on('click',function(){
+$('.cart-review-slides li, .options-map-wrapper ul li').on('click',function(){
     var cartSlide = $(this).data('slide');
     $( '.product-slider' ).slick('slickGoTo', cartSlide);
 });
@@ -102,14 +104,17 @@ $('.cart-review-slides li').on('click',function(){
 
 //cleaner load so it doesnt look fragmented
 $(window).load(function(){
-  $('.product-slider').css('opacity',1);
+  $('.productView-options').css('height','auto');
+  $('.productView-options').css('opacity',1);
+
   	//removes whitespace from learn more links since IDs cannot have them
 	$('.learn-more-icon a, .options-tab-list a').each(function(){
 		var shortLm = $(this).attr('data-reveal-id');
 		shortLm = shortLm.replace(/ /g,'')
 		$(this).attr('data-reveal-id',shortLm);
 	});
-	$('.options-tab-list').appendTo('.options-link-wrapper')
+	$('.options-tab-list').appendTo('.options-link-wrapper');
+
 });
 
 //Appends Option selections to cart list
@@ -238,10 +243,10 @@ $('.form-options-wrapper').each(function(){
 		///////////////////////////////////
 		var $selNoShowContainer = $('#sel-not-shown ul');
 		var $selNoShowItems = $('#sel-not-shown ul li');
-
+		
 		//handles mat placement
-		if (imgSet.indexOf('Promo') >= 0 && newSelection.indexOf('145') >= 0) {
-            console.log(newSelection)
+		if (imgSet.indexOf('Promo') >= 0 && newSelection === 'UPL145~unboxed') {
+            
 			$('.Promo.Item').remove();
 			$('.Promo.Item img').removeClass('hide').addClass('active');
 			if ($('#sel-not-shown ul li').length >= 1 && $(window).width() >= 1200) {

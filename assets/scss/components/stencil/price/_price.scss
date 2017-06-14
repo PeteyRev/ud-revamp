@@ -5,8 +5,17 @@
 .price--rrp,
 .price--discounted {
     text-decoration: line-through;
+    font-size: 15px;
+    position: absolute;
+    bottom: -13px;
+    left: 1px;
 }
 
 .price-section--minor {
     color: color("greys", "light");
+}
+
+.price-section.price-section--withoutTax {
+    position: relative;
+    line-height: 1;
 }
