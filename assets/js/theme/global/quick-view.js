@@ -21,6 +21,15 @@ export default function (context) {
             modal.$content.find('.productView').addClass('productView--quickView');
 
             return new ProductDetails(modal.$content.find('.quickView'), context);
+            
         });
+
+        setTimeout(function () {
+            $('.productView-options').css('height', 'auto');
+            $('.productView-options').css('opacity', 1);
+        }, 5000);
+
+
     });
 }
+

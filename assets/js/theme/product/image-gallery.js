@@ -83,3 +83,12 @@ export default class ImageGallery {
     }
 
 }
+
+//image gallery init - provides cleaner modal load
+$('.productView-thumbnail').on('click',function(){
+    var imgSlide = $(this).data('slick-index')
+    $( '.product-image-gallery' ).slick('slickGoTo', imgSlide);
+    setTimeout(function(){
+        $('.product-image-gallery').css('opacity', 1);
+    },600)
+});

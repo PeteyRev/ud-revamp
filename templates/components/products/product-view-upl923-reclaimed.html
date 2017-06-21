@@ -23,12 +23,6 @@
 
         {{> components/products/upl923-reclaimed-builder-images}}
 
-        {{#if product.videos.list.length}}
-            <div class="video-3d-links">
-                <a href="/new-uplift-reclaimed-wood-stand-up-desk/" class="testvideo" data-reveal-id="ModalVideoGallery">video modal</a>
-             </div>
-        {{/if}}
-
         <div class="product-thumbnail-wrapper">
             <div class="productView-thumbnails" data-slick='{
             "arrows": true,
@@ -38,6 +32,18 @@
             "autoplay": false,
             "infinite":false
         }'>
+                {{#if product.videos.list.length}}
+                    <div class="productView-thumbnail">
+                        <a class="productView-thumbnail-link modal-slider" data-reveal-id="ModalVideoGallery" href="#">
+                            {{#each product.videos.list}}
+                                {{#if @first}}
+                                    <img src="//i.ytimg.com/vi/{{id}}/maxresdefault.jpg">
+                                {{/if}}
+                            {{/each}}      
+                        </a>
+
+                    </div>
+                {{/if}}
                 {{#each product.images}}
                     <div class="productView-thumbnail">
                         <a class="productView-thumbnail-link" data-reveal-id="ProductImageGallery" href="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}">
@@ -261,6 +267,18 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="relative">
+                    <div class="options-map-wrapper">
+                        <p>Jump to an option</p>
+                        <ul>
+                            {{#each product.options}}
+                            <li data-slide="{{@index}}">{{display_name}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="product-arrows">
 
                     <div class="product-tour-step step-4">
@@ -278,13 +296,7 @@
                     </div>
 
                     <button type="button" class="button button--primary options-map-button">Options Map</button>
-                    <div class="options-map-wrapper">
-                        <ul>
-                            {{#each product.options}}
-                            <li data-slide="{{@index}}">{{display_name}}</li>
-                            {{/each}}
-                        </ul>
-                    </div>
+
 
                 </div>
             </div>

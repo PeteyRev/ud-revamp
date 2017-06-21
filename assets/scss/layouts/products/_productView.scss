@@ -228,8 +228,9 @@ ul.cart-review-slides {
 
 .options-map-wrapper{
     position: absolute;
-    top: -76px;
-    padding: 9px 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-83%);
+    padding: 1rem 1rem .5rem;
     background-color: #f6f7f7;
     z-index: 0;
     box-shadow: $box-shadow;
@@ -238,13 +239,13 @@ ul.cart-review-slides {
     transition: .2s ease-in;
 
     ul{
-       margin: 0;
-       text-align: center; 
+       margin-bottom: 0;
 
        li{
            display: inline-block;
             margin: 4px;
             cursor:pointer;
+            width:33%;
        }
        li:hover{
             color: stencilColor("color-textLink");
@@ -256,10 +257,20 @@ ul.cart-review-slides {
     opacity:1;
     z-index: 9;
     transform: translateY(-100%);
-    top: -1px;
+    top: 0px;
+}
+
+.option-map-active{
+    color: stencilColor("color-textLink");
 }
 
 //img gallery
+
+a.productView-thumbnail-link.modal-slider img {
+    max-height: 55px;
+    width:100%;
+}
+
 div#ProductImageGallery {
     width: 63.5%;
     background: transparent;
@@ -506,6 +517,10 @@ table.spec-table {
 .absolute {
     position: absolute;
 }
+.relative {
+    position:relative;
+}
+
 
 .text-center {
     text-align: center;

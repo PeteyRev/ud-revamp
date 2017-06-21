@@ -6,6 +6,7 @@ import Global from './theme/global';
 
 const getAccount = () => import('./theme/account');
 const getLogin = () => import('./theme/auth');
+
 const pageClasses = {
     'pages/account/orders/all': getAccount,
     'pages/account/orders/details': getAccount,

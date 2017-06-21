@@ -78,36 +78,43 @@ $("img.lazy, img.learn-lazy").each(function(){
     $(this).attr('data-src',data)
 });
 
-//video gallery stuff init
-    $('.productView-thumbnail').on('click',function(){
-        var imgSlide = $(this).data('slick-index')
-        $( '.product-image-gallery' ).slick('slickGoTo', imgSlide);
-        setTimeout(function(){
-            $('.product-image-gallery').css('opacity', 1);
-        },600)
-    });
+
 
 
 //slider actions for options map and review list
+
+function toggleMap() {
+	$('.options-map-wrapper').toggleClass('options-map-show');
+	$('.options-map-button').html($('.options-map-button').text() == 'Hide Map' ? 'Options Map' : 'Hide Map');	
+}
+
 var totalCartSlides = $('.product-slider .form-field').length;
 $('.options-map-button').on('click',function(){
     // $( '.product-slider' ).slick('slickGoTo', totalCartSlides);
-	$('.options-map-wrapper').toggleClass('options-map-show');
-	$('.options-map-button').html($('.options-map-button').text() == 'Hide Map' ? 'Options Map' : 'Hide Map');
+	toggleMap();
 });
 
-$('.cart-review-slides li, .options-map-wrapper ul li').on('click',function(){
+$('.options-map-wrapper ul li').on('click',function(){
+	toggleMap();
+	$('.options-map-wrapper ul li').removeClass('option-map-active');
+	$(this).addClass('option-map-active');
+    var cartSlide = $(this).data('slide');
+    $( '.product-slider' ).slick('slickGoTo', cartSlide);
+});
+
+$('.cart-review-slides li').on('click',function(){
     var cartSlide = $(this).data('slide');
     $( '.product-slider' ).slick('slickGoTo', cartSlide);
 });
 
 
-//cleaner load so it doesnt look fragmented
 $(window).load(function(){
-  $('.productView-options').css('height','auto');
-  $('.productView-options').css('opacity',1);
 
-  	//removes whitespace from learn more links since IDs cannot have them
+	//cleaner load so it doesnt look fragmented
+	$('.productView-options').css('height','auto');
+	$('.productView-options').css('opacity',1);
+
+	//removes whitespace from learn more links since IDs cannot have them
 	$('.learn-more-icon a, .options-tab-list a').each(function(){
 		var shortLm = $(this).attr('data-reveal-id');
 		shortLm = shortLm.replace(/ /g,'')
@@ -243,7 +250,7 @@ $('.form-options-wrapper').each(function(){
 		///////////////////////////////////
 		var $selNoShowContainer = $('#sel-not-shown ul');
 		var $selNoShowItems = $('#sel-not-shown ul li');
-		
+
 		//handles mat placement
 		if (imgSet.indexOf('Promo') >= 0 && newSelection === 'UPL145~unboxed') {
             
@@ -287,7 +294,7 @@ $('.form-options-wrapper').each(function(){
     });
 
 
-//starts product tour
+//Product Tour functions
 
 const productTour = () =>{
 	$('#ProductTour, .product-tour-step').toggle();
@@ -310,3 +317,5 @@ const runOncePerDay = () => {
 		localStorage.yourapp_today = today;
 		productTour();
 	}
+
+
