@@ -516,6 +516,13 @@ table.spec-table {
     }
 }
 
+.learn-more-body {
+    overflow: auto;
+    height: 790px;
+    min-height: 240px;
+    max-height: 90%;
+}
+
 .learn-more-vid {
     margin-bottom: 1rem;
     .youtube {

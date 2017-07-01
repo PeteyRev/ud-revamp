@@ -115,7 +115,7 @@ $(window).load(function(){
 	$('.productView-options').css('opacity',1);
 
 	//removes whitespace from learn more links since IDs cannot have them
-	$('.learn-more-icon a, .options-tab-list a').each(function(){
+	$('.option-learn-more-icon a, .label-learn-more-icon a, .options-tab-list a').each(function(){
 		var shortLm = $(this).attr('data-reveal-id');
 		shortLm = shortLm.replace(/ /g,'')
 		$(this).attr('data-reveal-id',shortLm);

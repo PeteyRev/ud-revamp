@@ -58,11 +58,27 @@
 }
 
 .fullscreen-bg {
-    margin-top: -2.5rem;
+    margin-top: -7.5rem;
+    position: relative;
+    position: fixed;
+    width: 100%;
+}
+
+.home-parallax {
+    height: 100vh;
+}
+
+.home-page-header header {
+    background: transparent;
 }
 
 video.fullscreen-bg__video {
     width: 100%;
+}
+
+.home-sections-wrap{
+  z-index: 1;
+  position: relative;
 }
 
 .full-width{
@@ -85,8 +101,104 @@ video.fullscreen-bg__video {
     background: #f6f8fc;
 }
 
+.white-bg{
+  background: #fff;
+}
+
+.blue-txt {
+  color: $color-blue;
+}
+
 .stencil-hide{
   display:none;
+}
+
+.no-margin-btm{
+  margin-bottom:0 !important;
+}
+
+.home-page-top {
+    position: absolute;
+    text-align:center;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    span{
+      color: $color-blue;
+    }
+    h2{
+      line-height: 1;
+      font-size: 5rem;
+      color: #fff;
+      position: relative;
+      opacity: 0;
+      animation-name: home-h2;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+    h3{
+      color: #fff;
+      margin-top:0px;
+      position: relative;
+      opacity: 0;
+      animation-name: home-h3;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.1s;
+    }
+    p{
+      position: relative;
+      opacity: 0;
+      animation-name: home-h3;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.5s;
+    }
+     button {
+      position: relative;
+      opacity: 0;
+      animation-name: opacity-show;
+      animation-duration: .7s;
+      animation-fill-mode: forwards;
+      animation-delay: 2.3s;
+    }
+    
+}
+
+@keyframes home-h2{
+      from {
+        opacity:0;
+        top: 90px;
+    }
+    to {
+        opacity:1;
+         top: 0px;
+    }
+}
+
+@keyframes home-h3{
+      from {
+        opacity:0;
+        top: -90px;
+    }
+    to {
+        opacity:1;
+        top: 0px;
+    }
+}
+
+@keyframes opacity-show{
+      from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 //Adding Foundation Grid -PA
