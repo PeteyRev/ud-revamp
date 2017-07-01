@@ -49,7 +49,7 @@
 
     @include breakpoint("medium") {
         background: transparent;
-        display: block;
+        display: inline-block;
         height: auto;
         padding: 0;
         position: relative;
