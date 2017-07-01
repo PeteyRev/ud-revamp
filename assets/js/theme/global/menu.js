@@ -85,15 +85,17 @@ export default function menuFactory(selector = `[data-${PLUGIN_KEY}]`) {
 
 
     const fixedHead = $('header')
-    var lastScroll = 0;
+    let lastScroll = 0;
 
     $(window).scroll(function () {
-        var thisScroll = $(this).scrollTop();
+        let thisScroll = $(this).scrollTop();
         if (thisScroll > lastScroll && thisScroll > 0) {
-            fixedHead.addClass("off-screen");
+            // fixedHead.addClass("off-screen");
+            fixedHead.addClass("scroll-header");
         }
         if (thisScroll === 0) {
-            fixedHead.removeClass("off-screen");
+            // fixedHead.removeClass("off-screen");
+            fixedHead.removeClass("scroll-header");
         }
         lastScroll = thisScroll;
     });

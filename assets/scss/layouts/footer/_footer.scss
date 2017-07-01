@@ -16,6 +16,8 @@
     background-color: $footer-background;
     border-top: container("border");
     padding: spacing("double") 0;
+    z-index:1;
+    position:relative;
 }
 
 .footer-info {

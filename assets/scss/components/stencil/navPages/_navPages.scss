@@ -193,6 +193,7 @@
     padding: spacing("half") 0;
     text-decoration: none;
     text-transform: uppercase;
+    transition:.3s ease-in-out;
 
     @include breakpoint("medium") {
         display: inline-block;

@@ -34,12 +34,39 @@
     }
 }
 
-    .off-screen {
-        top: -82px;
-    }
+.home-page-header header.header.scroll-header {
+    background:#353332;
+}
 
+.header-logo img {
+    transition:.3s ease-in-out;
+    width: 100%
+}
+
+.scroll-header {
+    opacity:0.9;
+    .header-logo{
+        padding: 0.5rem;
+    }
+    .navUser-action{
+        padding:.1rem 0.78571rem;   
+    }
+    .navPages {
+       padding: 0; 
+    }
+    .navPages-action {
+        padding: 0.3978rem 1.14286rem .5rem;
+    }
+    .header-logo img {
+        width: 60%;
+    }
+    .dropdown--quickSearch.is-open{
+        top: 48px !important;
+    }
+}
 
 .header-logo {
+    transition:.3s ease-in-out;
     font-size: 0;   // 1
     margin: 0 remCalc($header-toggle-width); // 2
     text-align: center;
