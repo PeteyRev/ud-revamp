@@ -370,6 +370,10 @@ div#ProductImageGallery {
     display: none!important;
 }
 
+.cursor{
+    cursor: pointer;
+}
+
 //img builder zindex
 img.active {
     z-index: 1;
@@ -697,4 +701,12 @@ div#cart-preview-dropdown {
     position: absolute;
     right: -105px;
     top: -53px;
+}
+
+.wishlist-icon {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    cursor:pointer;
+
 }

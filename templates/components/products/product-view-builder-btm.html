@@ -1,29 +1,4 @@
-<div class="productView">
-    {{#each product.reviews.messages}}
-        {{#if error}}
-            {{> components/common/alert-error error}}
-        {{/if}}
-        {{#if success}}
-            {{> components/common/alert-success success}}
-        {{/if}}
-    {{/each}}
-
-    <section class="productView-images" data-image-gallery>
-        <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
-                    
-        {{#if product.sku}}
-            <div class="sku-wrapper">
-                <div class="productView-info-name">{{lang 'products.sku'}}</div>
-                <div class="productView-info-value" data-product-sku>{{product.sku}}</div>
-                <div class="product-tour">| <a href="#" id="StartTour">Take Tour</a></div>
-            </div>
-        {{/if}}
-
-        {{> components/common/share}}
-
-        {{> components/products/upl923-reclaimed-builder-images}}
-
-        <div class="product-thumbnail-wrapper">
+<div class="product-thumbnail-wrapper">
             <div class="productView-thumbnails" data-slick='{
             "arrows": true,
             "mobileFirst": true,
