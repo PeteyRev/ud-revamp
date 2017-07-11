@@ -168,7 +168,7 @@
     }
 
     > a {
-        color: stencilColor("color-textSecondary");
+        color: stencilColor("color-textLink");
 
         // scss-lint:disable NestingDepth
         &:hover {

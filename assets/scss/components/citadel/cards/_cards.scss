@@ -38,6 +38,7 @@
     display: $card-figcaption-body-display;
     pointer-events: all; // 1
     transform: translate3d(0, -50%, 0); // 2
+    display: none;
 }
 
 .card-image {
@@ -91,7 +92,7 @@
     text-align: center;
 
     @include breakpoint("small") {
-        text-align: left;
+
     }
 }
 
@@ -132,4 +133,8 @@
             color: stencilColor("card--alternate-color--hover");
         }
     }
+}
+
+.card-body .card-text {
+    color: #3a3a3a;
 }

@@ -27,54 +27,62 @@ blog:
         </video>
     </div>
 </div> 
-<div class="home-sections-wrap">
-    <div class="row expanded collapse flex-row white-bg">
-        <div class="small-12 large-7 columns">
-            <img class="lazyload" data-src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/whoAreWeEcoCorner.jpg" width="1004" height="708" >
+<div class="home-sections-wrap full-width-wrapper">
+    <div class="row expanded collapse flex-row white-bg animate-1">
+        <div class="small-12 large-7 columns hide-left-img">
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/whoAreWeEcoCorner.jpg"}}">
         </div>
         <div class="small-12 large-4 end columns middle-just">
-            <h2>WHO ARE WE?</h2>
-            <p>For more than a decade, we’ve been at the forefront of the standing desk movement. We have been manufacturing products with the best in locally and globally sourced components here in Austin, Texas, since 2002.</p>
-            <p>We design all of our products so you can customize and build your dream office at an affordable price. Our aluminum and steel frames, reclaimed solid wood desktops, monitor arms, stools, task lights, and other products are optimized to work well together. It's time to UPLIFT your work day.</p>
-            <a href="/about/"><button class="button button--primary">Learn More</button></a>
+            <div class="hide-down-txt">
+                <h2>WHO ARE WE?</h2>
+                <p>For more than a decade, we’ve been at the forefront of the standing desk movement. We have been manufacturing products with the best in locally and globally sourced components here in Austin, Texas, since 2002.</p>
+                <p>We design all of our products so you can customize and build your dream office at an affordable price. Our aluminum and steel frames, reclaimed solid wood desktops, monitor arms, stools, task lights, and other products are optimized to work well together. It's time to UPLIFT your work day.</p>
+                <a href="/about/"><button class="button button--primary">Learn More</button></a>
+            </div>
         </div>
     </div>
-    <div class="row expanded collapse flex-row blue-bg">
+    <div class="row expanded collapse flex-row blue-bg animate-2">
         <div class="small-12 large-4 large-offset-1 columns middle-just">
-            <h2>LET'S BUILD IT TOGETHER</h2>
-            <p>Your desk is where you work and create, so it’s important that it’s built to your specification. That’s why we offer a wide range of desktop materials, useful accessories and expert advice. But when off-the-shelf options aren’t enough, we’ll happily work with you to make the height adjustable desk you need. Choose from 100 percent recycled wood desktops in our Eco line. Or, consider a <a href="http://site.thehumansolution.com/UPLIFT/greenguard-certified-laminate.pdf">GREENGUARD-certified</a> laminate desktop, which provides excellent value while being indoor-air friendly and environmentally sound.</p>
-            <a href="/about/"><button class="button button--primary">Learn More</button></a>
+            <div class="hide-down-txt">
+                <h2>LET'S BUILD IT TOGETHER</h2>
+                <p>Your desk is where you work and create, so it’s important that it’s built to your specification. That’s why we offer a wide range of desktop materials, useful accessories and expert advice. But when off-the-shelf options aren’t enough, we’ll happily work with you to make the height adjustable desk you need. Choose from 100 percent recycled wood desktops in our Eco line. Or, consider a <a href="http://site.thehumansolution.com/UPLIFT/greenguard-certified-laminate.pdf">GREENGUARD-certified</a> laminate desktop, which provides excellent value while being indoor-air friendly and environmentally sound.</p>
+                <a href="/about/"><button class="button button--primary">Learn More</button></a>
+            </div>
         </div>
-        <div class="small-12 large-7 columns text-right">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/customizeStack.jpg" width="1004" height="708" >
+        <div class="small-12 large-7 columns text-right hide-right-img">
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/customizeStack.jpg"}}">
         </div>
     </div>
 
-    <!-- Add Desktop thing or replace with carousel here? -->
+    {{> components/frame-animate}}
 
-    <div class="row expanded collapse flex-row blue-bg">
-        <div class="small-12 large-7 columns">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/adaptConvertHomepageImage.jpg" width="952" height="706" >
+    <div class="row expanded collapse flex-row blue-bg frame-animation-cover animate-3">
+        <div class="small-12 large-7 columns hide-left-img">
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/adaptConvertHomepageImage.jpg"}}">
         </div>
         <div class="small-12 large-4 end columns middle-just">
-            <h2>ADAPT YOUR DESK</h2>
-            <p>Transform your existing workstation with the UPLIFT Adapt Height Adjustable Standing Desk Converter. Simple and easy pneumatic adjustments bring your monitor and keyboard to your preferred sitting and       standing positions seamlessly, and without the need for an outlet. They're perfect for use with fixed-height desks and cubicle workstations that could use personalized height adjustments without building from scratch.</p>
-            <a href="/about/"><button class="button button--primary">Learn More</button></a>
+            <div class="hide-down-txt">
+                <h2>ADAPT YOUR DESK</h2>
+                <p>Transform your existing workstation with the UPLIFT Adapt Height Adjustable Standing Desk Converter. Simple and easy pneumatic adjustments bring your monitor and keyboard to your preferred sitting and       standing positions seamlessly, and without the need for an outlet. They're perfect for use with fixed-height desks and cubicle workstations that could use personalized height adjustments without building from scratch.</p>
+                <a href="/about/"><button class="button button--primary">Learn More</button></a>
+            </div>
         </div>
     </div>
-    <div class="row expanded collapse flex-row white-bg">
+    <div class="row expanded collapse flex-row white-bg animate-4">
         <div class="small-12 large-4 large-offset-1 columns middle-just">
-            <h2>ACCESSORIES THAT MATTER</h2>
-            <p>Once you've customized your perfect sit stand desk, take it to the next level with innovative accessories. Our ergonomist designs all accessories to enhance the functionality, quality, and value of your desk. We have in-desk power grommets with convenient electric outlets, single and dual monitor arms with fingertip adjustability, task lights with personalized lighting levels, cable management kits with all the wire organizers you could want, and much more.</p>
-            <a href="/about/"><button class="button button--primary">Learn More</button></a>
+            <div class="hide-down-txt">
+                <h2>ACCESSORIES THAT MATTER</h2>
+                <p>Once you've customized your perfect sit stand desk, take it to the next level with innovative accessories. Our ergonomist designs all accessories to enhance the functionality, quality, and value of your desk. We have in-desk power grommets with convenient electric outlets, single and dual monitor arms with fingertip adjustability, task lights with personalized lighting levels, cable management kits with all the wire organizers you could want, and much more.</p>
+                <a href="/about/"><button class="button button--primary">Learn More</button></a>
+            </div>
         </div>
-        <div class="small-12 large-7 columns text-right">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/accessoriesDesk.jpg" width="1004" height="708" >
+        <div class="small-12 large-7 columns text-right hide-right-img">
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/accessoriesDesk.jpg"}}">
         </div>
     </div>
     <div class="row expanded collapse flex-row blue-bg">
         <div class="small-12 large-7 columns">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/applyDesktopTools.jpg" width="1004" height="708" >
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/applyDesktopTools.jpg"}}">
         </div>
         <div class="small-12 large-4 end columns middle-just">
             <h2>DIY STANDING DESKS? A-OK</h2>
@@ -86,9 +94,9 @@ blog:
 
     <!-- Add Frame thing or replace with carousel here? -->
 
-    <div class="row expanded collapse flex-row blue-bg">
+    <div class="row expanded collapse flex-row blue-bg" style="background:url('{{cdn "webdav:img/home/keypadDesk.jpg"}}')">
         <div class="small-12 large-7 columns">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/applyDesktopTools.jpg" width="1004" height="708" >
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/applyDesktopTools.jpg"}}">
         </div>
         <div class="small-12 large-4 end columns middle-just">
             <h2>THE KEY TO A HEIGHT ADJUSTABLE DESK</h2>
@@ -104,12 +112,12 @@ blog:
             <a href="/about/"><button class="button button--primary">Learn More</button></a>
         </div>
         <div class="small-12 large-7 columns text-right">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/shippingBoxes.jpg" width="1135" height="709" >
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/shippingBoxes.jpg"}}">
         </div>
     </div>
     <div class="row expanded collapse flex-row blue-bg">
         <div class="small-12 large-7 columns">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/environmentalBamboo.jpg" width="1004" height="708" >
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/environmentalBamboo.jpg"}}">
         </div>
         <div class="small-12 large-4 end columns middle-just">
             <h2>ECO-FRIENDLY ERGONOMICS</h2>
@@ -125,12 +133,12 @@ blog:
             <a href="/about/"><button class="button button--primary">Learn More</button></a>
         </div>
         <div class="small-12 large-7 columns text-right">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/seatingStool.jpg" width="1135" height="709" >
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/seatingStool.jpg"}}">
         </div>
     </div>
     <div class="row expanded collapse flex-row blue-bg">
         <div class="small-12 large-7 columns">
-            <img src="http://cdn3.bigcommerce.com/s-l85bzww3lo/templates/__custom/images/customerServiceGroup.jpg" width="1004" height="708" >
+            <img class="lazyload" data-src="{{cdn "webdav:img/home/customerServiceGroup.jpg"}}">
         </div>
         <div class="small-12 large-4 end columns middle-just">
             <h2>UNPARALLELED SERVICE</h2>
