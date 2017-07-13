@@ -12,6 +12,15 @@
         </a>
     </h4>
     <div class="toggle-content is-open" id="productReviews-content" aria-hidden="false">
+        {{#if settings.show_product_reviews}}
+            <span class="productView-reviewLink">
+                <a href="{{product.url}}{{#if is_ajax}}#writeReview{{/if}}"
+                    {{#unless is_ajax }}data-reveal-id="modal-review-form"{{/unless}}>
+                    {{lang 'products.reviews.new'}}
+                </a>
+            </span> 
+            {{> components/products/modals/writeReview}}
+        {{/if}}
         <ul class="productReviews-list" id="productReviews-list">
             {{#each reviews.list}}
             <li class="productReview">

@@ -71,7 +71,7 @@
 
             <div class="row expanded">
                 <div class="small-4 columns">
-                    <span>Your Cost</span>
+                    <span>Your Price</span>
                     <div class="productView-price">
                         {{#or customer (if theme_settings.restrict_to_login '!==' true)}} {{> components/products/price price=product.price schema_org=schema}}
                         {{else}} {{> components/common/login-for-pricing}} {{/or}}
@@ -92,14 +92,9 @@
                         {{else}}
                             {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
                         {{/if}}
-                    </span> {{/if}} {{#if settings.show_product_reviews}}
-                        <span class="productView-reviewLink">
-                        <a href="{{product.url}}{{#if is_ajax}}#writeReview{{/if}}"
-                           {{#unless is_ajax }}data-reveal-id="modal-review-form"{{/unless}}>
-                           {{lang 'products.reviews.new'}}
-                        </a>
-                    </span> {{> components/products/modals/writeReview}} {{/if}}
+                    </span> {{/if}} 
                     </div>
+                    <a href="#" class="smooth-tab-open" data-opentab="tab-faq"><span>17</span> FAQs</a>
                 </div>
                 <div class="small-4 columns">
                     {{#if product.availability}}
@@ -250,6 +245,7 @@
                             {{#each product.options}}
                             <li data-slide="{{@index}}">{{display_name}}</li>
                             {{/each}}
+                            <li data-slide="17">Order Review</li>
                         </ul>
                     </div>
                 </div>
@@ -302,23 +298,27 @@
                     <p class="alertBox-column alertBox-message"></p>
                 </div>
 
-                {{#if settings.show_wishlist}}
-                    <form class="form product-wishlist" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
-                        <div class="form-action">
-                            <input type="hidden" name="variation_id" value="">
-                            <label for="wishlist-input" class="cursor">
-                                <svg class="wishlist-icon"><use xlink:href="#icon-wishList-icon"/><span>ADD TO WISH LIST</span></svg>
-                            </label>
-                            <input id="wishlist-input" class="button hide" type="submit" value="{{lang 'account.wishlists.add_item'}}">
+                <ul class="cart-bottom-icons">
+                    <li><svg class="cart-icon"><use xlink:href="#icon-bulkDeals-icon"/><span>BULK DEALS</span></svg></li>
+                    {{#if settings.show_wishlist}}
+                    <li><form class="product-wishlist" method="post" action="{{product.add_to_wishlist_url}}" data-wishlist-add>
+                            <div class="form-action">
+                                <input type="hidden" name="variation_id" value="">
+                                <label for="wishlist-input" class="cursor">
+                                    <svg class="cart-icon wishlist-icon"><use xlink:href="#icon-wishList-icon"/><span>ADD TO WISH LIST</span></svg>
+                                </label>
+                                <input id="wishlist-input" class="button hide" type="submit" value="{{lang 'account.wishlists.add_item'}}">
+                            </div>
+                        </form>
+                    </li>
+                    {{/if}}
+                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                        {{#if product.can_purchase}}
+                        <li><div id="form-action-addToCartFast" class="form-action product-bottom-cart-add">
+                            <svg class="cart-icon"><use xlink:href="#icon-addNow"/><span>ADD NOW</span></svg>
                         </div>
-                    </form>
-                {{/if}}
-                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
-                    {{#if product.can_purchase}}
-                    <div class="form-action product-bottom-cart-add">
-                        <svg class="wishlist-icon" id="form-action-addToCartFast"><use xlink:href="#icon-bulkDeals-icon"/><span>BULK DEALS</span></svg>
-                        <svg class="wishlist-icon" id="form-action-addToCartFast"><use xlink:href="#icon-AddNow"/><span>ADD NOW</span></svg>
-                    </div>
+                        </li>
+                </ul>
                  {{/if}}
                 {{{snippet 'product_addtocart'}}}
                 {{/or}}
@@ -339,7 +339,7 @@
                 <a class="tab-title" href="#tab-options">Options</a>
             </li>
             <li class="tab">
-                <a class="tab-title" href="#tab-faq">F.A.Q.</a>
+                <a id="faq-tab" class="tab-title" href="#tab-faq">F.A.Q.</a>
             </li>
             {{#if product.warranty}}
                 <li class="tab">

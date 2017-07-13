@@ -34,6 +34,7 @@ export class VideoGallery {
     bindEvents() {
         this.$videos.on('click', this.selectNewVideo.bind(this));
     }
+
 }
 
 export default function videoGallery() {
@@ -49,6 +50,22 @@ export default function videoGallery() {
         }
 
         $el.data(pluginKey, new VideoGallery($el));
+
+    });
+
+    //Appends titles to video carousel buttons
+    $(window).load(function(){
+        
+        var videoTitles = [];
+        $('.video-title').each(function(){
+            var slideTitle = $(this).text();
+            videoTitles.push(slideTitle)
+        });
+
+        $('.video-carousel-buttons ul li').each(function(index){
+            $(this).append(videoTitles[index]);
+        })
+
     });
 }
 
@@ -60,19 +77,6 @@ $('.modal-slider').on('click',function(){
     },500)
 });
 
-//Appends titles to video carousel buttons
-$(window).load(function(){
-    
-    var videoTitles = [];
-    $('.video-title').each(function(){
-        var slideTitle = $(this).text();
-        videoTitles.push(slideTitle)
-    });
 
-    $('.video-carousel-buttons ul li').each(function(index){
-        $(this).append(videoTitles[index]);
-    })
-
-});
 
 
