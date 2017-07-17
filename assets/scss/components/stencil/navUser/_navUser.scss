@@ -21,12 +21,11 @@
     z-index: zIndex("lowest"); // 5.
 
     @include breakpoint("medium") {
-        padding: 0.6rem 0 0;
+        padding: 0.6rem 3.3rem 0;
         right: auto;
         top: auto;
         transform: none;
         z-index: zIndex("lowest");
-        padding-right: remCalc($header-toggle-width * 1.5);
         width:100%;
     }
 
@@ -65,11 +64,11 @@
 
 .navUser-action {
     color: stencilColor("navUser-color");
-    font-weight: fontWeight("bold");
-    padding: spacing("base") spacing("half");
+    padding: 1.3rem 0.78571rem;
     text-decoration: none;
     text-transform: uppercase;
     transition:.3s ease-in-out;
+    font-size: 15px;
 
     &:hover,
     &.is-open {
@@ -120,6 +119,18 @@
 
 .navUser-item {
     display: none;
+     a.navUser-action.navUser-action--quickSearch {
+        display: inline-block;
+    }
+    .header-search-icon{
+        width:25px;
+        height:25px;
+        fill:$color-white;
+        vertical-align: middle;
+        position: relative;
+        left: 8px;
+        top:-2px;
+    }
 
     @include breakpoint("medium") {
         display: block;
@@ -265,7 +276,6 @@
 }
 
 
-
 // Quick search
 // -----------------------------------------------------------------------------
 //
@@ -353,6 +363,7 @@
     margin-left: spacing("eighth");
     text-align: center;
     width: 20px; // 1
+    vertical-align: text-bottom;
 }
 
 .countPill--positive {

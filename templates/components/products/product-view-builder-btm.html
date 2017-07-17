@@ -60,24 +60,25 @@
         <div class="product-cart-wrapper">
                 <div class="productView-product">
 
-            <h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
+            <!--<h2 class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
                 <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}>{{product.brand.name}}</span></a>
-            </h2>
+            </h2>-->
             {{#if product.call_for_price}}
                 <p class="productView-price">
                     <span>{{product.call_for_price}}</span>
                 </p>
             {{/if}}
 
-            <div class="row expanded">
-                <div class="small-4 columns">
+            <div class="row expanded collapse">
+                <div class="small-4 columns product-price-wrap relative">
                     <span>Your Price</span>
                     <div class="productView-price">
                         {{#or customer (if theme_settings.restrict_to_login '!==' true)}} {{> components/products/price price=product.price schema_org=schema}}
                         {{else}} {{> components/common/login-for-pricing}} {{/or}}
                     </div>
+                    <div class="cart-line--left"></div>
                 </div>
-                <div class="small-4 columns">
+                <div class="small-3 columns relative">
                     <div class="productView-rating" {{#if schema}} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"
                         {{/if}}>
                         {{#if settings.show_product_rating}} {{#if product.num_reviews '>' 0}} {{#if schema}}
@@ -92,15 +93,18 @@
                         {{else}}
                             {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
                         {{/if}}
-                    </span> {{/if}} 
+                    </span> {{/if}}
+                    <a href="#" class="smooth-tab-open" data-opentab="tab-faq"><span>17</span> FAQs</a> 
                     </div>
-                    <a href="#" class="smooth-tab-open" data-opentab="tab-faq"><span>17</span> FAQs</a>
+                    <div class="cart-line--right"></div>
                 </div>
-                <div class="small-4 columns">
+                <div class="small-5 columns">
+                    <div class="product-avail-wrap">
                     {{#if product.availability}}
-                    <div class="productView-info-name">{{lang 'products.availability'}}</div>
-                    <div class="productView-info-value">{{product.availability}}</div>
-                    {{/if}}
+                        <div class="productView-info-name">{{lang 'products.availability'}}</div>
+                        <div class="productView-info-value">{{product.availability}}</div>
+                        {{/if}}
+                    </div>
                 </div>
             </div>
 
@@ -210,16 +214,7 @@
                     {{#each product.customizations}}
                         {{{dynamicComponent 'components/products/customizations'}}}
                     {{/each}}
-                <div class="product-slider" data-product-option-change style="display:none;" data-slick='{
-        "arrows": true,
-        "mobileFirst": true,
-        "slidesToShow": 1,
-        "slidesToScroll": 1,
-        "autoplay": false,
-        "infinite": false,
-        "draggable": false,
-        "appendArrows": ".product-arrows"
-    }'>
+                <div class="product-slider" data-product-option-change style="display:none;">
                     {{#each product.options}}
                         {{{dynamicComponent 'components/products/options'}}}
                     {{/each}}
@@ -240,17 +235,26 @@
 
                 <div class="relative">
                     <div class="options-map-wrapper">
-                        <p>Jump to an option</p>
+                        <h4>Select an option...</h4>
                         <ul>
                             {{#each product.options}}
                             <li data-slide="{{@index}}">{{display_name}}</li>
                             {{/each}}
-                            <li data-slide="17">Order Review</li>
+                            <li data-slide="{{length product.options}}">Order Review</li>
                         </ul>
+                        <p>*Cycle through all the options by clicking the "Next" and "Back" buttons below</p>
                     </div>
                 </div>
 
                 <div class="product-arrows">
+
+                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                        <div class="form-action">
+                            <input id="form-action-addToCart" data-wait-message="{{lang 'products.adding_to_cart'}}" class="button button--cart" type="submit"
+            value="{{#if product.pre_order}}{{lang 'products.pre_order'}}{{else}}{{lang 'products.add_to_cart'}}{{/if}}">
+                        </div>
+                        {{{snippet 'product_addtocart'}}}
+                    {{/or}}
 
                     <div class="product-tour-step step-4">
                         <p>Click the next button to move to the next option</p>
@@ -266,7 +270,7 @@
                         </svg>
                     </div>
 
-                    <button type="button" class="button button--primary options-map-button">Options Map</button>
+                    <div class="options-map-button">JUMP TO AN OPTION</div>
 
 
                 </div>

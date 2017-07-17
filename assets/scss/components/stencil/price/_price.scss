@@ -1,14 +1,19 @@
 // =============================================================================
 // PRICE (CSS)
 // =============================================================================
-
+.list-price,
 .price--rrp,
 .price--discounted {
+    display:inline-block;
     text-decoration: line-through;
     font-size: 15px;
-    position: absolute;
-    bottom: -13px;
-    left: 1px;
+    color:$color-grey;
+    font-weight: 400;
+    font-family:$fontFamily-karla;
+}
+
+.list-price {
+    text-decoration: none;
 }
 
 .price-section--minor {
@@ -18,4 +23,26 @@
 .price-section.price-section--withoutTax {
     position: relative;
     line-height: 1;
+}
+
+.cart-line--left {
+    width: 1px;
+    height: 63px;
+    background-color: $color-greyLightest;
+    position: absolute;
+    top: 0;
+    right: 22px;
+}
+
+.cart-line--right {
+    width: 1px;
+    height: 63px;
+    background-color: $color-greyLightest;
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+
+.product-avail-wrap {
+    margin-left: 1rem;
 }

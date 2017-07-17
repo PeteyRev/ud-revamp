@@ -44,6 +44,19 @@ export default class Product extends PageManager {
 		imageBuilder();
 		startProductTour();
 
+        $('.product-slider').slick({
+            arrows: true,
+            mobileFirst: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false,
+            infinite: false,
+            draggable: false,
+            appendArrows: ".product-arrows",
+            prevArrow: '<button type="button" class="button button--transparent"><svg class="cart-arrow-left"><use xlink:href="#icon-left-back-arrow-builder-icon" /></svg>BACK</button>',
+            nextArrow: '<button type="button" class="button button--blue">NEXT<svg class="cart-arrow-right"><use xlink:href="#icon-right-next-arrow-builder-icon" /></svg></button>'
+        });
+
         const $reviewForm = classifyForm('.writeReview-form');
         const review = new Review($reviewForm);
 

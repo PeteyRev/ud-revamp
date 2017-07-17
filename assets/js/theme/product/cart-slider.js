@@ -4,7 +4,7 @@ import $ from 'jquery';
         //slider actions for options map and review list
         function toggleMap() {
             $('.options-map-wrapper').toggleClass('options-map-show');
-            $('.options-map-button').html($('.options-map-button').text() == 'Hide Map' ? 'Options Map' : 'Hide Map');	
+            $('.options-map-button').html($('.options-map-button').text() == 'HIDE OPTIONS' ? 'JUMP TO AN OPTION' : 'HIDE OPTIONS');	
         }
 
         let totalCartSlides = $('.product-slider .form-field').length;
@@ -28,6 +28,18 @@ import $ from 'jquery';
         //fast add
         $('#form-action-addToCartFast').on('click',function(){
             $('#form-action-addToCart').click();
+        });
+
+        $('.product-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+            console.log(currentSlide)
+            console.log(totalCartSlides)
+            if (currentSlide === totalCartSlides - 1){
+                $('.options-map-button').hide();
+                $('#form-action-addToCart').show()
+            } else {
+                $('.options-map-button').show();
+                $('#form-action-addToCart').hide()
+            }
         });
 
         //Removes SKUS and and adds data attributes for wishlist and builder

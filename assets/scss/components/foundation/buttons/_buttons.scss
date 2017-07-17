@@ -25,3 +25,30 @@
         fill: stencilColor("button--icon-svg-color");
     }
 }
+
+.button--blue{
+    background-color: $button-blue;
+    border-color: $button-blue;
+    color: $color-white;
+}
+
+.button--transparent{
+    color: $color-black;
+}
+
+.button--blue:hover{
+        background-color: $button-blue-hover;
+        border-color: $button-blue-hover;
+        color: $color-white;  
+}
+.button--blue:active, .button--blue:focus{
+        background-color: $button-blue-hover;
+        border-color: $button-blue-hover;
+        color: $color-white;  
+}
+
+.button--cart{
+    background-color: #ed6325;
+    border-color: #ed6325;
+    color: $color-white;
+}

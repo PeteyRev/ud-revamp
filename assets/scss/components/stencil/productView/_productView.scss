@@ -86,10 +86,11 @@
 // -----------------------------------------------------------------------------
 
 .productView-product {
+    padding: 23px 23px 0;
+    background-color:$color-greyLight;
     @include breakpoint("medium") {
-        border-bottom: container("border");
+        border-bottom: 1px solid $color-greyLightest;
         // padding-bottom: spacing("single") + spacing("third");
-        padding-top: .1rem;
     }
 
     > :last-child {
@@ -98,7 +99,8 @@
 }
 
 .productView-title {
-    font-size: fontSize("small");
+    color:#353332;
+    font-size: 24px;
     margin: -(spacing("half")) 0 spacing("quarter");
 
     @include breakpoint("medium") {
@@ -106,7 +108,7 @@
     }
 
     @include breakpoint("large") {
-        font-size: fontSize("largest");
+        font-size: 24px;
     }
 }
 
@@ -133,6 +135,18 @@
 // Details - Product price
 // -----------------------------------------------------------------------------
 
+.product-price-wrap{
+    font-family: $fontFamily-headings;
+    font-weight: $fontWeight-medium;
+    span {
+        font-size:14px;
+    }
+    span.price.price--withoutTax {
+        font-size: 23px;
+        display:block;
+    }
+}
+
 .productView-price {
     font-size: fontSize("smaller");
     margin-bottom: spacing("third");
@@ -153,31 +167,38 @@
     }
 }
 
-.productView-reviewLink {
-    display: block;
-    vertical-align: middle;
+.productView-rating {
 
-    + .productView-reviewLink {
+    a {
+        text-decoration:none;
+    }
+
+    .productView-reviewLink {
         display: block;
-        margin-left: auto;
+        vertical-align: middle;
+        margin-top: 2px;
 
-        @include breakpoint("small") {
-            display: inline-block;
-            // margin-left: spacing("half");
+        + .productView-reviewLink {
+            display: block;
+            margin-left: auto;
+
+            @include breakpoint("small") {
+                display: inline-block;
+                // margin-left: spacing("half");
+            }
+        }
+
+        > a {
+            color: stencilColor("color-textLink");
+
+            // scss-lint:disable NestingDepth
+            &:hover {
+                color: stencilColor("color-textSecondary--hover");
+            }
         }
     }
 
-    > a {
-        color: stencilColor("color-textLink");
-
-        // scss-lint:disable NestingDepth
-        &:hover {
-            color: stencilColor("color-textSecondary--hover");
-        }
-    }
 }
-
-
 // Details - Product Information
 // -----------------------------------------------------------------------------
 
@@ -217,8 +238,8 @@
 
     @include breakpoint("small") {
         font-family: fontFamily("headingSans");
-        font-size: fontSize("smallest");
-        font-weight: fontWeight("normal");
+        font-size: 14px;
+        font-weight: fontWeight("medium");
     }
 }
 

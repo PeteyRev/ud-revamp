@@ -1,8 +1,6 @@
 // =============================================================================
 // FOOTER (CSS)
 // =============================================================================
-
-
 // Layout and columns
 // -----------------------------------------------------------------------------
 //
@@ -11,13 +9,12 @@
 // 2. Re-set the font-size that was reduced to 0 in point 1 for children.
 //
 // -----------------------------------------------------------------------------
-
 .footer {
     background-color: $footer-background;
     border-top: container("border");
     padding: spacing("double") 0;
-    z-index:1;
-    position:relative;
+    z-index: 1;
+    position: relative;
 }
 
 .footer-info {
@@ -34,24 +31,19 @@
     margin-bottom: spacing("double");
     text-align: center;
     vertical-align: top;
-
     @include breakpoint("small") {
         text-align: left;
         width: width("6/12");
     }
-
     @include breakpoint("medium") {
         width: width("4/12");
     }
-
     > :first-child {
         margin-top: 0;
     }
-
     > :last-child {
         margin-bottom: 0;
     }
-
     h5 {
         color: stencilColor("color-textSecondary");
     }
@@ -78,7 +70,6 @@
         left: 50%;
         position: inherit;
     }
-
     @include breakpoint("medium") {
         left: 0;
         padding: 0;
@@ -86,10 +77,8 @@
     }
 }
 
-
 // Content
 // -----------------------------------------------------------------------------
-
 .footer-info-heading {
     color: $footer-heading-fontColor;
     font-size: fontSize("base");
@@ -99,59 +88,46 @@
 .footer-info-list {
     list-style: none;
     margin-left: 0;
-
     a {
         color: stencilColor("color-textSecondary");
-        text-decoration: none;
-
-        // scss-lint:disable NestingDepth
+        text-decoration: none; // scss-lint:disable NestingDepth
         &:hover {
             color: stencilColor("color-textSecondary--hover");
-        }
-        // scss-lint:enable NestingDepth
+        } // scss-lint:enable NestingDepth
     }
 }
 
 .footer-copyright {
     text-align: center;
-
     @include breakpoint("small") {
         text-align: left;
     }
-
-    > .powered-by {
+    >.powered-by {
         color: stencilColor("color-textSecondary");
         font-size: fontSize("tiny");
         margin: 0;
     }
-
     a {
         color: stencilColor("color-textSecondary");
-        text-decoration: none;
-
-        // scss-lint:disable NestingDepth
+        text-decoration: none; // scss-lint:disable NestingDepth
         &:hover {
             color: stencilColor("color-textSecondary--hover");
-        }
-        // scss-lint:enable NestingDepth
+        } // scss-lint:enable NestingDepth
     }
 }
 
 .footer-payment-icons {
     height: remCalc(40);
     margin-top: spacing("single");
-
     @include breakpoint("medium") {
         margin-top: spacing("double");
     }
-
     .footer-payment-icon {
         height: 100%;
         margin: spacing("quarter");
         vertical-align: middle;
         width: remCalc(50);
     }
-
     svg {
         fill: stencilColor("color-textSecondary");
     }
@@ -163,8 +139,13 @@
         position: absolute;
         right: 16px;
     }
-
     table {
         margin: auto;
+    }
+}
+
+.footer-info-col {
+    .socialLinks svg {
+        fill: #fff;
     }
 }

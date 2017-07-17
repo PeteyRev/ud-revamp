@@ -22,9 +22,11 @@
 // -----------------------------------------------------------------------------
 
 $fontFamily-sans:               stencilFontFamily("body-font"), Arial, Helvetica, sans-serif;
+$fontFamily-karla:              stencilFontFamily("body-font"), Arial, Helvetica, sans-serif;
 $fontFamily-serif:              null;
 $fontFamily-mono:               null;
 $fontFamily-headings:           stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+$fontFamily-monts:              stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
 
 $fontFamily-hero:               stencilFontFamily("logo-font"), Arial, Helvetica, sans-serif;
 

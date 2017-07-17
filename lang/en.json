@@ -615,7 +615,7 @@
         "sku": "SKU:",
         "upc": "UPC:",
         "condition": "Condition:",
-        "availability": "Availability:",
+        "availability": "Ships Free (US 48)",
         "shipping": "Shipping:",
         "shipping_fixed": "{amount} (Fixed Shipping Cost)",
         "shipping_free": "Free Shipping",

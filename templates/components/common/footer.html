@@ -17,7 +17,7 @@
             </article>
         {{/if}}
         <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+            <!--<article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
                 <h5 class="footer-info-heading">{{lang 'footer.navigate'}}</h5>
                 <ul class="footer-info-list">
                     {{#each pages}}
@@ -29,20 +29,50 @@
                         <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
                     </li>
                 </ul>
-            </article>
+            </article>-->
 
             <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h5 class="footer-info-heading">{{lang 'footer.categories'}}</h5>
+                <h5 class="footer-info-heading">Products</h5>
                 <ul class="footer-info-list">
-                    {{#each categories}}
+                    <!--{{#each categories}}
                         <li>
                             <a href="{{url}}">{{name}}</a>
                         </li>
-                    {{/each}}
+                    {{/each}}-->
+                    <li><a href="">Standing Desks</a></li>
+                    <li><a href="">Desk Frames</a></li>
+                    <li><a href="">Desk Converters</a></li>
+                    <li><a href="">Accessories</a></li>
+                    <li><a href="">Chairs</a></li>
+                    <li><a href="">Warranty</a></li>
                 </ul>
             </article>
 
-            {{#if theme_settings.shop_by_brand_show_footer}}
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading">Learn More</h5>
+                <ul class="footer-info-list">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Reviews</a></li>
+                    <li><a href="">Videos</a></li>
+                    <li><a href="">Photo Gallery</a></li>
+                    <li><a href="">Environmental</a></li>
+                    <li><a href="">Resources</a></li>
+                </ul>
+            </article>
+
+            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading">Contact Us</h5>
+                <ul class="footer-info-list">
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Chat</a></li>
+                    <li><a href="">Corporate Sales</a></li>
+                    <li><a href="">Financing</a></li>
+                    <li><a href="">Shipping &amp; Returns</a></li>
+                    <li><a href="">Blog</a></li>
+                </ul>
+            </article>
+
+            <!--{{#if theme_settings.shop_by_brand_show_footer}}
             <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
                 <h5 class="footer-info-heading">{{lang 'footer.brands'}}</h5>
                 <ul class="footer-info-list">
@@ -54,13 +84,17 @@
                     <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
                 </ul>
             </article>
-            {{/if}}
+            {{/if}}-->
 
             <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h5 class="footer-info-heading">{{lang 'footer.info'}}</h5>
+                <h5 class="footer-info-heading">Location</h5>
                 <address>{{nl2br settings.address}}</address>
+                <h5 class="footer-info-heading">Hours</h5>
+                <ul class="footer-info-list">
+                    <li>Mon-Fri 8am-7pm</li>
+                    <li>Mon-Fri 8am-7pm</li>
                 {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
+                    <li>{{lang 'footer.call_us' phone_number=settings.phone_number}}</li>
                 {{/if}}
             </article>
 
@@ -68,7 +102,7 @@
                 {{#if settings.show_newsletter_box}}
                     {{> components/common/subscription-form}}
                 {{/if}}
-                {{> components/common/payment-icons}}
+                {{> components/common/social-links}}
             </article>
         </section>
         {{#if theme_settings.geotrust_ssl_common_name}}
@@ -82,8 +116,8 @@
             </div>
         {{/if}}
         {{#if theme_settings.show_copyright_footer}}
-            <div class="footer-copyright">
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
+            <div class="footer-copyright text-center">
+                <p class="powered-by">Copyright 2003-{{moment format="YYYY"}} SquareGrove&copy; LLC, all rights reserved </p>
             </div>
         {{/if}}
     </div>

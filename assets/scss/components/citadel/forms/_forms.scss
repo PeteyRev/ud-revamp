@@ -262,7 +262,7 @@
 //
 
 .form-option {
-    border: 1px solid stencilColor("input-border-color");
+    border: 2px solid stencilColor("input-border-color");
     color: stencilColor("form-label-font-color");
     cursor: pointer;
     display: inline-block;
