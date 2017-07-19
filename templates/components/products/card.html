@@ -66,6 +66,7 @@
         </h4>
 
         <div class="card-text" data-test-info-type="price">
+            <span data-product-rrp-without-tax class="price price--rrp"> {{price.rrp_without_tax.formatted}}</span>
             {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
                 {{> components/products/price price=price customer=customer}}
             {{else}}

@@ -92,3 +92,5 @@ $('.productView-thumbnail').on('click',function(){
         $('.product-image-gallery').css('opacity', 1);
     },600)
 });
+
+

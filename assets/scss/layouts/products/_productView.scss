@@ -382,6 +382,30 @@ div#ProductImageGallery {
     }
 }
 
+svg.img-arrow-left {
+    position: absolute;
+    width: 20px;
+    height:20px;
+    left: -2.35714rem;
+    fill:$color-black;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    top: 38%;
+}
+
+svg.img-arrow-right {
+    position: absolute;
+    width: 20px;
+    height:20px;
+    right: -2.35714rem;
+    fill:$color-black;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    top: 38%;
+}
+
 //img builder
 .desk-build-images {
     position: relative;
@@ -506,18 +530,15 @@ article.productView-description {
     }
     .tab a {
         color: #fff !important;
-        background-color: #454545;
+        background-color: #353332;
         margin: 0 1rem;
         text-align: center !important;
         border-top-left-radius: $box-radius;
         border-top-right-radius: $box-radius;
     }
-    .tab.is-active {
-        border: none !important;
-    }
     .tab.is-active a {
         color: #fff !important;
-        background-color: gray;
+        background-color: $color-grey;
     }
 }
 
@@ -527,10 +548,20 @@ article.productView-description {
         font-weight: normal;
         margin-top: .5rem;
     }
+    li {
+        margin-bottom: 2rem;
+    }
 }
 
 #tab-description {
     padding-top: 0;
+    h2{
+        margin-top: 0;
+    }
+}
+
+#tab-warranty ul li {
+    margin-bottom: 1rem;
 }
 
 .left-txt-section {
@@ -549,12 +580,23 @@ article.productView-description {
     text-align: left;
 }
 
+ul.spec-tab-downloads {
+    list-style-type: none;
+    margin: 0;
+    a{
+        text-decoration: none;
+    }
+}
+
 table.spec-table {
     tr {
-        border-bottom: 1px solid;
+        border-bottom: 1px solid $color-greyLightest;
+    }
+    table.spec-table tr:last-child {
+        border-bottom: none;
     }
     td {
-        padding: 0.7rem 0;
+        padding: 1rem 0;
     }
     .table-des {
         font-weight: bold;

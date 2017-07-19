@@ -56,6 +56,20 @@ export default class Product extends PageManager {
             prevArrow: '<button type="button" class="button button--transparent"><svg class="cart-arrow-left"><use xlink:href="#icon-left-back-arrow-builder-icon" /></svg>BACK</button>',
             nextArrow: '<button type="button" class="button button--blue">NEXT<svg class="cart-arrow-right"><use xlink:href="#icon-right-next-arrow-builder-icon" /></svg></button>'
         });
+        $('.productView-thumbnails').slick({
+            arrows: true,
+            mobileFirst: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: false,
+            infinite: false,
+            draggable: false,
+            prevArrow: '<button type="button"><svg class="img-arrow-left"><use xlink:href="#icon-left-back-arrow-image-gallery-icon" /></svg></button>',
+            nextArrow: '<button type="button"><svg class="img-arrow-right"><use xlink:href="#icon-right-next-arrow-image-gallery-icon" /></svg></button>'
+        });
+
+        $('.breadcrumbs').prependTo($('.productView-images'));
+
 
         const $reviewForm = classifyForm('.writeReview-form');
         const review = new Review($reviewForm);

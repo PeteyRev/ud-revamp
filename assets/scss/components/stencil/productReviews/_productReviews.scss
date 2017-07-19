@@ -12,6 +12,7 @@
     @include u-listBullets("none");
     @include grid-row($behavior: "nest");
     font-size: 0; // 1
+    margin: 1rem -0.75rem 0;
 }
 
 
@@ -40,7 +41,7 @@
 }
 
 .productReview-author {
-    color: stencilColor("color-textSecondary");
+    color: stencilColor("color-grey");
     margin-bottom: spacing("base");
 }
 

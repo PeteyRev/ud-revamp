@@ -1,12 +1,5 @@
 <div class="product-thumbnail-wrapper">
-            <div class="productView-thumbnails" data-slick='{
-            "arrows": true,
-            "mobileFirst": true,
-            "slidesToShow": 4,
-            "slidesToScroll": 1,
-            "autoplay": false,
-            "infinite":false
-        }'>
+            <div class="productView-thumbnails">
                 {{#if product.videos.list.length}}
                     <div class="productView-thumbnail">
                         <a class="productView-thumbnail-link modal-slider" data-reveal-id="ModalVideoGallery" href="#">
@@ -337,13 +330,13 @@
                 <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
             </li>
             <li class="tab">
-                <a class="tab-title" href="#tab-specs-assembly">Specifications / Assembly</a>
+                <a class="tab-title" href="#tab-specs-assembly">Specs/Assembly</a>
             </li>
             <li class="tab">
                 <a class="tab-title" href="#tab-options">Options</a>
             </li>
             <li class="tab">
-                <a id="faq-tab" class="tab-title" href="#tab-faq">F.A.Q.</a>
+                <a id="faq-tab" class="tab-title" href="#tab-faq">FAQ</a>
             </li>
             {{#if product.warranty}}
                 <li class="tab">

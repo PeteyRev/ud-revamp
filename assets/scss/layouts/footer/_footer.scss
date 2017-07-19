@@ -12,7 +12,7 @@
 .footer {
     background-color: $footer-background;
     border-top: container("border");
-    padding: spacing("double") 0;
+    padding: spacing("double") 0 1.5rem;
     z-index: 1;
     position: relative;
 }
@@ -24,7 +24,7 @@
 
 .footer-info-col {
     @include grid-column(12);
-    color: stencilColor("color-textSecondary");
+    color: $color-white;
     display: inline-block;
     float: none;
     font-size: fontSize("base"); // 2
@@ -45,7 +45,7 @@
         margin-bottom: 0;
     }
     h5 {
-        color: stencilColor("color-textSecondary");
+        color: $color-white;
     }
 }
 
@@ -81,7 +81,7 @@
 // -----------------------------------------------------------------------------
 .footer-info-heading {
     color: $footer-heading-fontColor;
-    font-size: fontSize("base");
+    font-size: 20px;
     text-transform: inherit;
 }
 
@@ -89,7 +89,7 @@
     list-style: none;
     margin-left: 0;
     a {
-        color: stencilColor("color-textSecondary");
+        color: $color-white;
         text-decoration: none; // scss-lint:disable NestingDepth
         &:hover {
             color: stencilColor("color-textSecondary--hover");
@@ -103,12 +103,12 @@
         text-align: left;
     }
     >.powered-by {
-        color: stencilColor("color-textSecondary");
-        font-size: fontSize("tiny");
+        color: $color-white;
+        font-size: 13px;
         margin: 0;
     }
     a {
-        color: stencilColor("color-textSecondary");
+        color: $color-white;
         text-decoration: none; // scss-lint:disable NestingDepth
         &:hover {
             color: stencilColor("color-textSecondary--hover");
@@ -129,7 +129,7 @@
         width: remCalc(50);
     }
     svg {
-        fill: stencilColor("color-textSecondary");
+        fill: $color-white;
     }
 }
 
@@ -145,7 +145,24 @@
 }
 
 .footer-info-col {
+    .main-footer-links li{
+        margin-bottom: 1rem;
+    }
     .socialLinks svg {
-        fill: #fff;
+        fill: $color-white;
+    }
+    .socialLinks .socialLinks-item {
+        margin-bottom: 0.35714rem;
+        margin-right: 3.2rem;
+    }
+    .socialLinks--alt .icon {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .socialLinks .socialLinks-item:last-child {
+        margin-right: 0;
+    }
+    .form {
+        margin: 0 0 0.5rem;
     }
 }

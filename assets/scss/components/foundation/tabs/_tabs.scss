@@ -26,13 +26,14 @@
         }
 
         @include breakpoint("medium") {
-            border: $tab-active-border;
-            border-bottom: $tab-title-border;
+
         }
     }
 }
 
 .tab-title {
+    font-family:$fontFamily-monts;
+    font-weight:700;
     padding: spacing("half") + spacing("quarter") 0;
     text-align: center;
     text-decoration: $tab-title-text-decoration;

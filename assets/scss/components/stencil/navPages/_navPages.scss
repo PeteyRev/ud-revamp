@@ -206,6 +206,12 @@
                 fill: stencilColor("navPages-color-hover");
                 stroke: stencilColor("navPages-color-hover");
             }
+            svg.menu-drop-icon {
+                width: 10px;
+                height: 10px;
+                 fill:$color-blue !important;
+                stroke:$color-blue !important;
+            }
         }
     }
 
@@ -223,6 +229,12 @@
         fill: stencilColor("navPages-color");
         stroke: stencilColor("navPages-color");
         transition: all 0.15s ease;
+    }
+    svg.menu-drop-icon {
+        width: 10px;
+        height: 10px;
+        fill:$color-blue !important;
+        stroke:$color-blue !important;
     }
 }
 

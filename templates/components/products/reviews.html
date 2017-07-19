@@ -16,7 +16,9 @@
             <span class="productView-reviewLink">
                 <a href="{{product.url}}{{#if is_ajax}}#writeReview{{/if}}"
                     {{#unless is_ajax }}data-reveal-id="modal-review-form"{{/unless}}>
+                    <button class="button button--primary">
                     {{lang 'products.reviews.new'}}
+                    </button>
                 </a>
             </span> 
             {{> components/products/modals/writeReview}}

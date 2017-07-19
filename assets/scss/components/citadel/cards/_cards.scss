@@ -51,6 +51,7 @@
 .card-title {
     font-size: $card-title-fontSize;
     margin: $card-title-margin;
+    font-weight:400;
 
     > a {
         color: $card-title-color;
@@ -70,6 +71,15 @@
         border: 0;
         color: inherit;
         font-size: inherit;
+    }
+    .price-section.price-section--withoutTax {
+        font-family:$fontFamily-monts;
+        font-weight:700;
+        font-size: 20px;
+    }
+    .price.price--rrp{
+        font-family:$fontFamily-monts;
+        margin-top: .5rem;
     }
 }
 

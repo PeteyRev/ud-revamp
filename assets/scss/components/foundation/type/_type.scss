@@ -7,7 +7,7 @@
 
 
 body {
-    font-size: $body-fontSize;
+    font-size: 1.072rem;
     font-weight: $body-font-weight;
 }
 
@@ -19,6 +19,11 @@ h5,
 h6 {
     font-weight: $header-font-weight;
     margin-top: $heading-marginTop;
+    color:$color-black;
+}
+
+h2{
+    font-size:20px;
 }
 
 h5,
