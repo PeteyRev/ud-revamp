@@ -269,7 +269,6 @@
     font-size: 0; // 2
     margin-bottom: spacing("third");
     margin-right: spacing("third");
-    padding: 1px;
     transition: all 0.15s ease;
 
     &:hover {
@@ -301,6 +300,7 @@
 .form-option-variant--pattern {
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

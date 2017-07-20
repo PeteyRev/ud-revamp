@@ -41,11 +41,12 @@
 .form-label--inlineSmall {
 
     small {
-        color: stencilColor("color-textSecondary");
+        color: stencilColor("color-error");
         float: none;
-        font-size: inherit;
+        font-size: $fontSize-tiny;
         font-weight: fontWeight("normal");
         margin-left: spacing("quarter");
         text-transform: none;
+        vertical-align: middle;
     }
 }

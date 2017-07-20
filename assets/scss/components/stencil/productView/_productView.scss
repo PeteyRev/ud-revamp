@@ -359,8 +359,7 @@
 
 .productOptions-list-item {
     position: relative;
-    height:99px;
-    border: $productOptions-list-border;
+    height:102px;
     margin-bottom: 1rem;
 
     .form-label {
@@ -368,6 +367,11 @@
         left: 0px;
         position: absolute;
         height: 100%;
+        border: 2px solid #dfdfdf;
+        transition: all 0.15s ease;
+    }
+    .form-label:hover {
+        border-color: #989898;
     }
 }
 
@@ -379,7 +383,6 @@
 
 .productOptions-list-item-figure {
     // width: $productOptions-list-item-figure-width;
-    width: 8rem;
 }
 
 .productOptions-list-item-content {

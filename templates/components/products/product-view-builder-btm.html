@@ -359,7 +359,11 @@
 <div class="hide">
     <ul class="options-tab-list">
         {{#each product.options}}
-        <li><a href="#" data-reveal-id="{{display_name}}">{{display_name}}</a></li>
+        <li>
+            <a href="#" data-reveal-id="{{display_name}}">
+                <span>{{display_name}}</span>
+            </a>
+        </li>
         {{/each}}
     </ul>
 </div>

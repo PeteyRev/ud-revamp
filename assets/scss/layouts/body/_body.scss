@@ -125,7 +125,7 @@ video.fullscreen-bg__video {
     }
     h2 {
         line-height: 1;
-        font-size: 5rem;
+        font-size: 55px;
         color: #fff;
         position: relative;
         opacity: 0;
@@ -135,10 +135,15 @@ video.fullscreen-bg__video {
         margin-top: 0px;
         position: relative;
         opacity: 0;
+        font-size:24px;
+        font-family:$fontFamily-karla;
+        margin: 0px;
+        line-height: 1;
     }
     p {
         position: relative;
         opacity: 0;
+        font-size:24px
     }
     button {
         position: relative;

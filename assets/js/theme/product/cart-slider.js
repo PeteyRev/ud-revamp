@@ -51,21 +51,21 @@ import $ from 'jquery';
                 $(this).attr('data-sku', 0);
             }
             if ($(this).text().indexOf('>') >= 0) {
-                var nameSku = $(this).text().split('>', 1)[0].trim();
+                let nameSku = $(this).text().split('>', 1)[0].trim();
                 $(this).attr('data-sku', nameSku);
-                var shortOptionName = $(this).text().substr($(this).text().indexOf(">") + 1);
+                let shortOptionName = $(this).text().substr($(this).text().indexOf(">") + 1);
                 $(this).text(shortOptionName);
             }
             if ($(this).text().indexOf('|') >= 0) {
-                var nameSku = $(this).text().split('|', 1)[0].trim();
+                let nameSku = $(this).text().split('|', 1)[0].trim();
                 $(this).attr('data-sku', nameSku);
-                var shortOptionName = $(this).text().substr($(this).text().indexOf("|") + 1);
+                let shortOptionName = $(this).text().substr($(this).text().indexOf("|") + 1);
                 $(this).text(shortOptionName);
             }
             if ($(this).text().indexOf(':') >= 0) {
-                var nameSku = $(this).text().split(':', 1)[0].trim();
+                let nameSku = $(this).text().split(':', 1)[0].trim();
                 $(this).attr('data-sku', nameSku);
-                var shortOptionName = $(this).text().substr($(this).text().indexOf(":") + 1);
+                let shortOptionName = $(this).text().substr($(this).text().indexOf(":") + 1);
                 $(this).text(shortOptionName);
             }
 
@@ -98,11 +98,16 @@ import $ from 'jquery';
 
             //removes whitespace from learn more links since IDs cannot have them
             $('.option-learn-more-icon a, .label-learn-more-icon a, .options-tab-list a').each(function(){
-                var shortLm = $(this).attr('data-reveal-id');
+                let shortLm = $(this).attr('data-reveal-id');
                 shortLm = shortLm.replace(/ /g,'')
                 $(this).attr('data-reveal-id',shortLm);
             });
             $('.options-tab-list').appendTo('.options-link-wrapper');
+
+            $('.options-tab-list li a').each(function() {
+                let imgTitle = $(this).attr('data-reveal-id');
+                $(this).prepend('<img class="lazyload" data-src="https://www.upliftdesk.com/content/img/product-options/uplift-product-listing-options-tab-' + imgTitle +'.jpg">');
+            });
 
         });
 

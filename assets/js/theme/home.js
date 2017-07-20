@@ -24,14 +24,14 @@ export default class Home extends PageManager {
                 $('.animate-1 .hide-down-txt').addClass('show-up-anim');
                 $('.animate-1 img').addClass('slide-right-anim');
             },
-            offset: '50%'
+            offset: '70%'
         })
         const waypoints2 = $('.animate-2').waypoint({
             handler: function (direction) {
                 $('.animate-2 .hide-down-txt').addClass('show-up-anim');
                 $('.animate-2 img').addClass('slide-left-anim');
             },
-            offset: '50%'
+            offset: '70%'
         })
         const waypoints3 = $('.animate-3').waypoint({
             handler: function (direction) {
