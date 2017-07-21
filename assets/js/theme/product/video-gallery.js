@@ -66,6 +66,15 @@ export default function videoGallery() {
             $(this).append(videoTitles[index]);
         })
 
+        $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+            $(this).find('iframe').each(function(){
+                var autoPlay = $(this).attr("src");
+			    var video = autoPlay.split('autoplay=1&autohide=1')[0]
+			    $(this).attr("src", "");
+			    $(this).attr("src", video);
+            });
+        });
+
     });
 }
 

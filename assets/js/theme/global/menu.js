@@ -104,7 +104,19 @@ export default function menuFactory(selector = `[data-${PLUGIN_KEY}]`) {
     $('#ShopOpenNav').on('click', function() {
          $('#ShopMenu').foundation('reveal','open');
     });
-
+    $('#OpenResources').on('click', function() {
+         $('#ResourceMenu').foundation('reveal','open');
+    });
+    $(window).on('load',function(){
+        $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+            $(this).find('iframe').each(function(){
+                var autoPlay = $(this).attr("src");
+			    var video = autoPlay.split('autoplay=1&autohide=1')[0]
+			    $(this).attr("src", "");
+			    $(this).attr("src", video);
+            });
+        });
+    })
     //Efficency for dynamically loading youtube thumbnails
     $(".youtube").each(function () {
 
@@ -125,6 +137,7 @@ export default function menuFactory(selector = `[data-${PLUGIN_KEY}]`) {
             var iframe = $('<iframe/>', {
                 'frameborder': '0',
                 'src': iframe_url,
+                'allowfullscreen': 'allowfullscreen',
                 'width': $(this).width(),
                 'height': $(this).height()
             })

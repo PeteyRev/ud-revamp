@@ -10,7 +10,6 @@
 // 5. Needs to be lower than logo zIndex, otherwise, logo is not clickable
 //
 // -----------------------------------------------------------------------------
-
 .navUser {
     @include nav($style: "navBar", $wrapper: "nav");
     @include verticalPositionMiddle("absolute");
@@ -19,41 +18,28 @@
     // width: 100%; // 4
     float: right;
     z-index: zIndex("lowest"); // 5.
-
     @include breakpoint("medium") {
         padding: 0.6rem 3.3rem 0;
         right: auto;
         top: auto;
         transform: none;
         z-index: zIndex("lowest");
-        width:100%;
+        width: 100%;
     }
-
     .dropdown-menu {
         background-color: stencilColor("navUser-dropdown-backgroundColor");
         border: 1px solid stencilColor("navUser-dropdown-borderColor");
         box-shadow: container("dropShadow");
-        position: absolute;
-
-        // scss-lint:disable NestingDepth
+        position: absolute; // scss-lint:disable NestingDepth
         &.is-open {
             &:before {
-                @include css-triangle(
-                    $triangle-direction: "bottom",
-                    $triangle-size: 10px,
-                    $triangle-color: stencilColor("navUser-dropdown-borderColor")
-                );
+                @include css-triangle( $triangle-direction: "bottom", $triangle-size: 10px, $triangle-color: stencilColor("navUser-dropdown-borderColor"));
                 bottom: 100%;
                 left: spacing("half");
                 position: absolute;
             }
-
             &:after {
-                @include css-triangle(
-                    $triangle-direction: "bottom",
-                    $triangle-size: 8px,
-                    $triangle-color: stencilColor("navUser-dropdown-backgroundColor")
-                );
+                @include css-triangle( $triangle-direction: "bottom", $triangle-size: 8px, $triangle-color: stencilColor("navUser-dropdown-backgroundColor"));
                 bottom: 100%;
                 left: spacing("half") + remCalc(2px);
                 position: absolute;
@@ -67,26 +53,20 @@
     padding: 1.3rem 0.78571rem;
     text-decoration: none;
     text-transform: uppercase;
-    transition:.3s ease-in-out;
+    transition: .3s ease-in-out;
     font-size: 15px;
-
     &:hover,
     &.is-open {
-        color: stencilColor("navUser-color-hover");
-
-        // scss-lint:disable NestingDepth
+        color: stencilColor("navUser-color-hover"); // scss-lint:disable NestingDepth
         svg {
             fill: stencilColor("navUser-color-hover");
             stroke: stencilColor("navUser-color-hover");
-        }
-        // scss-lint:enable NestingDepth
+        } // scss-lint:enable NestingDepth
     }
-
     .icon {
         @include square(8px);
         margin: -1px 0 0 spacing("eighth");
     }
-
     svg {
         fill: stencilColor("navUser-color");
         stroke: stencilColor("navUser-color");
@@ -94,15 +74,13 @@
     }
 }
 
-.navUser-action--storeCredit + .dropdown-menu {
+.navUser-action--storeCredit+.dropdown-menu {
     max-width: remCalc(300px);
     padding: spacing("single");
-
     &:before {
         // scss-lint:disable ImportantRule
         left: remCalc(140px) !important; // 3
     }
-
     &:after {
         // scss-lint:disable ImportantRule
         left: remCalc(142px) !important; // 3
@@ -119,27 +97,24 @@
 
 .navUser-item {
     display: none;
-     a.navUser-action.navUser-action--quickSearch {
+    a.navUser-action.navUser-action--quickSearch {
         display: inline-block;
     }
-    .header-search-icon{
-        width:25px;
-        height:25px;
-        fill:$color-white;
+    .header-search-icon {
+        width: 25px;
+        height: 25px;
+        fill: $color-white;
         vertical-align: middle;
         position: relative;
         left: 8px;
-        top:-2px;
+        top: -2px;
     }
-
     @include breakpoint("medium") {
         display: block;
-
         &.navUser-item--social {
             margin-top: rem-calc(5px);
             padding-right: rem-calc(5px);
         }
-
         &.navUser-item--divider {
             font-size: rem-calc(25px);
             margin-top: rem-calc(8px);
@@ -150,31 +125,23 @@
 
 .navUser-item--cart {
     display: block;
-
     .navUser-action {
-        color: stencilColor("navUser-color");
-
-        // scss-lint:disable NestingDepth
+        color: stencilColor("navUser-color"); // scss-lint:disable NestingDepth
         &:hover,
         &.is-open {
             color: stencilColor("navUser-color-hover");
         }
     }
-
     .dropdown-menu {
-        max-width: remCalc(320px);
-
-        // scss-lint:disable NestingDepth
+        max-width: remCalc(320px); // scss-lint:disable NestingDepth
         &.is-open {
             &:before,
             &:after {
                 left: auto;
             }
-
             &:before {
                 right: spacing("half");
             }
-
             &:after {
                 right: spacing("half") + remCalc(2px);
             }
@@ -184,7 +151,6 @@
 
 .navUser-item-cartLabel {
     display: none;
-
     @include breakpoint("small") {
         display: inline;
     }
@@ -192,22 +158,18 @@
 
 .navUser-item--compare {
     display: none;
-
     &.show {
         display: block;
     }
 }
 
 .navUser-item--account {
-
     .navUser-or {
-
         // scss-lint:disable NestingDepth
-        + .navUser-action {
+        +.navUser-action {
             margin-right: -0.5rem; // 1
         }
     }
-
     .navUser-action {
         display: inline-block;
     }
@@ -224,57 +186,143 @@
 }
 
 //custom menu modal
+#ShopMenu, #ResourceMenu {
+    width: 1388px;
+    padding: 1px;
+    .modal-content{
+        display:flex;
+    }
+    .nav-left-block {
+        position: relative;
+        display: inline-block;
+        width: 19.34%;
+                ul {
+        list-style-type: none;
+        margin: 0;
+        li {
+            padding-bottom: 1rem;
+        }
+        a {
+            text-decoration: none;
+            color: $color-black;
+        }
+    }
+
+    }
+    .youtube {
+        display: block;
+        width: 556px;
+        height: 313px;
+        margin-bottom:1px;
+    }
+    iframe{
+        display:block;
+    }
+}
+
+.left-nav-wrap, .nav-text-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    h2{
+        margin:0;
+        color:$color-white;
+    }
+}
+
+.nav-menu-block-half{
+    position:relative;
+    display: inline-block;
+    padding: 1px;
+    width: 40.33%;  
+    .resource-top {
+        margin-bottom: 2px;
+        position: relative;
+    }
+}
+
+.nav-block-half {
+    position:relative;
+    display: inline-block;
+    width: 49.66%;
+    .nav-text-wrap {
+        width:80%;
+        text-align: center;
+    }
+}
+
+.nav-menu-block {
+    position:relative;
+    display: inline-block;
+    padding: 1px;
+    width: 26.886%;
+    .menu-block-btm {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 99.4%;
+        padding: 2rem 1rem 2.5rem;
+        .nav-block-overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background:$color-black;
+            opacity: .6;
+        }
+        .nav-block-txt-wrap{
+            position:relative;
+            z-index: 1;
+        }
+        h4{
+            color:$color-white;
+            margin: 0;
+            font-size:18px;
+            font-weight: normal;
+        }
+        h2 {
+            color:$color-white;
+            font-size: 30px;
+            margin-top: 0;
+            margin-bottom: 1.2rem;
+            line-height: 1.1;
+            font-weight: normal;
+        }
+        button {
+            margin-bottom:0;
+        }
+    }
+}
 
 .nav-shop-left {
-        background: #f6f8fc;
-        position:relative;
-
-        >.row{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-             transform: translate(-50%, -50%);
-             width: 100%;
-             text-align: center;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-
-            li {
-                padding-bottom: 1rem;
-            }
-
-            a {
-                text-decoration: none;
-            }
-        }
+    background: #f6f8fc;
+    position: relative;
+    .left-nav-wrap {
+        max-width: 50%;
+        margin: 0 auto;
+    }
 }
+
 .nav-shop-right {
-    h2, p {
+    h2,
+    p {
         text-align: right;
     }
     .nav-buttons-wrapper {
         text-align: right;
         margin-bottom: 2rem;
     }
-    .youtube {
-        display: inline-block;
-        width: 598px;
-        height: 336px;
-        box-shadow: 0 0 9px 0 rgba(58, 58, 58, 0.35);
-        border-radius: 3px;
-    }
+
     .nav-vid {
         margin-bottom: 1rem;
         text-align: right;
     }
 }
-
 
 // Quick search
 // -----------------------------------------------------------------------------
@@ -282,19 +330,11 @@
 // 1. Overriding the inline styles from Foundation as this is a unique dropdown.
 //
 // -----------------------------------------------------------------------------
-
 .navUser-action--quickSearch {
-
     &.is-open {
-        position: relative;
-
-        // scss-lint:disable NestingDepth
+        position: relative; // scss-lint:disable NestingDepth
         &:before {
-            @include css-triangle(
-                $triangle-direction: "bottom",
-                $triangle-size: 10px,
-                $triangle-color: color("greys", "lightest")
-            );
+            @include css-triangle( $triangle-direction: "bottom", $triangle-size: 10px, $triangle-color: color("greys", "lightest"));
             bottom: 0;
             left: 50%;
             position: absolute;
@@ -306,11 +346,9 @@
 .dropdown--quickSearch {
     background-color: $dropdown--quickSearch-backgroundColor;
     padding: spacing("single") 0;
-
     @include breakpoint("small") {
         padding: spacing("double");
     }
-
     &.is-open {
         // scss-lint:disable ImportantRule
         left: 0 !important; // 1
@@ -319,25 +357,20 @@
         width: 100% !important;
         z-index: zIndex("high");
     }
-
     .form {
         margin: auto;
         max-width: 30rem;
     }
-
     .form,
     .form-field {
         margin-bottom: 0;
     }
-
     .form-input {
         font-size: fontSize("small");
         height: unset;
     }
-
     .productGrid {
         padding: spacing("single") 0 0;
-
         @include breakpoint("small") {
             padding: spacing("double") 0 0;
         }
@@ -350,7 +383,6 @@
 // 1. Hardcoded intentionally for precise pixels.
 //
 // -----------------------------------------------------------------------------
-
 .countPill {
     background-color: stencilColor("navUser-indicator-backgroundColor");
     border-radius: 50%;
