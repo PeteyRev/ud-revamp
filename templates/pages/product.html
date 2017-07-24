@@ -17,7 +17,20 @@ product:
     {{/each}}
 
     <div itemscope itemtype="http://schema.org/Product">
-        {{> components/products/product-view schema=true}}
+        {{> components/products/product-view-builder-top schema=true}}
+
+        <figure class="testes productView-image"
+                data-image-gallery-main
+                data-zoom-image="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
+                >
+            <a href="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}">
+                <img class="productView-image--default"
+                     src="{{getImage product.main_image 'product_size' (cdn theme_settings.default_image_product)}}"
+                     alt="{{product.main_image.alt}}" title="{{product.main_image.alt}}" data-main-image>
+            </a>
+        </figure>
+
+        {{> components/products/product-view-builder-btm}}
 
         {{#if product.videos.list.length}}
             {{> components/products/videos product.videos}}
@@ -32,4 +45,4 @@ product:
     </div>
 
 {{/partial}}
-{{> layout/base}}
+{{> layout/base-product}}
