@@ -11,7 +11,8 @@ import $ from 'jquery';
 
         //automatically shows add to cart when no options
         if (totalCartSlides === 1) {
-            console.log('no options');
+            $('.options-map-button').css('display','none');
+            $('#form-action-addToCart').css('display','block');
         }
 
         $('.options-map-button').on('click',function(){
@@ -107,12 +108,15 @@ import $ from 'jquery';
                 shortLm = shortLm.replace(/ /g,'')
                 $(this).attr('data-reveal-id',shortLm);
             });
-            $('.options-tab-list').appendTo('.options-link-wrapper');
+            //adds option images to options tab if builder page
+            if ($('div#tab-options').length > 0){
+                $('.options-tab-list').appendTo('.options-link-wrapper');
 
-            $('.options-tab-list li a').each(function() {
-                let imgTitle = $(this).attr('data-reveal-id');
-                $(this).prepend('<img class="lazyload" data-src="https://www.upliftdesk.com/content/img/product-options/uplift-product-listing-options-tab-' + imgTitle +'.jpg">');
-            });
+                $('.options-tab-list li a').each(function() {
+                    let imgTitle = $(this).attr('data-reveal-id');
+                    $(this).prepend('<img class="lazyload" data-src="https://www.upliftdesk.com/content/img/product-options/uplift-product-listing-options-tab-' + imgTitle +'.jpg">');
+                });
+            }
 
         });
 

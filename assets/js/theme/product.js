@@ -44,6 +44,12 @@ export default class Product extends PageManager {
 		imageBuilder();
 		startProductTour();
 
+        //hides option tab and tour on accessory listings
+        if ($('#tab-options').length === 0){
+            $('.productView-description .tabs').addClass('accessory-tabs');
+            $('.product-tour, .options-tab').css('display','none');
+        }
+
         $('.product-slider').slick({
             arrows: true,
             mobileFirst: true,
