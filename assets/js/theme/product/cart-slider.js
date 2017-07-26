@@ -9,6 +9,11 @@ import $ from 'jquery';
 
         let totalCartSlides = $('.product-slider .form-field').length;
 
+        //automatically shows add to cart when no options
+        if (totalCartSlides === 1) {
+            console.log('no options');
+        }
+
         $('.options-map-button').on('click',function(){
             toggleMap();
         });
