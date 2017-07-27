@@ -46,7 +46,7 @@
 .productView-description {
     @include grid-column(12); // padding-left: spacing("base");
     // padding-right: spacing("base");
-    padding-top: 1rem;
+    margin-top: 2rem;
     padding-left: 0;
     padding-right: 0;
     @include breakpoint("large") {
@@ -839,6 +839,7 @@ ul.options-tab-list {
 
 ul.cart-bottom-icons {
     text-align: center;
+    margin: 2.2rem 0 0;
     li {
         display: inline-block;
         width: 31%;

@@ -90,7 +90,7 @@ $('.productView-thumbnail').on('click',function(){
     $( '.product-image-gallery' ).slick('slickGoTo', imgSlide);
     setTimeout(function(){
         $('.product-image-gallery').css('opacity', 1);
-    },600)
+    },700)
 });
 
 
