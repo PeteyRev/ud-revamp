@@ -164,11 +164,12 @@
 }
 
 .empty-gallery-box {
-    background-color: pink;
+    background-color: gray;
 }
 
 .gallery-box-btm{
     height: 222px;
+    overflow: hidden;
     position:relative;
     background-size: cover;
     background-position: center;
@@ -176,6 +177,9 @@
     .center-txt svg {
         transition:.3s ease;
         opacity:0;
+        &:hover{
+            fill: stencilColor("icon-color-hover");
+        }
     }
         ul {
             @include absoluteVert;
@@ -201,11 +205,12 @@
         }
         p{
             position: absolute;
-            bottom: -2.5rem;
+            bottom: -4.5rem;
             left:1rem;
             margin:0;
             color:$color-white;
             transition: .5s ease;
+            width:80%;
         }
         .std-overlay {
             opacity: 0;
