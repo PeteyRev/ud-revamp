@@ -1,223 +1,516 @@
+
+
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
-<main class="page">
+    <main class="page">
 
-    <h1 class="page-heading">{{ page.title }}</h1>
+        <h1 class="page-heading">{{ page.title }}</h1>
 
-    {{#if page.sub_pages}}
-    <nav class="navBar navBar--sub">
-        <ul class="navBar-section account-navigation">
-        {{#each page.sub_pages}}
-            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
-        {{/each}}
-        </ul>
-    </nav>
-    {{/if}}
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
 
-    <div class="page-content">
-        {{#replace '%%Syndicate%%' page.content}}
-            {{> components/page/rss_feed}}
-        {{else}}
-
-<!--Gallery Top Nav-->
-        <div class="row collapse expanded">
-            <div class="small-12 large-2 columns">
-                <a href="#GalleryStandingDesk">
-                    <div data-yt-id="nPJilowT8OE" class="youtube-video-thumb gallery-box-top">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <h2>Standing Desks</h2>
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+                    <!--Gallery Top Nav-->
+                    <div class="row collapse expanded">
+                        <div class="small-12 large-2 columns">
+                            <a href="#GalleryStandingDesk">
+                                <div data-yt-id="nPJilowT8OE" class="youtube-video-thumb gallery-box-top">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Standing Desks</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 large-2 columns">
+                            <a href="#GalleryDeskConverters">
+                                <div data-yt-id="BiIWlLqGmfA" class="youtube-video-thumb gallery-box-top">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Desk Converters</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 large-2 columns">
+                            <a href="#ChairsandStools">
+                                <div data-yt-id="waB3IJZYCvY" class="youtube-video-thumb gallery-box-top">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Chairs &amp; Stools</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 large-2 columns">
+                            <a href="#Accessories">
+                                <div data-yt-id="I7HVDl5XltU" class="youtube-video-thumb gallery-box-top">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Accessories</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 large-2 columns">
+                            <a href="#Tutorials">
+                                <div data-yt-id="Kk8UgqpEoBg" class="youtube-video-thumb gallery-box-top">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Tutorials</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 large-2 columns">
+                            <a href="#Reviews">
+                                <div data-yt-id="alOGyfzLgDU" class="youtube-video-thumb gallery-box-top">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Reviews</h2>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="small-12 large-2 columns">
-                <div data-yt-id="BiIWlLqGmfA" class="youtube-video-thumb gallery-box-top">
-                    <div class="std-overlay"></div>
-                    <div class="center-txt">
+                    <!--Gallery Section-->
+                    <div id="GalleryStandingDesk" class="row collapse expanded gallery-row">
+                        <h2>Standing Desks</h2>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="fvYKiDYBsNs" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="TEST">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Height Adjustable Standing Desk</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="UHIiUREiHhA" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Reclaimed Teak Solid Wood Desktop</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="v8TD0NGvZ4c" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Eco Corner L-Shape Sit-Stand Desk</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="BdOVl4qSgJo" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Reclaimed Douglas Fir Solid Wood Desktop</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Gallery Section-->
+                    <div id="GalleryDeskConverters" class="row collapse expanded gallery-row">
                         <h2>Desk Converters</h2>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="CfAWLYvf5tQ" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="TEST">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Adapt Standing Desk Converter</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="AmsStAgbUMo" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Mobile Standing Converter</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="BiIWlLqGmfA" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Adapt X Standing Desk Converter</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="" class="youtube-video-thumb gallery-box-btm empty-gallery-box">
+                                <!--<a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    --social-links--
+                                </ul>
+                                <p>Something Something Desk</p>-->
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="small-12 large-2 columns">
-                <div data-yt-id="waB3IJZYCvY" class="youtube-video-thumb gallery-box-top">
-                    <div class="std-overlay"></div>
-                    <div class="center-txt">
-                        <h2>Chairs &amp; Stools</h2>
+                    <!--Gallery Section-->
+                    <div id="ChairsandStools" class="row collapse expanded gallery-row">
+                        <h2>Chairs &#38; Stools </h2>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="5xp9l4wv66M" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="TEST">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Motion Stool</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="waB3IJZYCvY" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Pursuit Ergonomic Chair</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="" class="youtube-video-thumb gallery-box-btm empty-gallery-box">
+                                <!--<a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    --social-links--
+                                </ul>
+                                <p>Something Something Desk</p>-->
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="" class="youtube-video-thumb gallery-box-btm empty-gallery-box">
+                                <!--<a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    --social-links--
+                                </ul>
+                                <p>Something Something Desk</p>-->
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="small-12 large-2 columns">
-                <div data-yt-id="I7HVDl5XltU" class="youtube-video-thumb gallery-box-top">
-                    <div class="std-overlay"></div>
-                    <div class="center-txt">
-                        <h2>Accessories</h2>
+                    <!--Gallery Section-->
+                    <div id="Accessories" class="row collapse expanded gallery-row">
+                        <h2>Desk Accessories</h2>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="N1lsi_nf5nQ" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="TEST">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Desk Advanced Wire Management Kit</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="Qxch_VZUUio" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT LED Task Light</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="mdOGN4St0Zo" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Desk CPU Holder</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="C5j2TKfnmcI" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT View Monitor Arm</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="small-12 large-2 columns">
-                <div data-yt-id="Kk8UgqpEoBg" class="youtube-video-thumb gallery-box-top">
-                    <div class="std-overlay"></div>
-                    <div class="center-txt">
+                    <!--Gallery Section-->
+                    <div id="Tutorials" class="row collapse expanded gallery-row">
                         <h2>Tutorials</h2>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="Kk8UgqpEoBg" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="TEST">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Height Adjustable Standing Desk Step-by-Step Assembly Process</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="b5DZE0fp8QU" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>How to Reset Your UPLIFT Desk</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="XJUe4Wn9mSc" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>Adjusting Your UPLIFT Monitor Arm</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="_B433nlemyo" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Keyboard Tray Assembly and Review</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="small-12 large-2 columns">
-                <div data-yt-id="alOGyfzLgDU" class="youtube-video-thumb gallery-box-top">
-                    <div class="std-overlay"></div>
-                    <div class="center-txt">
+                    <!--Gallery Section-->
+                    <div id="Reviews" class="row collapse expanded gallery-row">
                         <h2>Reviews</h2>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="---32ZZBvUM" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="TEST">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>Graveyard Carz UPLIFT Desk Review</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="Cq9CZOjH1IU" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Desk Review by Ray Benson from Asleep at the Wheel</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="alOGyfzLgDU" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>UPLIFT Desk Review by SXSW Musician Zac Kellogg</p>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div data-yt-id="YQA5VRvYmb0" class="youtube-video-thumb gallery-box-btm">
+                                <a href="#" data-reveal-id="#">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <svg class="video-play-icon">
+                                            <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                                <p>Uplift Desk standing desk hands-on walkthrough and build</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-<!--Gallery Section-->
-        <div id="GalleryStandingDesk" class="row collapse expanded gallery-row">
-            <h2>Standing Desks</h2>
-            <div class="small-12 large-3 columns">
-                <div data-yt-id="waB3IJZYCvY" class="youtube-video-thumb gallery-box-btm">
-                    <a href="#" data-reveal-id="TEST">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
-                        </div>
-                    </a>
-                    <ul>
-                        <!--social-links-->
-                    </ul>
-                    <p>Something Something Desk</p>
-                </div>
-            </div>
-            <div class="small-12 large-3 columns">
-                <div data-yt-id="I7HVDl5XltU" class="youtube-video-thumb gallery-box-btm">
-                    <a href="#" data-reveal-id="#">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
-                        </div>
-                    </a>
-                    <ul>
-                        <!--social-links-->
-                    </ul>
-                    <p>Something Something Desk</p>
-                </div>
-            </div>
-            <div class="small-12 large-3 columns">
-                <div data-yt-id="Kk8UgqpEoBg" class="youtube-video-thumb gallery-box-btm">
-                    <a href="#" data-reveal-id="#">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
-                        </div>
-                    </a>
-                    <ul>
-                        <!--social-links-->
-                    </ul>
-                    <p>Something Something Desk</p>
-                </div>
-            </div>
-            <div class="small-12 large-3 columns">
-                <div data-yt-id="alOGyfzLgDU" class="youtube-video-thumb gallery-box-btm">
-                    <a href="#" data-reveal-id="#">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
-                        </div>
-                    </a>
-                    <ul>
-                        <!--social-links-->
-                    </ul>
-                    <p>Something Something Desk</p>
-                </div>
-            </div>
-        </div>
-<!--Gallery Section-->
-        <div class="row collapse expanded gallery-row">
-            <h2>Desk Converters</h2>
-            <div class="small-12 large-3 columns">
-                <div data-yt-id="b5DZE0fp8QU" class="youtube-video-thumb gallery-box-btm">
-                    <a href="#" data-reveal-id="TEST">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
-                        </div>
-                    </a>
-                    <ul>
-                        <!--social-links-->
-                    </ul>
-                    <p>Something Something Desk</p>
-                </div>
-            </div>
-            <div class="small-12 large-3 columns">
-                <div data-yt-id="XJUe4Wn9mSc" class="youtube-video-thumb gallery-box-btm">
-                    <a href="#" data-reveal-id="#">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
-                        </div>
-                    </a>
-                    <ul>
-                        <!--social-links-->
-                    </ul>
-                    <p>Something Something Desk</p>
-                </div>
-            </div>
-            <div class="small-12 large-3 columns">
-                <div data-yt-id="v8TD0NGvZ4c" class="youtube-video-thumb gallery-box-btm">
-                    <a href="#" data-reveal-id="#">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
-                        </div>
-                    </a>
-                    <ul>
-                        <!--social-links-->
-                    </ul>
-                    <p>Something Something Desk</p>
-                </div>
-            </div>
-            <div class="small-12 large-3 columns">
-                <div data-yt-id="UFrk7eGjBaU" class="youtube-video-thumb gallery-box-btm">
-                    <a href="#" data-reveal-id="#">
-                        <div class="std-overlay"></div>
-                        <div class="center-txt">
-                            <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
-                        </div>
-                    </a>
-                    <ul>
-                        <!--social-links-->
-                    </ul>
-                    <p>Something Something Desk</p>
-                </div>
-            </div>
+
+                    <!--end-->
+
+            {{/replace}}
         </div>
 
-<!--end-->
-
-        {{/replace}}
-    </div>
-
-    {{#if page.feed}}
-        <ul>
-            {{#each page.feed}}
-                <li>
-                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
-                    <p>{{content}}</p>
-                </li>
-            {{/each}}
-        </ul>
-    {{/if}}
-</main>
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
 
 {{/partial}}
 
 {{> layout/base}}
-
-
-
-
-
-
