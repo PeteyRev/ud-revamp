@@ -239,3 +239,7 @@
     height: 500px;
     background:transparent;
 }
+
+.flex-video {
+    @include flex-video-container();
+}
