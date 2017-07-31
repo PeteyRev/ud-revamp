@@ -246,6 +246,6 @@
     background:transparent;
 }
 
-.photo-gallery-slide img {
-    width: 100%;
+.flex-video {
+    @include flex-video-container();
 }
