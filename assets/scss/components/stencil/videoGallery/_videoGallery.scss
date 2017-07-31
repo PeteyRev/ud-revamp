@@ -60,6 +60,12 @@
 
 //Customizations
 
+#PhotoImageGallery{
+    width:50.6%;
+    background: transparent;
+
+}
+
 #ModalVideoGallery {
     background-color: transparent;
     width:50%;
@@ -238,4 +244,8 @@
 .videoModal {
     height: 500px;
     background:transparent;
+}
+
+.photo-gallery-slide img {
+    width: 100%;
 }

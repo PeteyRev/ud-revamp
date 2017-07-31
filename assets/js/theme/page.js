@@ -20,30 +20,66 @@ export default class Page extends PageManager {}
 
     });
 
+    //creates share buttons
+    window.shareMe = function shareMe(url) {
+        window.open(
+            url,
+            'popupwindow',
+            'scrollbars=yes,width=800,height=400'
+        ).focus();
+        return false;
+    }
+    const tweetShare = 'onClick=' + "shareMe('http://twitter.com/intent/tweet?status=Check+out+these+pictures+@www.thehumansolution.com/uplift-photo-gallery/')";
+    const pintShare = 'onClick=' +
+        "shareMe('http://pinterest.com/pin/create/bookmarklet/?media=https://cdn3.bigcommerce.com/s-l85bzww3lo/product_images/uploaded_images/ecoDesktopGirl.jpg&is_video=false&url=www.thehumansolution.com/uplift-photo-gallery/')";
+    const faceShare = 'onClick=' + "shareMe('http://www.facebook.com/sharer/sharer.php?u=www.thehumansolution.com/uplift-photo-gallery');";
+    const googShare = 'onClick=' + "shareMe('https://plus.google.com/share?url=www.thehumansolution.com/uplift-photo-gallery');";
+
+    const galleryShare = 
+        '<li ' + tweetShare + '>' + '<svg><use xlink:href="#icon-twitter" /></svg>' + '</li>' +
+        '<li ' + pintShare + '>' + '<svg><use xlink:href="#icon-pinterest" /></svg>' + '</li>' +
+        '<li ' + faceShare + '>' + '<svg><use xlink:href="#icon-facebook" /></svg>' + '</li>' +
+        '<li ' + googShare + '>' + '<svg><use xlink:href="#icon-google" /></svg>' + '</li>'
+
+    $('.gallery-box-btm ul').each(function () {
+        $(this).html(galleryShare)
+    });
 
 
+    $('.photo-gallery-box a').each(function(index){
+        $(this).attr('data-slide',index);
+        let gallerySlideHref = $(this).attr('data-big-image');
+        let gallerySlideTitle = $(this).find('.photo-gallery-slide img').attr('title');
+        let gallerySlide = '<div><img src="'+ gallerySlideHref + '">' + '<p>' + gallerySlideTitle + '</p></div>';
+        $(".product-image-gallery").append(gallerySlide);
+    });
 
-       //creates share buttons
-        window.shareMe = function shareMe(url) {
-            window.open(
-                url,
-                'popupwindow',
-                'scrollbars=yes,width=800,height=400'
-            ).focus();
-            return false;
-        }
-        var tweetShare = 'onClick=' + "shareMe('http://twitter.com/intent/tweet?status=Check+out+these+pictures+@www.thehumansolution.com/uplift-photo-gallery/')";
-        var pintShare = 'onClick=' +
-            "shareMe('http://pinterest.com/pin/create/bookmarklet/?media=https://cdn3.bigcommerce.com/s-l85bzww3lo/product_images/uploaded_images/ecoDesktopGirl.jpg&is_video=false&url=www.thehumansolution.com/uplift-photo-gallery/')";
-        var faceShare = 'onClick=' + "shareMe('http://www.facebook.com/sharer/sharer.php?u=www.thehumansolution.com/uplift-photo-gallery');";
-        var googShare = 'onClick=' + "shareMe('https://plus.google.com/share?url=www.thehumansolution.com/uplift-photo-gallery');";
+    $('.photo-gallery-box a').on('click',function(){
+        var imgSlide = $(this).data('slide');
+        $( '.product-image-gallery' ).slick('slickGoTo', imgSlide);
+        setTimeout(function(){
+            $('.product-image-gallery').css('opacity', 1);
+        },700)
+    });
 
-        var galleryShare = 
-            '<li ' + tweetShare + '>' + '<svg><use xlink:href="#icon-twitter" /></svg>' + '</li>' +
-            '<li ' + pintShare + '>' + '<svg><use xlink:href="#icon-pinterest" /></svg>' + '</li>' +
-            '<li ' + faceShare + '>' + '<svg><use xlink:href="#icon-facebook" /></svg>' + '</li>' +
-            '<li ' + googShare + '>' + '<svg><use xlink:href="#icon-google" /></svg>' + '</li>'
+    $(".product-image-gallery").slick({
+        dots: false,
+        arrows: true,
+        fade: true,
+        mobileFirst: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        infinite: false 
+    });
 
-        $('.gallery-box-btm ul').each(function () {
-            $(this).html(galleryShare)
-        });
+
+    	//opens tabs for fast tabs and review
+	$('.smooth-scroll').on('click', function (e) {
+		e.preventDefault()
+        let smoothLink = $(this).attr('href');
+        console.log(smoothLink)
+		$('html, body').animate({
+			scrollTop: $(smoothLink).offset().top - 70
+		}, 1000);
+	});
