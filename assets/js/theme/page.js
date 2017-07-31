@@ -49,14 +49,21 @@ export default class Page extends PageManager {}
     $('.photo-gallery-box a').each(function(index){
         $(this).attr('data-slide',index);
         let gallerySlideHref = $(this).attr('data-big-image');
-        let gallerySlideTitle = $(this).find('.photo-gallery-slide img').attr('title');
-        let gallerySlide = '<div><img src="'+ gallerySlideHref + '">' + '<p>' + gallerySlideTitle + '</p></div>';
+        let gallerySlideTitle = $(this).find('.photo-gallery-slide img').attr('alt');
+        let gallerySlide = '<div><img class="lazyload" data-src="'+ gallerySlideHref + '">' + '<p>' + gallerySlideTitle + '</p></div>';
         $(".product-image-gallery").append(gallerySlide);
     });
 
     $('.photo-gallery-box a').on('click',function(){
         var imgSlide = $(this).data('slide');
-        $( '.product-image-gallery' ).slick('slickGoTo', imgSlide);
+        if (imgSlide === 0) { 
+            $( '.product-image-gallery' ).slick('slickGoTo', 1);
+            setTimeout(function(){
+                $( '.product-image-gallery' ).slick('slickGoTo', 0);
+            },500)
+        } else {
+            $( '.product-image-gallery' ).slick('slickGoTo', imgSlide);
+        }
         setTimeout(function(){
             $('.product-image-gallery').css('opacity', 1);
         },700)

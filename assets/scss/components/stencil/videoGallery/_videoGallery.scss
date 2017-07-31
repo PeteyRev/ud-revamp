@@ -249,3 +249,7 @@
 .flex-video {
     @include flex-video-container();
 }
+
+.photo-gallery-slide img {
+    width: 100%;
+}
