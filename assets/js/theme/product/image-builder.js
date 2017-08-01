@@ -77,7 +77,7 @@ export default function imageBuilder() {
 		}
 
         //selected but not shown function
-		if ((imgSet.indexOf('Wire') >= 0 || imgSet.indexOf('Treadmill') >= 0 || imgSet.indexOf('Care') >= 0 || imgSet.indexOf('Chair') >= 0 || imgSet.indexOf('Warranty') >= 0 || imgSet.indexOf('Promo') >= 0 || imgSet.indexOf('Organizer') >= 0) && newSelection != "UPL145~unboxed") {
+		if ((imgSet.indexOf('Wire') >= 0 || imgSet.indexOf('Treadmill') >= 0 || imgSet.indexOf('Temporary') >= 0 || imgSet.indexOf('Credenza') >= 0 || imgSet.indexOf('Care') >= 0 || imgSet.indexOf('Chair') >= 0 || imgSet.indexOf('Warranty') >= 0 || imgSet.indexOf('Promo') >= 0 || imgSet.indexOf('Organizer') >= 0) && newSelection != "UPL145~unboxed") {
 
 			let name = $(this).next().find('.product-option-txt').text();
 			if (!$('#sel-not-shown ul li').hasClass(imgSet) && (name.indexOf('No') < 0 || name.indexOf('Standard') < 0)) {
