@@ -8,6 +8,7 @@ import collapsibleFactory from './common/collapsible';
 import ProductDetails from './common/product-details';
 import videoGallery from './product/video-gallery';
 import cartSlider from './product/cart-slider';
+import customBuilder from './product/custom-build';
 import imageBuilder from './product/image-builder';
 import startProductTour from './product/product-tour';
 import { classifyForm } from './common/form-utils';
@@ -43,6 +44,7 @@ export default class Product extends PageManager {
 		cartSlider();
 		imageBuilder();
 		startProductTour();
+        customBuilder();
 
         //hides option tab and tour on accessory listings
         if ($('#tab-options').length === 0){
@@ -73,8 +75,6 @@ export default class Product extends PageManager {
             prevArrow: '<button type="button"><svg class="img-arrow-left"><use xlink:href="#icon-left-back-arrow-image-gallery-icon" /></svg></button>',
             nextArrow: '<button type="button"><svg class="img-arrow-right"><use xlink:href="#icon-right-next-arrow-image-gallery-icon" /></svg></button>'
         });
-
-        $('.breadcrumbs').prependTo($('.productView-images'));
 
 
         const $reviewForm = classifyForm('.writeReview-form');
@@ -110,11 +110,4 @@ export default class Product extends PageManager {
 }
 
 
-	//opens tabs for fast tabs and review
-        $('.smooth-tab-open').on('click', function () {
-            var tabLink = $(this).data('opentab');
-            $('#'+tabLink).click();
-            $('html, body').animate({
-                scrollTop: $('.productView-description').offset().top
-            }, 1000);
-        });
+

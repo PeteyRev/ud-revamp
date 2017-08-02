@@ -1,7 +1,6 @@
 // =============================================================================
 // VIDEO GALLERY
 // =============================================================================
-
 .videoGallery-main {
     @include flex-video-container();
     margin-bottom: $videoGallery-spacing;
@@ -18,7 +17,6 @@
     display: inline-block;
     float: none;
     vertical-align: top;
-
     @include breakpoint("medium") {
         width: grid-calc(6, $total-columns);
     }
@@ -31,11 +29,9 @@
     opacity: 0.4;
     text-decoration: none;
     transition: opacity 100ms ease-out;
-
     @include breakpoint("medium") {
         margin-bottom: $videoGallery-spacing;
     }
-
     &:hover,
     &.is-active {
         color: color("greys", "darker");
@@ -59,79 +55,102 @@
 }
 
 //Customizations
-
-#PhotoImageGallery{
-    width:50.6%;
+#PhotoImageGallery {
+    width: 50.6%;
     background: transparent;
-
 }
 
 #ModalVideoGallery {
     background-color: transparent;
-    width:50%;
-        button {
-        display:none;
+    width: 50%;
+    button {
+        display: none;
     }
 }
 
 .video-slider {
-    opacity:0;
+    opacity: 0;
     margin-bottom: 0;
     .video-body {
-    margin-top: 1rem;
-    h5 {
-    color:#fff;
-    }
+        margin-top: 1rem;
+        h5 {
+            color: #fff;
+        }
     }
 }
 
 .video-carousel-buttons {
-    opacity:0;
+    opacity: 0;
     position: relative;
     h4 {
-    color: #fff;
-    margin-top: 0;
-}
-    ul{
-        position:relative;
-        text-align: left;
-        bottom:0;
+        color: #fff;
+        margin-top: 0;
     }
-    li{
-        display:inline-block;
+    ul {
+        position: relative;
+        text-align: left;
+        bottom: 0;
+    }
+    li {
+        display: inline-block;
         width: 100%;
-        color:#fff;
+        color: #fff;
         line-height: 1.2;
     }
-    li.slick-active{
+    li.slick-active {
         color: stencilColor("color-textLink");
     }
-
 }
 
 .youtube {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    .video-play-icon {
+        @include absoluteVertHor;
+        cursor: pointer;
+    }
 }
 
-.play {
-    background: url(//cdn6.bigcommerce.com/s-492apnl0xy/templates/__custom/images/PlayButtonNormal.svg?t=1496440839) no-repeat center center;
-    background-size: 64px 64px;
+.video-thumbnail {
+    position: relative;
+    .video-play-icon {
+        @include absoluteVertHor;
+        cursor: pointer;
+        width: 37%;
+    }
+}
+
+.video-play-icon {
+    fill: $color-white;
+    width: 50px;
+    height: 50px;
+}
+
+.product-top-video {
     position: absolute;
-    height: 100%;
+    right: 10px;
     top: 0;
-    width: 100%;
-    opacity: .8;
-    filter: alpha(opacity=80);
-    transition: all 0.2s ease-out;
-    cursor: pointer;
-}
-
-.video-play-icon{
-    fill:$color-white;
-    width:50px;
-    height:50px;
+    text-decoration: none;
+    .video-play-icon {
+        fill: $color-black;
+        width: 43px;
+        height: 43px;
+    }
+    p{
+        color:$color-black;
+            font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: -4px;
+    font-weight: 600;
+    }
+    &:hover{
+        p, svg{
+            color:$color-blue;
+            fill:$color-blue
+        }
+    }
 }
 
 .center-txt {
@@ -141,23 +160,22 @@
 
 .gallery-box-top {
     height: 285px;
-    position:relative;
+    position: relative;
     background-size: cover;
     background-position: center;
     margin: 0 2px;
-        h2{
-            font-size: 30px;
-            color:$color-white;
-            line-height: 1.2;
-            margin: 0;
-            transition: .5s ease;
-        }
-    &:hover{
+    h2 {
+        font-size: 30px;
+        color: $color-white;
+        line-height: 1.2;
+        margin: 0;
+        transition: .5s ease;
+    }
+    &:hover {
         h2 {
-            color:stencilColor("icon-color-hover");
+            color: stencilColor("icon-color-hover");
         }
     }
-
 }
 
 .std-overlay {
@@ -173,58 +191,56 @@
     background-color: gray;
 }
 
-.gallery-box-btm{
+.gallery-box-btm {
     height: 222px;
     overflow: hidden;
-    position:relative;
+    position: relative;
     background-size: cover;
     background-position: center;
     margin: 0 2px;
     .center-txt svg {
-        transition:.3s ease;
-        opacity:0;
-        &:hover{
+        transition: .3s ease;
+        opacity: 0;
+        &:hover {
             fill: stencilColor("icon-color-hover");
         }
     }
-        ul {
-            @include absoluteVert;
-            right: .6rem;
-            margin:0;
-            list-style-type: none;
-            li{
-                cursor:pointer;
-
-            }
-            li:not(:last-child){
-                margin-bottom:.5rem;
-            }
-            li:hover svg{
-                fill: stencilColor("icon-color-hover");
-            }
-            svg {
-                fill:$color-white;
-                width:0px;
-                height:0px;
-                transition: .5s ease;
-            }
+    ul {
+        @include absoluteVert;
+        right: .6rem;
+        margin: 0;
+        list-style-type: none;
+        li {
+            cursor: pointer;
         }
-        p{
-            position: absolute;
-            bottom: -4.5rem;
-            left:1rem;
-            margin:0;
-            color:$color-white;
+        li:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+        li:hover svg {
+            fill: stencilColor("icon-color-hover");
+        }
+        svg {
+            fill: $color-white;
+            width: 0px;
+            height: 0px;
             transition: .5s ease;
-            width:80%;
         }
-        .std-overlay {
-            opacity: 0;
-        }
+    }
+    p {
+        position: absolute;
+        bottom: -4.5rem;
+        left: 1rem;
+        margin: 0;
+        color: $color-white;
+        transition: .5s ease;
+        width: 80%;
+    }
+    .std-overlay {
+        opacity: 0;
+    }
 }
 
-
-.gallery-box-btm:hover{
+.gallery-box-btm:hover {
     .std-overlay {
         opacity: 0.6;
     }
@@ -233,17 +249,16 @@
         height: 30px;
     }
     .center-txt svg {
-        opacity:1;
+        opacity: 1;
     }
     p {
         bottom: 0.5rem;
     }
-} 
-
+}
 
 .videoModal {
     height: 500px;
-    background:transparent;
+    background: transparent;
 }
 
 .flex-video {

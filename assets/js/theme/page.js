@@ -80,13 +80,3 @@ export default class Page extends PageManager {}
         infinite: false 
     });
 
-
-    	//opens tabs for fast tabs and review
-	$('.smooth-scroll').on('click', function (e) {
-		e.preventDefault()
-        let smoothLink = $(this).attr('href');
-        console.log(smoothLink)
-		$('html, body').animate({
-			scrollTop: $(smoothLink).offset().top - 70
-		}, 1000);
-	});

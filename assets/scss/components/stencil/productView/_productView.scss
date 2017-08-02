@@ -76,14 +76,14 @@
 
 .productView-thumbnail-link {
     border: 2px solid transparent;
+    border-radius:3px;
     display: inline-block;
-    padding: 2px;
     text-align: center;
     width: 100%;
 
     &:hover,
     &.is-active {
-        border-color: color("greys", "darker");
+        border-color: $color-greyLightest;
     }
 }
 
