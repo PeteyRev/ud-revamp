@@ -124,9 +124,11 @@ export default function menuFactory(selector = `[data-${PLUGIN_KEY}]`) {
         $(this).css('background-image', 'url(//i.ytimg.com/vi/' + this.id + '/maxresdefault.jpg)');
 
         // Overlay the Play icon to make it look like a video player
-        $(this).append($('<div/>', {
-            'class': 'play'
-        }));
+        // $(this).append($('<div/>', {
+        //     'class': 'play'
+        // }));
+
+        $(this).append('<svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>')
 
         $(document).delegate('#' + this.id, 'click', function () {
             // Create an iFrame with autoplay set to true
@@ -146,5 +148,25 @@ export default function menuFactory(selector = `[data-${PLUGIN_KEY}]`) {
             $(this).replaceWith(iframe);
 
         });
+    });
+
+    //opens tabs for fast tabs and review
+	$('.smooth-scroll').on('click', function (e) {
+		e.preventDefault()
+        let smoothLink = $(this).attr('href');
+        console.log(smoothLink)
+		$('html, body').animate({
+			scrollTop: $(smoothLink).offset().top - 70
+		}, 1000);
+	});
+
+    //opens tabs for fast tabs and review
+    $('.smooth-tab-open').on('click', function (e) {
+        e.preventDefault()
+        let tabLink = $(this).attr('href');
+        $(tabLink).click();
+        $('html, body').animate({
+            scrollTop: $('.productView-description').offset().top - 70
+        }, 1000);
     });
 

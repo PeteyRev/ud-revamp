@@ -9,6 +9,7 @@
     {{/each}}
 
     <section class="productView-images" data-image-gallery>
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
         <h1 class="productView-title" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
                     
         {{#if product.sku}}
@@ -17,6 +18,13 @@
                 <div class="productView-info-value" data-product-sku>{{product.sku}}</div>
                 <div class="product-tour">| <a href="#" id="StartTour">Take Tour</a></div>
             </div>
+        {{/if}}
+
+        {{#if product.videos.list.length}}
+            <a class="product-top-video modal-slider" data-reveal-id="ModalVideoGallery" href="#">
+                <svg class="video-play-icon"><use xlink:href="#icon-play-button-for-image-gallery-videos-icon" /></svg>
+                <p>VIDEO</p>
+            </a>
         {{/if}}
 
         {{> components/common/share}}

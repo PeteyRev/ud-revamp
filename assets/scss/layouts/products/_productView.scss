@@ -20,6 +20,7 @@
 }
 
 .productView-images {
+    position:relative;
     .socialLinks {
         margin-bottom: 19px;
     }
@@ -123,7 +124,7 @@ $box-radius: 3px;
 }
 
 .product-thumbnail-wrapper {
-    width: 57%;
+    width: 67%;
     margin: 0 auto;
     clear: both;
 }
@@ -176,7 +177,6 @@ $box-radius: 3px;
     position: relative;
     border-top: $productOptions-list-border;
     background-color: $color-greyLight;
-    z-index: 1;
     .button--blue {
         position: absolute;
         right: 15px;
@@ -241,7 +241,7 @@ input#form-action-addToCart {
     transform: translate(-50%, -50%);
     z-index: 1;
     color: $color-blue;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: $fontWeight-medium;
     cursor: pointer;
     font-family: $fontFamily-headings;
@@ -348,7 +348,7 @@ svg.learn-more-small {
 
 //img gallery
 a.productView-thumbnail-link.modal-slider img {
-    max-height: 55px;
+    max-height: 67px;
     width: 100%;
 }
 
@@ -550,6 +550,10 @@ ul.tabs.accessory-tabs li {
     }
 }
 
+#tab-description > .row {
+    min-height: 500px;
+}
+
 #tab-description {
     padding-top: 0;
     h2 {
@@ -585,19 +589,23 @@ ul.spec-tab-downloads {
     }
 }
 
-table.spec-table {
+table.spec-table, table.comparison-table {
+    width:100%;
     tr {
         border-bottom: 1px solid $color-greyLightest;
     }
-    table.spec-table tr:last-child {
+    tr:last-child {
         border-bottom: none;
     }
     td {
         padding: 1rem 0;
     }
-    .table-des {
+    .table-des, .comparison-feature-col {
         font-weight: bold;
         width: 31%
+    }
+    .comparison-item-head{
+        font-weight: bold;
     }
 }
 
@@ -619,6 +627,9 @@ table.spec-table {
         padding-bottom: 1rem;
         border-bottom: 1px solid black;
     }
+    .row:last-child {
+        border-bottom: none;
+    }
 }
 
 .learn-more-header {
@@ -633,9 +644,8 @@ table.spec-table {
 
 .learn-more-body {
     overflow: auto;
-    height: 790px;
+    height: 600px;
     min-height: 240px;
-    max-height: 90%;
 }
 
 .learn-more-vid {
@@ -837,15 +847,24 @@ ul.options-tab-list {
 ul.cart-bottom-icons {
     text-align: center;
     margin: 2.2rem 0 0;
+    a{
+        text-decoration: none;
+        color:$color-black;
+    }
     li {
+        cursor: pointer;
         display: inline-block;
         width: 31%;
         span {
-            cursor: pointer;
             position: relative;
             left: .4rem;
         }
-        li:hover svg {
+    }
+    li:hover {
+        span{
+            color:$color-blue;
+        }
+        svg {
             fill: $color-blue;
         }
     }

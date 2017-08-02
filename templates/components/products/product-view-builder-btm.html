@@ -1,24 +1,27 @@
 <div class="product-thumbnail-wrapper">
     <div class="productView-thumbnails">
         {{#if product.videos.list.length}}
-        <div class="productView-thumbnail">
-            <a class="productView-thumbnail-link modal-slider" data-reveal-id="ModalVideoGallery" href="#">
-                            {{#each product.videos.list}}
-                                {{#if @first}}
-                                    <img src="//i.ytimg.com/vi/{{id}}/maxresdefault.jpg">
-                                {{/if}}
-                            {{/each}}      
-                        </a>
-
-        </div>
-        {{/if}} {{#each product.images}}
-        <div class="productView-thumbnail">
-            <a class="productView-thumbnail-link" data-reveal-id="ProductImageGallery" data-image-gallery-item data-image-gallery-new-image-url="{{getImage this 'product_size' (cdn ../theme_settings.default_image_product)}}"
-                data-image-gallery-zoom-image-url="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}"
-                href="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}">
-                            <img src="{{getImage this 'productthumb_size' (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
-                        </a>
-        </div>
+            <div class="productView-thumbnail">
+                <a class="productView-thumbnail-link modal-slider video-thumbnail" data-reveal-id="ModalVideoGallery" href="#">
+                    {{#each product.videos.list}}
+                        {{#if @first}}
+                            <img src="//i.ytimg.com/vi/{{id}}/mqdefault.jpg">
+                            <svg class="video-play-icon">
+                                <use xlink:href="#icon-play-button-for-image-gallery-videos-icon" />
+                            </svg>
+                        {{/if}}
+                    {{/each}}      
+                </a>
+            </div>
+        {{/if}} 
+        {{#each product.images}}
+            <div class="productView-thumbnail">
+                <a class="productView-thumbnail-link" data-reveal-id="ProductImageGallery" data-image-gallery-item data-image-gallery-new-image-url="{{getImage this 'product_size' (cdn ../theme_settings.default_image_product)}}"
+                    data-image-gallery-zoom-image-url="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}"
+                    href="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}">
+                                <img src="{{getImage this 'productthumb_size' (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
+                            </a>
+            </div>
         {{/each}}
 
 
@@ -28,6 +31,7 @@
         <div>
             <div class="product-image-gallery" data-slick='{
                 "dots": true,
+                "fade": true,
                 "arrows": true,
                 "mobileFirst": true,
                 "slidesToShow": 1,
@@ -37,7 +41,7 @@
             }'>
                 {{#each product.images}}
                 <div>
-                    <img src="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
+                    <img class="lazyload" data-src="{{getImage this 'zoom_size' (cdn ../theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}">
                     <p>{{this.alt}}</p>
                 </div>
                 {{/each}}
@@ -81,14 +85,14 @@
                         <meta itemprop="reviewCount" content="{{product.num_reviews}}"> {{/if}} {{/if}} {{> components/products/ratings rating=product.rating}}
                         <span class="productView-reviewLink">
                         {{#if product.num_reviews '>' 0}}
-                            <a href="{{product.url}}#product-reviews">
+                            <a class="smooth-scroll" href="#product-reviews">
                                 {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
                             </a>
                         {{else}}
                             {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
                         {{/if}}
                     </span> {{/if}}
-                        <a href="#" class="smooth-tab-open" data-opentab="tab-faq"><span>17</span> FAQs</a>
+                        <a href="#faq-tabs" class="smooth-tab-open"><span>17</span> FAQs</a>
                     </div>
                     <div class="cart-line--right"></div>
                 </div>
@@ -270,8 +274,10 @@
 
         <ul class="cart-bottom-icons">
             <li>
+                <a href="#" data-reveal-id="BulkDeals">
                 <svg class="cart-icon">
                     <use xlink:href="#icon-bulkDeals-icon" /><span>BULK DEALS</span></svg>
+                </a>
             </li>
             {{#if settings.show_wishlist}}
             <li>
@@ -311,7 +317,7 @@
             <a class="tab-title" href="#tab-options">Options</a>
         </li>
         <li class="tab">
-            <a id="faq-tab" class="tab-title" href="#tab-faq">FAQ</a>
+            <a id="faq-tabs" class="tab-title" href="#tab-faq">FAQ</a>
         </li>
         {{#if product.warranty}}
         <li class="tab">
@@ -348,4 +354,18 @@
     </a>
     <div class="modal-content"></div>
     <div class="loadingOverlay"></div>
+</div>
+
+
+<div id="BulkDeals" class="modal" data-reveal>
+    <div class="modal-header">
+        <h2 class="modal-header-title">Bulk Deals</h2>
+        <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button">
+            <span aria-hidden="true">&#215;</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        <p>Love our desks, but want more? In most cases, we can offer bulk quantity discounts for orders or smaller purchases placed over time. Bulk deals are based on expected volume and the products you choose. We can also provide you with brochures and swatches to help you in your decisions.</p>
+        <p>To request a quote, contact us via phone <a href="tel:+800-531-3746">(800-531-3746)</a>, email <a href="mailto:info@upliftdesk.com">(info@upliftdesk.com)</a>, or live chat from 8am - 7pm Monday - Friday and from 10am - 6pm Saturday.</p>
+    </div>
 </div>
