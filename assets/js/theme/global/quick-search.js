@@ -11,10 +11,13 @@ export default function () {
     const stencilDropDownExtendables = {
         hide: () => {
             $searchQuery.blur();
+            $('header, .body').removeClass('search-is-open');
         },
         show: (event) => {
             $searchQuery.focus();
             event.stopPropagation();
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            $('header').addClass('search-is-open');
         },
     };
     const stencilDropDown = new StencilDropDown(stencilDropDownExtendables);
@@ -37,6 +40,7 @@ export default function () {
             }
 
             $quickSearchResults.html(response);
+            $('.body').addClass('search-is-open');
         });
     }, 200);
 
@@ -58,7 +62,6 @@ export default function () {
         if (searchQuery.length === 0) {
             return event.preventDefault();
         }
-
         return true;
     });
 }

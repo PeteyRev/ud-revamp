@@ -121,7 +121,7 @@ export default function menuFactory(selector = `[data-${PLUGIN_KEY}]`) {
     $(".youtube").each(function () {
 
         // Based on the YouTube ID, we can easily find the thumbnail image
-        $(this).css('background-image', 'url(//i.ytimg.com/vi/' + this.id + '/maxresdefault.jpg)');
+        $(this).css('background-image', 'url(//i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
         // Overlay the Play icon to make it look like a video player
         // $(this).append($('<div/>', {

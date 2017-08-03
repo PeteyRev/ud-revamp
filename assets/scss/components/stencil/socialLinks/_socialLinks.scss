@@ -12,10 +12,11 @@
     @include u-listReset; // 2
     // line-height: lineHeight("largest");
 
-    .icon { // 1
+    li, .icon { // 1
         @include square($socialLinks-iconSize);
         margin: 0;
         text-decoration: none;
+        cursor:pointer;
 
         // scss-lint:disable NestingDepth, SelectorDepth
         &:hover {
@@ -31,6 +32,7 @@
         }
         // scss-lint:enable NestingDepth, SelectorDepth
     }
+
 }
 
 .socialLinks-item {

@@ -6,19 +6,31 @@
         {{> components/common/alert-info}}
     </div>
 
+    <div class="test-cart-review">
+        <ul class="cart-review-slides">
+            {{#each options}}
+                <li data-slide="{{@index}}"><span class="review-key">{{display_name}}</span><span class="review-value"></span></li>
+            {{/each}}
+        </ul>
+    </div>
+
     <form id="CartEditProductFieldsForm" method="post" action="cart.php" enctype="multipart/form-data">
         <input type="hidden" name="action" value="EditProductFieldsInCart">
         <input type="hidden" name="item_id" value="{{quote_item_id}}">
-        {{#each customizations}}
-            {{{dynamicComponent 'components/products/customizations'}}}
-        {{/each}}
 
-        {{#each options}}
-            {{{dynamicComponent 'components/products/options'}}}
-        {{/each}}
 
-        <div class="form-actions">
-            <input class="button button--primary" type="submit" value="{{lang 'common.save'}}">
+                <div class="product-slider" data-product-option-change>
+                    {{#each customizations}}
+                        {{{dynamicComponent 'components/products/customizations'}}}
+                    {{/each}}
+                    {{#each options}}
+                        {{{dynamicComponent 'components/products/options'}}}
+                    {{/each}}
+                </div>
+
+        <div class="form-actions cart-edit-form-actions">
+            <input class="button button--cart" type="submit" value="{{lang 'common.save'}}">
         </div>
     </form>
 </div>
+

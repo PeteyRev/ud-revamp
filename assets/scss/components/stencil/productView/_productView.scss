@@ -116,9 +116,10 @@
     color:#353332;
     font-size: 24px;
     margin: -(spacing("half")) 0 spacing("quarter");
+    width: 85%;
 
     @include breakpoint("medium") {
-        // margin-top: spacing("single");
+        width: 100%;
     }
 
     @include breakpoint("large") {
@@ -276,14 +277,14 @@
 // -----------------------------------------------------------------------------
 
 .productView-options {
-    opacity:0;
+    //opacity:0;
     @include clearfix;
     margin-bottom: spacing("single");
     text-align: center;
 
     @include breakpoint("small") {
         text-align: left;
-        height: 510px;
+        height: 562px;
     }
 
     .form-input[type="number"] {

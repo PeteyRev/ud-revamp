@@ -62,9 +62,12 @@
 
 #ModalVideoGallery {
     background-color: transparent;
-    width: 50%;
+    width: 100%;
     button {
         display: none;
+    }
+    @include breakpoint('medium'){
+        width: 50%;
     }
 }
 
@@ -106,9 +109,33 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    background-position: 30% 50%;
     .video-play-icon {
         @include absoluteVertHor;
         cursor: pointer;
+    }
+}
+
+.video-slider{
+    .youtube{
+        height: 205px;
+    }
+    @include breakpoint("medium"){
+        height: 388px;
+    }
+}
+
+.learn-more-vid {
+    margin-bottom: 1rem;
+    .youtube {
+        height: 300px;
+        width: 534px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    iframe {
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -192,7 +219,7 @@
 }
 
 .gallery-box-btm {
-    height: 222px;
+    height: 220px;
     overflow: hidden;
     position: relative;
     background-size: cover;

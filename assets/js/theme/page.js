@@ -7,7 +7,7 @@ export default class Page extends PageManager {}
 
         let ytId = $(this).attr('data-yt-id');
 
-        $(this).css('background-image', 'url(//i.ytimg.com/vi/' + ytId + '/maxresdefault.jpg)');
+        $(this).css('background-image', 'url(//i.ytimg.com/vi/' + ytId + '/sddefault.jpg)');
 
         if ($(this).hasClass('gallery-box-btm')){
 

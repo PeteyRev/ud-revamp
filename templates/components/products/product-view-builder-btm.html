@@ -245,7 +245,13 @@
 
                     <div class="options-map-button">JUMP TO AN OPTION</div>
 
+                </div>
 
+                <div class="progress-builder">
+                    <p>Desk Build Progress </p> <span>(<span class="percent-change">0%</span> completed)</span>
+                    <div class="custom-progress-container">
+                        <span class="meter" style="width:0%"></span>
+                    </div>
                 </div>
         </div>
     </div>
@@ -259,6 +265,13 @@
     {{#if product.out_of_stock}} {{#if product.out_of_stock_message}} {{> components/common/alert-error product.out_of_stock_message}}
     {{else}} {{> components/common/alert-error (lang 'products.sold_out')}} {{/if}} {{/if}}
     </form>
+
+    <!--<div class="progress-builder">
+        <p>Desk Build Progress </p> <span>(<span class="percent-change">0%</span> completed)</span>
+        <div class="custom-progress-container">
+        <span class="meter" style="width:0%"></span>
+        </div>
+    </div>-->
 
     <div class="cart-bottom-btns">
         <div class="alertBox productAttributes-message" style="display:none">

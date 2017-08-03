@@ -76,6 +76,51 @@ export default class Cart extends PageManager {
             modal.updateContent(response.content);
 
             this.bindGiftWrappingForm();
+
+            $(".product-option-txt").each(function () {
+                if ($(this).text().indexOf('>') >= 0) {
+                    let shortOptionName = $(this).text().substr($(this).text().indexOf(">") + 1);
+                    $(this).text(shortOptionName);
+                }
+                if ($(this).text().indexOf('|') >= 0) {
+                    let shortOptionName = $(this).text().substr($(this).text().indexOf("|") + 1);
+                    $(this).text(shortOptionName);
+                }
+                if ($(this).text().indexOf(':') >= 0) {
+                    let shortOptionName = $(this).text().substr($(this).text().indexOf(":") + 1);
+                    $(this).text(shortOptionName);
+                }
+            });
+
+            $(".form-options-wrapper").each(function() {
+                if (!$(this).find("input").is(":checked")) {
+                    $("input", this).each(function() {
+                        if ($(this).val() == 0) {
+                            $(this).click();
+                        }
+                    });
+                }
+            });
+
+            $('.product-slider').slick({
+                arrows: true,
+                mobileFirst: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                infinite: false,
+                draggable: false,
+                appendArrows: ".form-actions",
+                prevArrow: '<button type="button" class="button button--transparent"><svg class="cart-arrow-left"><use xlink:href="#icon-left-back-arrow-builder-icon" /></svg>BACK</button>',
+                nextArrow: '<button type="button" class="button button--blue">NEXT<svg class="cart-arrow-right"><use xlink:href="#icon-right-next-arrow-builder-icon" /></svg></button>'
+            });
+
+            $('.cart-review-slides li').on('click',function(){
+                $('.cart-review-slides li').removeClass('cart-option-active');
+                $(this).addClass('cart-option-active');
+                let cartSlide = $(this).data('slide');
+                $( '.product-slider' ).slick('slickGoTo', cartSlide);
+            });   
         });
 
         utils.hooks.on('product-option-change', (event, option) => {

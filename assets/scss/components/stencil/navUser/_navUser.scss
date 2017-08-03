@@ -99,6 +99,9 @@
     display: none;
     a.navUser-action.navUser-action--quickSearch {
         display: inline-block;
+        padding-left: 2rem;
+        z-index: 2;
+        position: relative;
     }
     .header-search-icon {
         width: 25px;
@@ -106,7 +109,7 @@
         fill: $color-white;
         vertical-align: middle;
         position: relative;
-        left: 8px;
+        left: 29px;
         top: -2px;
     }
     @include breakpoint("medium") {
@@ -188,6 +191,7 @@
 //custom menu modal
 #ShopMenu, #ResourceMenu {
     width: 1388px;
+    height:574px;
     padding: 1px;
     .modal-content{
         display:flex;

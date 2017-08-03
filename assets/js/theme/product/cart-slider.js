@@ -36,18 +36,28 @@ import $ from 'jquery';
         });
 
         $('.product-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+
+            //updates progress bar
+            const slidesDivide = 100 / totalCartSlides;
+            let progressMade = slidesDivide * currentSlide;
+            $('.percent-change').html(Math.floor(progressMade) + '%');
+            $('.custom-progress-container .meter').attr('style','width:' + progressMade +'%');
+
             //hides opt map button on last slide
             if (currentSlide === totalCartSlides - 1){
                 $('.options-map-button').hide();
-                $('#form-action-addToCart').show()
+                $('#form-action-addToCart').show();
+                $('.custom-progress-container .meter').attr('style','width:100%');
+                $('.percent-change').html('100%');
             } else {
                 $('.options-map-button').show();
-                $('#form-action-addToCart').hide()
+                $('#form-action-addToCart').hide();
             }
             //highlights selected option
             let optMapSlide = currentSlide + 1;
             $('.options-map-wrapper ul li').removeClass('option-map-active');
             $('.options-map-wrapper ul li:nth-child(' + optMapSlide + ')').addClass('option-map-active');
+
         });
 
         //Removes SKUS and and adds data attributes for wishlist and builder
@@ -99,7 +109,6 @@ import $ from 'jquery';
 
             //cleaner load so it doesnt look fragmented
             $('.productView-options').css('height','auto');
-            $('.productView-options').css('opacity',1);
             $('.productView-thumbnails').css('display','block');
 
             //removes whitespace from learn more links since IDs cannot have them

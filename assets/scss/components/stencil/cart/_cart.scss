@@ -378,6 +378,28 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
     }
 }
 
+.test-cart-review {
+    width: 36%;
+    float: left;
+}
+
+li.cart-option-active {
+    color: $color-blue;
+}
+
+#CartEditProductFieldsForm {
+     box-shadow: 0 0 9px 0 rgba(58, 58, 58, 0.35);
+     border-radius: 3px;
+     width: 60%;
+     float: right;
+    .label-learn-more-icon, .option-learn-more-icon {
+        display: none;
+    }
+    .button--cart{
+        @include absoluteVertHor;
+    }
+}
+
 
 // Cart actions
 // -----------------------------------------------------------------------------
