@@ -6,6 +6,19 @@ export default function imageBuilder() {
 	let $optionInput = $('.form-options-wrapper .form-radio');
     let $deskImgSet = $('.desk-img-set');
 
+	//Items to be selected but not shown, and func to show/hide div containing them
+	const SnSitems = ['Teak Desk Organizer Set','Teak Credenza','Treadmill', 'Discounted Chair', 'Wire Management', 
+	'Extended Warranty', 'Promotional Item', 'Solid Wood Care Kit','Temporary Desktop', 'Frame Style','Frame Width'];
+
+	function showSnSbox() {
+		if ($("#sel-not-shown ul li").length >= 1 && $(window).width() >= 1200) {
+			$(".desk-build-images").css("width", "75%");
+			$("#sel-not-shown").css("display", "block");
+		} else {
+			$(".desk-build-images").css("width", "100%");
+		}
+ 	 }
+
     //this finds the sku for that option (swatch/rectangle or product list type) and the option set name
 	$optionInput.on('click', function () {
 
@@ -64,20 +77,16 @@ export default function imageBuilder() {
 			});
 		}
 
-		//handles mat placement for selected not show
+		//handles mat placement for selected not shown
 		if (imgSet.indexOf('Promo') >= 0 && newSelection === 'UPL145~unboxed') {
             
-			$('.Promo.Item').remove();
-			$('.Promo.Item img').removeClass('hide').addClass('active');
-			if ($('#sel-not-shown ul li').length >= 1 && $(window).width() >= 1200) {
-				$('.desk-build-images').css('width', '75%');
-			} else {
-				$('.desk-build-images').css('width', '100%');
-			}
+			$('.Promotional.Item').remove();
+			$('.Promotional.Item img').removeClass('hide').addClass('active');
+			showSnSbox();
 		}
 
         //selected but not shown function
-		if ((imgSet.indexOf('Wire') >= 0 || imgSet.indexOf('Treadmill') >= 0 || imgSet.indexOf('Frame Style') >= 0 || imgSet.indexOf('Frame Width') >= 0 || imgSet.indexOf('Temporary') >= 0 || imgSet.indexOf('Credenza') >= 0 || imgSet.indexOf('Care') >= 0 || imgSet.indexOf('Chair') >= 0 || imgSet.indexOf('Warranty') >= 0 || imgSet.indexOf('Promo') >= 0 || imgSet.indexOf('Organizer') >= 0) && newSelection != "UPL145~unboxed") {
+		if(SnSitems.indexOf(imgSet) > 0 && newSelection != "UPL145~unboxed") {
 
 			let name = $(this).next().find('.product-option-txt').text();
 			if (!$('#sel-not-shown ul li').hasClass(imgSet) && (name.indexOf('No') < 0 || name.indexOf('Standard') < 0)) {
@@ -97,12 +106,8 @@ export default function imageBuilder() {
 					}
 				});
 			}
-            //this shows the selected but none feature only on bigger sized device windows
-			if ($('#sel-not-shown ul li').length >= 1 && $(window).width() >= 1200) {
-				$('.desk-build-images').css('width', '75%');
-			} else {
-				$('.desk-build-images').css('width', '100%');
-			}
+
+			showSnSbox();
 		}
 
     });

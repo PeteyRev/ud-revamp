@@ -31,7 +31,10 @@
     background-color: $color-greyLightest;
     position: absolute;
     top: 0;
-    right: 22px;
+    right: 10px;
+    @include breakpoint('medium'){
+        right: 22px;
+    }
 }
 
 .cart-line--right {
@@ -44,5 +47,7 @@
 }
 
 .product-avail-wrap {
-    margin-left: 1rem;
+    @include breakpoint('medium'){
+        margin-left: 1rem;
+    }
 }

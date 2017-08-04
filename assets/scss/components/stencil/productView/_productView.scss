@@ -100,9 +100,10 @@
 // -----------------------------------------------------------------------------
 
 .productView-product {
-    padding: 23px 23px 0;
+    padding: 15px 15px 0;
     background-color:$color-greyLight;
     @include breakpoint("medium") {
+        padding: 23px 23px 0;
         border-bottom: 1px solid $color-greyLightest;
         // padding-bottom: spacing("single") + spacing("third");
     }
@@ -114,12 +115,13 @@
 
 .productView-title {
     color:#353332;
-    font-size: 24px;
+    font-size: 20px;
     margin: -(spacing("half")) 0 spacing("quarter");
     width: 85%;
 
     @include breakpoint("medium") {
         width: 100%;
+        font-size: 24px;
     }
 
     @include breakpoint("large") {
@@ -157,8 +159,12 @@
         font-size:14px;
     }
     span.price.price--withoutTax {
-        font-size: 23px;
+        font-size: 18px;
         display:block;
+        @include breakpoint('medium'){
+            font-size: 23px;
+ 
+        }
     }
 }
 
@@ -189,6 +195,7 @@
     }
 
     .productView-reviewLink {
+        line-height: 1;
         display: block;
         vertical-align: middle;
         margin-top: 2px;
@@ -247,6 +254,7 @@
 }
 
 .productView-info-name {
+    font-size: 11px;
     clear: both;
     margin-bottom: spacing("eighth");
     margin-right: spacing("quarter");
@@ -260,6 +268,7 @@
 
 .productView-info-value {
     margin-bottom: spacing("quarter");
+    line-height: 1;
 
     @include breakpoint("small") {
         margin-bottom: spacing("base");
@@ -280,10 +289,8 @@
     //opacity:0;
     @include clearfix;
     margin-bottom: spacing("single");
-    text-align: center;
-
+    text-align: left;
     @include breakpoint("small") {
-        text-align: left;
         height: 562px;
     }
 

@@ -51,4 +51,9 @@
     background-color: #ed6325;
     border-color: #ed6325;
     color: $color-white;
+    &:hover{
+        background-color: #f18251;
+        border-color: #f18251;
+        color: $color-white;
+    }
 }

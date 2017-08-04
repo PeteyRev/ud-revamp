@@ -188,6 +188,29 @@
     z-index: 1;
 }
 
+.mobile-nav-hide{
+     display:none;
+     @include breakpoint('medium'){
+        display:block;
+    }  
+}
+
+.mobile-nav-links{
+    @include breakpoint('medium'){
+        display:none !important;
+    }
+
+}
+
+.normal-menu-nav {
+    height: 700px;
+    overflow: scroll;
+    @include breakpoint('medium'){
+        height: auto;
+        overflow: auto;
+    }
+}
+
 //custom menu modal
 #ShopMenu, #ResourceMenu {
     width: 1388px;

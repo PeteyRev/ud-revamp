@@ -4,21 +4,30 @@
     </div>
     <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
 
-        <li class="navPages-item">
+        <li class="navPages-item mobile-nav-hide">
             <a id="ShopOpenNav" class="navPages-action" href="#" data-reveal-id="ShopMenu">Shop <svg class="menu-drop-icon"><use xlink:href="#icon-header-drop-down-arrow-icon" /></a>
         </li>
-        <li class="navPages-item">
+        <li class="navPages-item mobile-nav-hide">
             <a id="OpenResources" class="navPages-action" href="#" data-reveal-id="ShopMenu">Resources <svg class="menu-drop-icon"><use xlink:href="#icon-header-drop-down-arrow-icon" /></a>
         </li>
-        <li class="navPages-item">
+        <li class="navPages-item mobile-nav-hide">
             <a class="navPages-action" href="/reviews">Reviews</a>
         </li>
-        <li class="navPages-item">
+        <li class="navPages-item mobile-nav-hide">
             <a class="navPages-action" href="/contact-us">Contact</a>
         </li>
-
+        {{#each categories}}
+            <li class="navPages-item mobile-nav-links">
+            {{#if ../theme_settings.navigation_design '===' 'simple'}}
+                {{> components/common/navigation-list}}
+            {{/if}}
+            {{#if ../theme_settings.navigation_design '===' 'alternate'}}
+                {{> components/common/navigation-list-alternate}}
+            {{/if}}
+            </li>
+        {{/each}}
         {{#unless theme_settings.hide_content_navigation}} {{#each pages}}
-        <li class="navPages-item navPages-item-page">
+        <li class="navPages-item navPages-item-page mobile-nav-links">
             <a class="navPages-action" href="{{url}}">{{name}}</a>
         </li>
         {{/each}} {{/unless}}

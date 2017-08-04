@@ -19,7 +19,7 @@ $second_value : str-slice($value_of_swatch_size, $position_of_x + 1);
 .form-option-variant--color,
 .form-option-variant--pattern {
     height: $second_value +"px";
-    width: $first_value +"px";
+    width: 30.42%;
 }
 
 .form-option-expanded {
@@ -52,4 +52,16 @@ $second_value : str-slice($value_of_swatch_size, $position_of_x + 1);
     display: block;
     height: 100px;
     width: 100px;
+}
+
+img.productOptions-list-item-image {
+    width: 34.7%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include breakpoint("medium"){
+        width:100%;
+        position:relative;
+        transform: none;
+    }
 }

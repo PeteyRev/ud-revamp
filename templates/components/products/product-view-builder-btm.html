@@ -30,7 +30,6 @@
     <div id="ProductImageGallery" class="modal" data-reveal>
         <div>
             <div class="product-image-gallery" data-slick='{
-                "dots": true,
                 "fade": true,
                 "arrows": true,
                 "mobileFirst": true,
@@ -76,7 +75,7 @@
                     </div>
                     <div class="cart-line--left"></div>
                 </div>
-                <div class="small-3 columns relative">
+                <div class="small-4 medium-3 columns relative">
                     <div class="productView-rating" {{#if schema}} itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"
                         {{/if}}>
                         {{#if settings.show_product_rating}} {{#if product.num_reviews '>' 0}} {{#if schema}}
@@ -96,7 +95,7 @@
                     </div>
                     <div class="cart-line--right"></div>
                 </div>
-                <div class="small-5 columns">
+                <div class="small-4 medium-5 columns">
                     <div class="product-avail-wrap">
                         {{#if product.availability}}
                         <div class="productView-info-name">{{lang 'products.availability'}}</div>

@@ -23,6 +23,7 @@
     position: relative;
     .socialLinks {
         margin-bottom: 19px;
+        clear:both;
     }
     @include grid-column(12);
     padding-left: spacing("base");
@@ -180,6 +181,7 @@ $box-radius: 3px;
 
 
 .progress-builder{
+    text-align:center;
     padding: 0 1rem 1rem;
     background-color: $color-greyLight;
     p{
@@ -245,6 +247,19 @@ $box-radius: 3px;
     }
 }
 
+.product-arrows{
+    height:90px;
+    @include breakpoint('medium'){
+        height:65px;
+    }
+    .button--blue, .button--transparent  {
+        top: 35%;
+        @include breakpoint('medium'){
+            top: 50%;
+        }
+    }
+}
+
 .product-arrows .slick-prev {
     left: 0;
     background-color: transparent;
@@ -260,17 +275,24 @@ input#form-action-addToCart {
     display: none;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 117%;
+    width:92%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
+    @include breakpoint('medium'){
+        top: 50%;
+        width:100%
+    }
 }
 
 .options-map-button {
     position: absolute;
+    width:100%;
+    text-align: center;
     left: 50%;
-    top: 50%;
+    top: 85%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -281,6 +303,10 @@ input#form-action-addToCart {
     font-weight: $fontWeight-medium;
     cursor: pointer;
     font-family: $fontFamily-headings;
+    @include breakpoint("medium"){
+            top: 50%;
+    }
+
 }
 
 li.productOptions-list-item:hover {
@@ -360,9 +386,12 @@ svg.learn-more-small {
             display: inline-block;
             margin: 3px 0;
             cursor: pointer;
-            width: 31%;
+            width: 49%;
             font-size: 15px;
             color: $color-grey;
+            @include breakpoint("medium"){
+                width: 31%;
+            }
         }
         li:last-child {
             color: $color-blue;
@@ -372,6 +401,13 @@ svg.learn-more-small {
             color: $color-black;
             font-weight: $fontWeight-bold;
         }
+    }
+}
+
+.product-tour{
+    display:none !important;
+    @include breakpoint('medium'){
+        display:block;
     }
 }
 
@@ -389,7 +425,10 @@ a.productView-thumbnail-link.modal-slider img {
 }
 
 div#ProductImageGallery {
-    width: 63.5%;
+    width: 100%;
+    @include breakpoint('medium'){
+        width: 63.5%;  
+    }
     background: transparent;
 }
 
@@ -397,10 +436,10 @@ div#ProductImageGallery {
     opacity: 0;
     margin-bottom: 0;
     .slick-prev {
-        left: 1.64286rem;
+        left: 0.64286rem;
     }
     .slick-next {
-        right: 1.64286rem;
+        right: 0.64286rem;
     }
     .slick-dots {
         display: none;
@@ -435,6 +474,16 @@ svg.img-arrow-right {
     top: 50%;
 }
 
+
+.productView-rating .icon {
+    height: 1rem;
+    width: 1rem;
+    @include breakpoint('medium'){
+        height: 1.14286rem;
+        width: 1.14286rem;
+    }
+}
+
 //img builder
 .desk-build-images {
     position: relative;
@@ -455,6 +504,7 @@ svg.img-arrow-right {
 }
 
 #sel-not-shown {
+    display:none;
     position: absolute;
     margin-top: .5rem;
     float: left;
@@ -878,10 +928,15 @@ ul.cart-bottom-icons {
     li {
         cursor: pointer;
         display: inline-block;
-        width: 31%;
+        width: 32%;
         span {
             position: relative;
             left: .4rem;
+            display:block;
+            font-size: 13px;
+            @include breakpoint('medium'){
+                display:inline-block;
+            }
         }
     }
     li:hover {
