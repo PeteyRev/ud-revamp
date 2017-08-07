@@ -119,9 +119,9 @@
 .video-slider{
     .youtube{
         height: 205px;
-    }
-    @include breakpoint("medium"){
-        height: 388px;
+        @include breakpoint("medium"){
+            height: 388px;
+        }
     }
 }
 

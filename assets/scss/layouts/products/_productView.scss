@@ -736,44 +736,6 @@ table.comparison-table {
     min-height: 240px;
 }
 
-
-//helper functions
-.absolute {
-    position: absolute;
-}
-
-.relative {
-    position: relative;
-}
-
-.text-center {
-    text-align: center;
-}
-
-video.fullscreen-bg__video {
-    width: 100%;
-}
-
-.full-width {
-    width: 100% !important;
-}
-
-.flex-row {
-    display: flex;
-}
-
-.middle-just {
-    align-self: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.stencil-hide {
-    display: none;
-}
-
 div#cart-preview-dropdown {
     left: 1500px !important;
     top: 55px !important;

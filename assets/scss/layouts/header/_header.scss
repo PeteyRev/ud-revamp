@@ -42,6 +42,7 @@
 
 header.header.search-is-open {
     position: relative;
+    background-color: $header-bg;
 }
 
 .body.search-is-open {
@@ -136,15 +137,14 @@ header.header.search-is-open.scroll-header {
 .header-logo {
     transition:.3s ease-in-out;
     font-size: 0;   // 1
-    margin: 0 6.92857rem;; // 2
-    text-align: left;
-
+    text-align: center;
+    margin: 0 0 0 3.92857rem;
     @include breakpoint("small") { // 4
         margin-right: remCalc($header-toggle-width * 2);
     }
 
     @include breakpoint("medium") {
-        //margin: (spacing("double") + spacing("base")) auto (spacing("double") + spacing("single"));
+        text-align: left;
         padding: 1rem 0 0;
         float: left;
         .header.fixed & {
@@ -164,7 +164,6 @@ header.header.search-is-open.scroll-header {
         padding: $header-logo-paddingVertical 0;
         position: relative;
         text-decoration: none;
-        width: 100%;
         z-index: zIndex("low");
 
         // scss-lint:disable NestingDepth
@@ -315,4 +314,36 @@ header.header.search-is-open.scroll-header {
         }
 
     }
+}
+
+
+@media screen and (max-width: 1300px){
+   .header-logo {
+    margin-right: 2.85714rem;
+}
+
+.navPages-action {
+    padding: 0.78571rem 2.071rem 1.14286rem 0;
+}
+
+ 
+}
+
+@media screen and (max-width: 1400px){
+   .header-logo {
+    margin-right: 2.85714rem;
+}
+
+.navPages-action {
+    padding: 0.78571rem 2.071rem 1.14286rem 0;
+}
+
+ 
+}
+
+@media screen and (max-width: 1200px){
+   .mobile-med-hide {
+    display:none !important;
+}
+ 
 }

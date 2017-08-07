@@ -4,7 +4,7 @@ import utils from '@bigcommerce/stencil-utils';
 import StencilDropDown from './stencil-dropdown';
 
 export default function () {
-    const TOP_STYLING = 'top: 63px;';
+    const TOP_STYLING = 'top: 72px;';
     const $quickSearchResults = $('.quickSearchResults');
     const $quickSearchDiv = $('#quickSearch');
     const $searchQuery = $('#search_query');
@@ -15,9 +15,11 @@ export default function () {
         },
         show: (event) => {
             $searchQuery.focus();
+            if ($('.quickSearchResults a').hasClass('modal-close')){
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                $('header, .body').addClass('search-is-open');
+            }
             event.stopPropagation();
-            document.body.scrollTop = document.documentElement.scrollTop = 0;
-            $('header').addClass('search-is-open');
         },
     };
     const stencilDropDown = new StencilDropDown(stencilDropDownExtendables);
@@ -52,7 +54,9 @@ export default function () {
             return;
         }
 
-        doSearch(searchQuery);
+        doSearch(searchQuery)
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        $('header').addClass('search-is-open');
     });
 
     // Catch the submission of the quick-search
