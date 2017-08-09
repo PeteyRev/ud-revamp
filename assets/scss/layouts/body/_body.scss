@@ -177,6 +177,9 @@ video.fullscreen-bg__video {
     transform: translate(-50%, -50%);
     z-index: 1;
     color: #fff;
+    @include breakpoint('large'){
+        top: 40%;
+    }
     span {
         color: $color-blue;
     }

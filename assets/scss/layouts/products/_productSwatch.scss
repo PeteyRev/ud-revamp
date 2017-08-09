@@ -59,7 +59,7 @@ img.productOptions-list-item-image {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    @include breakpoint("medium"){
+    @include breakpoint("small"){
         width:100%;
         position:relative;
         transform: none;

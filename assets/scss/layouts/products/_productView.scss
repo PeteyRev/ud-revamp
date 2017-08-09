@@ -249,12 +249,12 @@ $box-radius: 3px;
 
 .product-arrows{
     height:90px;
-    @include breakpoint('medium'){
+    @include breakpoint('small'){
         height:65px;
     }
     .button--blue, .button--transparent  {
         top: 35%;
-        @include breakpoint('medium'){
+        @include breakpoint('small'){
             top: 50%;
         }
     }
@@ -281,9 +281,9 @@ input#form-action-addToCart {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
-    @include breakpoint('medium'){
+    @include breakpoint('small'){
         top: 50%;
-        width:100%
+        width:auto;
     }
 }
 
@@ -303,7 +303,7 @@ input#form-action-addToCart {
     font-weight: $fontWeight-medium;
     cursor: pointer;
     font-family: $fontFamily-headings;
-    @include breakpoint("medium"){
+    @include breakpoint("small"){
             top: 50%;
     }
 
@@ -604,8 +604,30 @@ img.active {
 
 //tabs
 article.productView-description {
+    .tabs{
+        width: 80%;
+        margin: 0 auto;
+        @include breakpoint('medium'){
+            width: 100%;
+        }
+        @include breakpoint('large'){
+
+        }
+    }
     .tab {
-        width: 20%;
+        margin-bottom: 1px;
+        width: 100%;
+        border-top: none;
+        @include breakpoint('small'){
+
+        }
+        @include breakpoint('medium'){
+            margin-bottom: 0px;
+            width: 20%;
+        }
+        @include breakpoint('large'){
+
+        }
     }
     .tab a {
         color: #fff !important;

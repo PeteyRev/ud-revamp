@@ -19,20 +19,7 @@ export default function imageBuilder() {
 		}
  	 }
 
-    //this finds the sku for that option (swatch/rectangle or product list type) and the option set name
-	$optionInput.on('click', function () {
-
-
-		let $this = $(this);
-        let imgSet = $(this).closest('.form-options-wrapper').data('optionset');
-        let newSelection = $this.next().find('.product-option-txt').data('sku');
-
-		//  gets the current width and depth of the desk builder so it knows what size to match
-		let curWidth = $('.desktop-wrapper .active').attr('data-width');
-		let curDepth = $('.desktop-wrapper .active').attr('data-depth');
-
-      
-        //searches the matched option set name and reveals the correct image and hides the rest
+    function accessoryFind($this,imgSet,newSelection,curWidth,curDepth) {
 		$deskImgSet.each(function () {
 			let divSet = $(this).data('set');
 			if (imgSet === divSet) {
@@ -52,31 +39,100 @@ export default function imageBuilder() {
 						$this.removeClass('active').addClass('hide');
 					}
 				});
+				return false;
 			}
 		});
+	}
+
+	function sizeChange($this,imgSet,newSelection,curWidth,curDepth){
+		let newWidth = newSelection.toString().split('x')[0].trim();
+		let newDepth = newSelection.toString().split('x').pop().trim();
+		$deskImgSet.each(function () {
+			let currentSel = $(this).find('.active').attr('data-name');
+			$('img', this).each(function () {
+				let $this = $(this);
+				$this.addClass('hide').removeClass('active');
+				let name = $this.attr('data-name');
+				let width = $this.attr('data-width');
+				let depth = $this.attr('data-depth');
+				if (currentSel === name && (width === newWidth || width === "all") && (depth === newDepth || depth === "all")) {
+					if (!$this.hasClass('lazyload')){
+						$this.addClass('lazyload');
+					}
+					$this.click().removeClass('hide').addClass('active');
+				}
+			});
+		});
+	}
+
+	function accessoryFindLShape($this,imgSet,newSelection,curExt){
+		$deskImgSet.each(function() {
+            var divSet = $(this).data('set');
+            if (imgSet === divSet) {
+                $('img', this).each(function() {
+                    var $this = $(this);
+                    $this.removeClass('active').addClass('hide');
+                    var newImg = $this .attr('data-name');
+                    var newExt = $this.attr('data-ext');
+                    if (newSelection === newImg && curExt === newExt) {
+                    if (!$this.hasClass('lazyload')){
+                            $this.addClass('lazyload');
+                        }
+						$this.removeClass('hide').addClass('active');
+					}
+					if (newSelection === 0) {
+						$this.removeClass('active').addClass('hide');
+					}
+                });
+				return false;
+            }
+        })
+	}
+
+    function extensionChange($this,imgSet,newSelection){
+		$deskImgSet.each(function() {
+			var currentSel = $(this).find('.active').attr('data-name');
+			$('img',this).each(function(){
+				var $this = $(this);
+				$this.addClass('hide').removeClass('active');
+				var name = $this.attr('data-name');
+				var newExt = $this.attr('data-ext');
+				if (currentSel === name && newSelection === newExt) {
+					if (!$this.hasClass('lazyload')){
+						$this.addClass('lazyload');
+					}
+					$this.click().removeClass('hide').addClass('active');
+				}
+			});
+		});
+	}
+
+    //this finds the sku for that option (swatch/rectangle or product list type) and the option set name
+	$optionInput.on('click', function () {
+
+		let $this = $(this);
+        let imgSet = $(this).closest('.form-options-wrapper').data('optionset');
+        let newSelection = $this.next().find('.product-option-txt').data('sku');
+
+		//  gets the current width and depth of the desk builder so it knows what size to match
+		let curWidth = $('.desktop-wrapper .active').attr('data-width');
+		let curDepth = $('.desktop-wrapper .active').attr('data-depth');
+        let curExt = $('.desktop-wrapper .active').attr('data-ext');
+        //searches the matched option set name and reveals the correct image and hides the rest
+		if (document.getElementById('LSHAPE')){
+			accessoryFindLShape($this,imgSet,newSelection,curExt);
+		} else {
+			accessoryFind($this,imgSet,newSelection,curWidth,curDepth);
+		}
+        
 
 		//on size change, searches through each desk img set and hides each picture, revealing the correct sized option if active
 		if (imgSet === "Desktop Size") {
-			let newWidth = newSelection.toString().split('x')[0].trim();
-			let newDepth = newSelection.toString().split('x').pop().trim();
-			$deskImgSet.each(function () {
-				let currentSel = $(this).find('.active').attr('data-name');
-				$('img', this).each(function () {
-					let $this = $(this);
-					$this.addClass('hide').removeClass('active');
-					let name = $this.attr('data-name');
-					let width = $this.attr('data-width');
-					let depth = $this.attr('data-depth');
-					if (currentSel === name && (width === newWidth || width === "all") && (depth === newDepth || depth === "all")) {
-                        if (!$this.hasClass('lazyload')){
-                            $this.addClass('lazyload');
-                        }
-						$this.click().removeClass('hide').addClass('active');
-					}
-				});
-			});
+        	sizeChange($this,imgSet,newSelection,curWidth,curDepth);
 		}
-
+		if (imgSet === "Extension Side") {
+        	extensionChange($this,imgSet,newSelection);
+		}
 		//handles mat placement for selected not shown
 		if (imgSet.indexOf('Promo') >= 0 && newSelection === 'UPL145~unboxed') {
             

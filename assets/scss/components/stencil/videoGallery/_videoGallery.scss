@@ -110,6 +110,7 @@
     background-size: cover;
     position: relative;
     background-position: 30% 50%;
+    cursor: pointer;
     .video-play-icon {
         @include absoluteVertHor;
         cursor: pointer;
@@ -131,7 +132,6 @@
         height: 300px;
         width: 534px;
         margin: 0 auto;
-        cursor: pointer;
     }
     iframe {
         display: block;
