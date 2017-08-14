@@ -76,6 +76,29 @@ export default class Product extends PageManager {
             nextArrow: '<button type="button"><svg class="img-arrow-right"><use xlink:href="#icon-right-next-arrow-image-gallery-icon" /></svg></button>'
         });
 
+        //popout related products
+        setTimeout(function() {
+            $('.related-products-popout').addClass('popout-related');
+        }, 3000);
+        $('.popout-close-icon').on('click', () => {
+            $('.related-products-popout').toggleClass('popout-related');
+        });
+
+        //top bar fast cart and see more desk
+        $(document).on('scroll', function () {
+            // if ($(this).scrollTop() >= $('#fast-cart-anchor').position().top) {
+            //     $('.product-listing-fastcart').css('top', '52px');
+            // } else {
+            //     $('.product-listing-fastcart').css('top', '-6px');
+            // }
+
+            if ($(this).scrollTop() >= $('#BottomRelatedProducts').position().top - 450) {
+                $('.related-products-popout').css('opacity', '0');
+            } else {
+                $('.related-products-popout').css('opacity', '1');
+            }
+        });
+
 
         const $reviewForm = classifyForm('.writeReview-form');
         const review = new Review($reviewForm);

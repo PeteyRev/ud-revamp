@@ -15,9 +15,14 @@
     }
 }
 
-.full-width-wrapper {
+.full-width-wrapper, .full-width-template .container {
     max-width: 2000px;
     margin: 0 auto;
+    padding: 0;
+}
+
+.full-width-template .body {
+    padding-top: 75px;
 }
 
 .page {
@@ -49,6 +54,27 @@
         }
     }
 }
+
+.hero-top {
+    position: relative;
+    .hero-top-title {
+        width: 34%;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+    }
+    h1{
+        font-size: 50px;
+        color:$color-white;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+}
+
+
 
 .fullscreen-bg {
     position: relative;
