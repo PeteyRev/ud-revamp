@@ -1,0 +1,157 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
+
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>WE'RE HERE FOR YOU</h2>
+                                        <p>A new desk and matching chair is a big purchase, especially when you are outfitting
+                                            your entire office. That is why we are here for you every step of the way, from
+                                            providing custom quotes to financing options through PayPal. Our friendly team
+                                            of humans will be happy to provide the answers to all of your questions. Once
+                                            you have decided on the UPLIFT products for your space, our team will provide
+                                            you with a quote.</p>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>corporate sales</h2>
+                                        <p>Everyone could use some UPLIFTing in their life. That&rsquo;s why we work with businesses,
+                                            interior designers, architects, schools, and government organizations to help
+                                            you outfit your space with our unique commercial standing desks, UPLIFT style.
+                                            No project is too big or small for us. We&rsquo;d love to help make the office-wide
+                                            transition to height-adjustable desks, easy for you, by offering quick lead times
+                                            and great prices.</p>
+                                        <p>We'll work with you every step of the way, and you'll get unmatched, personal service
+                                            from our sales pros. Our job is to find the best solution for your space, from
+                                            selection to shipping to installation and warranty support.</p>
+                                        <p>Whether you&rsquo;re looking for desk frames only, complete height adjustable desks,
+                                            custom desktops, or a combination, we're here to accommodate your requests while
+                                            offering discounted bulk pricing. Give us a call, chat or email for more information
+                                            on our commercial standing desks or to receive a quote.</p>
+                                        <p>We look forward to you joining the UPLIFT family.</p>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Financing with PayPal</h2>
+                                        <p>Paired with 0% APR for 6 months, applying for PayPal credit is simple. Just answer
+                                            two quick questions and get your answer in seconds! The credit line is built
+                                            into your PayPal account - simply select PayPal at checkout once you've received
+                                            approval, and you'll have your UPLIFT Desk in no time.</p>
+                                        <p>You can read more about how it works on <a href="https://creditapply.paypal.com/apply?guid=ZM1LV5J9&amp;assetId=PPCMICRO"
+                                                target="_blank">PayPal's site here</a>.</p>
+                                        <a href="https://creditapply.paypal.com/apply?guid=ZM1LV5J9&amp;assetId=PPCMICRO" target="_blank"> <button class="std-btn">apply now</button> </a>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Purchase Order Service</h2>
+                                        <p>In addition to our other purchasing options such as all major credit cards or PayPal,
+                                            we also accept purchase orders from businesses, schools, organizations and government
+                                            agencies. Terms of payment will be established based on the credit rating and
+                                            credit information provided by and for specific customers. Net 30 payment terms
+                                            will be granted upon verification. Deposits may be required for first-time purchase
+                                            orderers. Orders are invoiced at the time of shipment or will call date. No credit
+                                            reference is required for government, military, public school, college or university
+                                            purchasers.
+                                        </p>
+                                        <p>Please ensure that the PO is submitted using a formalized document that includes
+                                            the following information:</p>
+                                        <ul>
+                                            <li>Purchase order number</li>
+                                            <li>Primary contact name, including phone number and email address</li>
+                                            <li>Billing address, including company name and accounts payable contact</li>
+                                            <li>Shipping address, including company name, phone number and recipient</li>
+                                            <li>Payment terms</li>
+                                            <li>List of product part numbers and product description as well as quantities</li>
+                                            <li>Unit price of each item</li>
+                                            <li>Total amount</li>
+                                            <li>Authorized signature</li>
+                                        </ul>
+                                        <p>If some of the above information is missing on your formal purchase order, please
+                                            make sure to include this information in your email for faster order processing.
+                                            Upon approval of terms, we will send an email confirmation of the order along
+                                            with tracking once it ships.</p>
+                                        <p>For purchase orders we accept payment via ACH/EFT, wire transfer, or check. To start
+                                            the purchase order process, contact us at <a href="mailto:info@upliftdesk.com">info@upliftdesk.com</a></p>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                        <a href="http://www.upliftdesk.com/content/square-grove-credit-application.pdf" target="_blank"> <button class="std-btn small-full-width">Download our credit application</button> </a></div>
+                                    <div class="small-12 large-5 columns text-center-padding no-pad-sm"><img class="float-right text-center-padding no-pad-top-sm reg-gap-small-btm" src="http://www.upliftdesk.com/product_images/uploaded_images/specsLight1.jpg"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}
