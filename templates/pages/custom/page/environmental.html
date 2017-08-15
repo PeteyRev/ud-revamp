@@ -1,102 +1,150 @@
 {{#partial "page"}}
 
-<main class="page">
+    <main class="page">
 
 
-    {{#if page.sub_pages}}
-    <nav class="navBar navBar--sub">
-        <ul class="navBar-section account-navigation">
-        {{#each page.sub_pages}}
-            <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
-        {{/each}}
-        </ul>
-    </nav>
-    {{/if}}
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
 
-    <div class="page-content">
-        {{#replace '%%Syndicate%%' page.content}}
-            {{> components/page/rss_feed}}
-        {{else}}
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
 
-<div class="full-width-l-r">
-    <div class="hero-top">
-        <img src="http://via.placeholder.com/1903x370">
-        <div class="hero-top-title">
-            <h1 class="page-heading">{{ page.title }}</h1>
-        </div>
-    </div>
-    
-<section>
-    <div class="row expanded collapse flex-row blue-bg">
-        <div class="small-12 large-5 columns middle-just">
-            <div class="middle-just-inner-l">
-                <h2>LET'S BUILD IT TOGETHER</h2>
-                <p>Your desk is where you work and create, so it’s important that it’s built to your specification. That’s why we offer a wide range of desktop materials, useful accessories and expert advice. But when off-the-shelf options aren’t enough, we’ll happily work with you to make the height adjustable desk you need. Choose from 100 percent recycled wood desktops in our Eco line. Or, consider a <a href="http://site.thehumansolution.com/UPLIFT/greenguard-certified-laminate.pdf">GREENGUARD-certified</a> laminate desktop, which provides excellent value while being indoor-air friendly and environmentally sound.</p>
-                <a href="/about/"><button class="button button--primary">Learn More</button></a>
-            </div>
-        </div>
-        <div class="small-12 large-7 columns text-right">
-            <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
-        </div>
-    </div>
-</section>
-<section>
-    <div class="row expanded collapse flex-row white-bg">
-        <div class="small-12 large-5 columns middle-just">
-            <div class="middle-just-inner-l">
-                <h2>LET'S BUILD IT TOGETHER</h2>
-                <p>Your desk is where you work and create, so it’s important that it’s built to your specification. That’s why we offer a wide range of desktop materials, useful accessories and expert advice. But when off-the-shelf options aren’t enough, we’ll happily work with you to make the height adjustable desk you need. Choose from 100 percent recycled wood desktops in our Eco line. Or, consider a <a href="http://site.thehumansolution.com/UPLIFT/greenguard-certified-laminate.pdf">GREENGUARD-certified</a> laminate desktop, which provides excellent value while being indoor-air friendly and environmentally sound.</p>
-                <a href="/about/"><button class="button button--primary">Learn More</button></a>
-            </div>
-        </div>
-        <div class="small-12 large-7 columns text-right">
-            <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
-        </div>
-    </div>
-</section>
-<section>
-    <div class="row expanded collapse flex-row blue-bg">
-        <div class="small-12 large-5 columns middle-just">
-            <div class="middle-just-inner-l">
-                <h2>LET'S BUILD IT TOGETHER</h2>
-                <p>Your desk is where you work and create, so it’s important that it’s built to your specification. That’s why we offer a wide range of desktop materials, useful accessories and expert advice. But when off-the-shelf options aren’t enough, we’ll happily work with you to make the height adjustable desk you need. Choose from 100 percent recycled wood desktops in our Eco line. Or, consider a <a href="http://site.thehumansolution.com/UPLIFT/greenguard-certified-laminate.pdf">GREENGUARD-certified</a> laminate desktop, which provides excellent value while being indoor-air friendly and environmentally sound.</p>
-                <a href="/about/"><button class="button button--primary">Learn More</button></a>
-            </div>
-        </div>
-        <div class="small-12 large-7 columns text-right">
-            <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
-        </div>
-    </div>
-</section>
-<section>
-    <div class="row expanded collapse flex-row white-bg">
-        <div class="small-12 large-5 columns middle-just">
-            <div class="middle-just-inner-l">
-                <h2>LET'S BUILD IT TOGETHER</h2>
-                <p>Your desk is where you work and create, so it’s important that it’s built to your specification. That’s why we offer a wide range of desktop materials, useful accessories and expert advice. But when off-the-shelf options aren’t enough, we’ll happily work with you to make the height adjustable desk you need. Choose from 100 percent recycled wood desktops in our Eco line. Or, consider a <a href="http://site.thehumansolution.com/UPLIFT/greenguard-certified-laminate.pdf">GREENGUARD-certified</a> laminate desktop, which provides excellent value while being indoor-air friendly and environmentally sound.</p>
-                <a href="/about/"><button class="button button--primary">Learn More</button></a>
-            </div>
-        </div>
-        <div class="small-12 large-7 columns text-right">
-            <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
-        </div>
-    </div>
-</section>
-</div>
-        {{/replace}}
-    </div>
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
 
-    {{#if page.feed}}
-        <ul>
-            {{#each page.feed}}
-                <li>
-                    <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
-                    <p>{{content}}</p>
-                </li>
-            {{/each}}
-        </ul>
-    {{/if}}
-</main>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Resources Restored</h2>
+                                        <p>Just because we&rsquo;re always bringing the freshest in ergonomic innovations doesn&rsquo;t
+                                            mean we can&rsquo;t benefit from a little look back every now and again. And
+                                            if we&rsquo;ve learned anything from the wisdom of classic rock band reunions,
+                                            it&rsquo;s that there&rsquo;s nothing wrong with recycling old material. We just
+                                            like to keep things a little more literal. Come to think of it, it&rsquo;s actually
+                                            pretty easy being green.
+                                        </p>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/environmental-tree-for-top.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>TREES FOR US</h2>
+                                        <p>UPLIFT Desk is committed to helping create and protect sustainable forests. In partnership
+                                            with the
+                                            <a title="National Forest Foundation" href="https://www.nationalforests.org/" target="_blank">National Forest Foundation</a>,
+                                            we're proud to plant five trees in U.S. National Forests for every solid wood
+                                            desktop that we sell. Not only does this help offset our impact on the environment,
+                                            but it's one way we're making sure that the resources we use today will be available
+                                            for future generations.&nbsp;</p>
+                                        <p>Think of it as getting one desk, giving five trees. That's a deal you can't pass
+                                            up.&nbsp;
+                                        </p>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Pulp fact</h2>
+                                        <p>It&rsquo;s a universal truth from crabs, to coconuts, to crackle-coated ice cream,
+                                            there&rsquo;s always something great to be found inside a hard shell. Our UPLIFT
+                                            Eco desks are no exception, only they&rsquo;re more of a treat for your eyes
+                                            than your tastebuds. We take 100 percent recycled wood, treat it, heat it, and
+                                            cover it in a sleek seamless matte coating to keep you writing, typing, and working
+                                            in sensibly sourced style. It&rsquo;s like we put together a fun puzzle with
+                                            about ten billion environmentally-friendly pieces. Quite the picture.</p>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/environmental-refurbished-wood.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Our reclaim to fame</h2>
+                                        <p>While we do offer freshly cut timber in our wide repertoire of desktops, not every
+                                            piece of wood finds its calling right away. Some start out in the flooring biz,
+                                            others take bridging gigs, and even more spend a good portion of their lives
+                                            making up the broad side of a barn. Normally, the end of the game would be retiring
+                                            in a bonfire or a nice landfill upstate, but as it turns out you can teach an
+                                            old log new tricks. We&rsquo;re just the only ones who know how.</p>
+                                        <p>Between the reclaimed teak and our reclaimed fir, you&rsquo;ll have two rock solid
+                                            options refurbished and finished to last. Call it job securi-tree.</p>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/environmental-recycled-wood.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>all natural bamboo</h2>
+                                        <p>Fun fact, one of our long-wearing, great looking hardwoods is actually a closer cousin
+                                            to a manicured lawn than a grand old oak. It&rsquo;s true&mdash;bamboo&rsquo;s
+                                            a grass, not a wood. But that&rsquo;s what makes it so green...environmentally
+                                            speaking anyway. Aside from keeping pandas looking black and white and cute all
+                                            over, bamboo&rsquo;s natural lightning-fast growth rates (seriously, one inch
+                                            in under an hour) make it one of the most renewable materials this side of a
+                                            wacky sitcom premise.</p>
+                                        <a href="/about/"><button class="button button--primary">Learn More</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/environmental-bamboo-plant.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
 
 {{/partial}}
 
