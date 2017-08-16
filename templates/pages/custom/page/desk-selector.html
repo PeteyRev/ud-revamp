@@ -1,0 +1,61 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
+
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>What desk will you build?</h2>
+                                        <p>Use our new desk builder to make the desk that you need.</p>
+                                        <a href="/uplift-height-adjustable-standing-desk/"><button class="button button--primary">click here to start</button></a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/customize-desk-shop-desk.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}

@@ -1,0 +1,174 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
+
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>UPLIFT Desk Power &amp; Data Link</h2>
+                                        <p>If your office consists of several desks or more, how do you power them all? You
+                                            can easily plug them into the wall if each desk is close to a power outlet,&nbsp;but
+                                            if desks are laid out in a line that goes perpendicular to the wall, getting
+                                            adequate power to every desk can be quite the task.</p>
+                                        <p>Happy and healthy people are the foundation of a productive workplace, just like
+                                            the foundation of every electric height adjustable desk is a proper power source.
+                                            Enjoy more freedom to adjust to your sitting and standing heights with the UPLIFT
+                                            Desk Power &amp; Data Link.</p>
+                                        <p>The Power &amp; Data Link delivers reliable power to groups of sit-to-stand desks,
+                                            providing a well-powered and flexible office setup for you and your employees.</p>
+                                        <p>For tailored assistance, fill out the contact form below and one of our sales professionals
+                                            will be in touch with you shortly.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Flexible Office Power &amp; Data Link from UPLIFT Desk</h2>
+                                        <p>Neighboring desks will have a unifying under-the-desk 6 prong vessel that powers
+                                            their height adjustable desks with no problem. Enjoy a well-powered workstation
+                                            without an unsightly trail of cords leading to the nearest power outlet.</p>
+                                        <p>Beginning with the main power system that's installed to the first desk, power is
+                                            passed on through a linked system to remaining neighboring desks via a looping
+                                            cable, delivering reliable power to grouped workstations.</p>
+                                        <p>Initial power is supplied to groups of desks via a 3 prong 120 Volt single circuit
+                                            plug, or directly wired to your power source, up to 4 circuits, depending on
+                                            your office&rsquo;s power capabilities. Each linked group has a 20 Amp max limit
+                                            per circuit. Depending on the electrical draw of the equipment and gear at your
+                                            desk, you can typically attach 4 desks to a single 120 Volt circuit. By combining
+                                            circuits you can do longer desk runs of up to 16 desks on a 4 circuit wall plug.</p>
+                                        <p>The power system mounts directly underneath each desk and comes with 6 - 120 Volt
+                                            power&nbsp;receptacles, 2 - 3.6 Amp USB charging ports, 1 - telecom plate knockout,
+                                            and mounting hardware.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Contact Us for Personalized Service</h2>
+                                        <form id="FlexiblePowerOffice" action="https://formspree.io/xdagzwlm" method="POST"><input style="display: none;" type="text" name="_gotcha" />
+                                            <div class="row">
+                                                <div class="small-12 columns"><label>Full Name <input id="contact_fullname" type="text" name="name" /> </label></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 columns"><label>Company <input class="custom-required" type="text" name="company" /> </label></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 columns"><label>Email <input id="contact_email" type="email" name="email" /> </label></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 columns"><label>Phone <input class="custom-required" type="number" name="phone number" /> </label></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 columns"><label>Shipping Address <input class="custom-required" type="text" name="address" /> </label></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 columns"><label>Number of Desks <input class="custom-required" type="number" name="number of desks" /> </label></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="small-12 columns"><label>Project Description <textarea class="custom-required" style="min-height: 100px;" name="project description"></textarea> </label></div>
+                                            </div>
+                                            <div class="text-right"><button class="button button--primary" type="submit">Send Form</button></div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Features of each under-desk mounted Power System:</h2>
+                                        <ul>
+                                            <li>(6) 120V power receptacles</li>
+                                            <li>(2) 3.6A USB charging ports</li>
+                                            <li>(1) telecom plate knockout</li>
+                                            <li>Mounting hardware</li>
+                                            <li>Available in black, silver, and white</li>
+                                        </ul>
+                                        <p>Give your flexible office a reliable power source and protect the organized look
+                                            of your workspace with the Power &amp; Data Link from UPLIFT.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/data-island-dimensions.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Pricing</h2>
+                                        <p>The Power &amp; Data Link has an estimated cost of around $400 per desk and includes
+                                            all the hardware to go from the wall power then neatly link all of your desks.
+                                            Once you submit your layout we can provide you with a custom-tailored electrical
+                                            system design and an accurate quote.</p>
+                                        <p>Note that you can deliver power to your own desks, so this system is optional. Even
+                                            as a qualified electrician can design and quote a power run from the wall to
+                                            group of desks, this is a fitting solution that should also be considered.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/blue-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}

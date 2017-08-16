@@ -1,0 +1,100 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
+
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+            <h2>Customize it</h2>
+                                        <p>We've got more customization possibilities than anyone else in the industry, hands down. Choose from three base
+                colors and add the top and accessories of your choice to create your customized workstation.</p>
+            <a href="http://www.upliftdesk.com/contact-us/" target="_blank"><button class="button button--primary">Contact us for a quote on custom work</button> </a></div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/customize-desk-shop-desk.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                    <h2>A multitude of materials</h2>
+                                         <p><strong>Custom laminate:</strong> Our laminate maker will custom-make your top to order, using your choice
+                        of Wilsonart's extensive color and pattern selections, all GREENGUARD-certified. There are thousands
+                        of additional colors and patterns available. If you need a center cutout or an unusual shape, no
+                        problem.</p>
+                    <p><strong>Reclaimed wood:</strong> Because the wood was originally cut from timber that had been growing
+                        for hundreds of years, these tops have a unique character, with more complex growth-ring pattern
+                        than you find on newer woods.</p>
+                    <p><strong>Bamboo:</strong>&nbsp;Our 1" thick option gives you a beautiful desk at an exceptional price.
+                        You can also upgrade to our premium bamboo, featuring a thickness of 1.5", a richer grain with more
+                        nuanced color, a vertical grain core, and chamfered edges.</p>
+                    <p><strong>Solid Wood:</strong> Our wide selection of solid wood styles are handmade to order in a variety
+                        of standard and custom sizes. These top-of-the-line desks give your office unmatched beauty and character.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                    <h2>Amazing Accessories</h2>
+                                        <p>You can further customize your desk by adding accessories according to your preferences. We especially
+                        recommend a monitor arm for quick and easy adjustments, a wire management kit to keep your desk organized,
+                        and a desk mat for extra-comfortable standing.</p>
+                    <a href="http://www.upliftdesk.com/desk-accessories/" target="_blank"> <button class="button button--primary">Shop UPLIFT Accessories</button> </a></div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/customize-cpu128-cpu-holder-desk-2.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}

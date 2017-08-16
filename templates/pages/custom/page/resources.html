@@ -1,0 +1,186 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
+
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Assembly Instructions</h2>
+                                        <ul class="desk-spec-sheet-list">
+                                            <li><a href="http://www.upliftdesk.com/content/3-leg-assembly-instructions.pdf" target="_blank">download 3-leg assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/4-leg-assembly-instructions.pdf" target="_blank">download 4-leg assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/adapt-clamp-instructions.pdf" target="_blank">download adapt clamp assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/adapt-freestand-instructions.pdf"
+                                                    target="_blank">download adapt freestand assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/corner-sleeve-instructions.pdf" target="_blank">download corner sleeve installation instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/cpu-holder-instructions.pdf" target="_blank">download cpu holder assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/dual-monitor-arm-instructions.pdf"
+                                                    target="_blank">download dual monitor arm assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/single-monitor-arm-instructions.pdf"
+                                                    target="_blank">download single monitor arm assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/ergohuman-me7erg-chair-instructions.pdf"
+                                                    target="_blank">download ergohuman chair assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/half-circle-drawer-instructions.pdf"
+                                                    target="_blank">download half-circle drawer installation instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/desk-assembly-instructions.pdf" target="_blank">download 2-leg frame and desk assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/eco-corner-assembly-instructions.pdf"
+                                                    target="_blank">download eco corner assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/eco-assembly-instructions.pdf" target="_blank">download eco rectangular desk assembly instructions pdf</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <ul class="desk-spec-sheet-list">
+                                            <li><a href="http://www.upliftdesk.com/content/laminate-l-shape-assembly-instructions.pdf"
+                                                    target="_blank">download laminate l-shape assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/laptop-mount-instructions.pdf" target="_blank">download laptop mount assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/large-keyboard-tray-instructions.pdf"
+                                                    target="_blank">download large keyboard tray installation instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/switch-keyboard-tray-instructions.pdf"
+                                                    target="_blank">download switch keyboard tray installation instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/led-task-light-instructions.pdf" target="_blank">download led task light assembly instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/lifespan-tr1200-dt3-instructions.pdf"
+                                                    target="_blank">download Lifespan treadmill instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/modesty-panel-instructions.pdf" target="_blank">download modesty panel installation instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/cpu-holder-track-spacer-instructions.pdf"
+                                                    target="_blank">download latest cpu holder track spacer installation instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/keyboard-tray-track-spacer-instructions.pdf"
+                                                    target="_blank">download latest keyboard tray track spacer installation instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/track-spacer-instructions-R02.pdf"
+                                                    target="_blank">download R02 track spacer installation instructions pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/track-spacer-instructions-R01.pdf"
+                                                    target="_blank">download R01 track spacer installation instructions pdf</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Accessory Spec Sheets</h2>
+                                        <ul class="desk-spec-sheet-list">
+                                            <li><a href="http://www.upliftdesk.com/content/single-monitor-arm-spec-sheet.pdf"
+                                                    target="_blank">download single monitor arm spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/dual-monitor-arm-spec-sheet.pdf" target="_blank">download dual monitor arm spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/large-keyboard-tray-spec-sheet.pdf"
+                                                    target="_blank">download large keyboard tray spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/switch-keyboard-tray-spec-sheet.pdf"
+                                                    target="_blank">download switch keyboard tray spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/cpu-holder-spec-sheet.pdf" target="_blank">download cpu holder spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/half-circle-drawer-spec-sheet.pdf"
+                                                    target="_blank">download half circle drawer spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/wire-management-kit-spec-sheet.pdf"
+                                                    target="_blank">download wire management kit spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/corner-sleeve-spec-sheet.pdf" target="_blank">download corner sleeve spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/grommet-spec-sheet.pdf" target="_blank">download grommets spec sheet pdf</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <ul class="desk-spec-sheet-list">
+                                            <li><a href="http://www.upliftdesk.com/content/keypad-spec-sheet.pdf" target="_blank">download keypad spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/track-spacer-spec-sheet.pdf" target="_blank">download track spacer spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/standing-desk-mat-spec-sheet.pdf"
+                                                    target="_blank">download standing desk mat spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/casters-spec-sheet.pdf" target="_blank">download casters spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/led-task-light-spec-sheet.pdf" target="_blank">download led task light spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/modesty-panel-spec-sheet.pdf" target="_blank">download modesty panel spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/lifespan-tr800-dt3-spec-sheet.pdf"
+                                                    target="_blank">download Lifespan TR800-DT3 spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/lifespan-tr1200-dt3-spec-sheet.pdf"
+                                                    target="_blank">download Lifespan TR1200-DT3 spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/lifespan-tr5000-dt3-spec-sheet.pdf"
+                                                    target="_blank">download Lifespan TR5000-DT3 spec sheet pdf</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Chair &amp; Stool Spec Sheets</h2>
+                                        <ul class="desk-spec-sheet-list">
+                                            <li><a href="http://www.upliftdesk.com/content/uplift-motion-stool-instructions.pdf"
+                                                    target="_blank">download uplift motion stool spec sheet pdf (CHR454)</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/uplift-motion-stool-instructions-ACC100.pdf"
+                                                    target="_blank">download uplift motion stool spec sheet pdf (ACC100)</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/chr455-pursuit-chair-instructions.pdf"
+                                                    target="_blank">download uplift pursuit ergonomic chair spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/via-muvman-stool-brochure.pdf" target="_blank">download muvman sit-stand stool spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/focal-pivot-stool-brochure.pdf" target="_blank">download focal pivot stool spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/steelcase-amia-chair-brochure.pdf"
+                                                    target="_blank">download steelcase amia spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/steelcase-leap-chair-brochure.pdf"
+                                                    target="_blank">download steelcase leap spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/steelcase-think-chair-brochure.pdf"
+                                                    target="_blank">download steelcase think spec sheet pdf</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <ul class="desk-spec-sheet-list">
+                                            <li><a href="http://www.upliftdesk.com/content/steelcase-gesture-chair-brochure.pdf"
+                                                    target="_blank">download steelcase gesture spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/ergocentric-tcentric-hybrid-chair-spec-sheet.pdf"
+                                                    target="_blank">download ergocenric tcentric spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/ergohuman-me7erg-chair-instructions.pdf"
+                                                    target="_blank">download raynor ergohuman spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/humanscale-freedom-chair-brochure.pdf"
+                                                    target="_blank">download humanscale freedom spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/humanscale-diffrient-world-chair-brochure.pdf"
+                                                    target="_blank">download humanscale diffrient world spec sheet pdf</a></li>
+                                            <li><a href="http://www.upliftdesk.com/content/knoll-life-chair-brochure.pdf" target="_blank">download knoll life chair spec sheet pdf</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </section>
+                        </div>
+            {{/replace}}
+            </div>
+
+            {{#if page.feed}}
+                <ul>
+                    {{#each page.feed}}
+                        <li>
+                            <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                            <p>{{content}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}

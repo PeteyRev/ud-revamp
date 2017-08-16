@@ -1,0 +1,76 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
+
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Wood Desktops and Dry Climates</h2>
+                                        <p>If the air in your area is especially dry, your wood desktop could be at increased
+                                            risk of cracking and splitting. Wood naturally expands and contracts depending
+                                            on the amount of moisture in the environment, and without enough humidity, the
+                                            moisture in your desk can evaporate, leaving it vulnerable to warping.</p>
+                                        <p>It's a completely natural process, but it's unfortunately something that could affect
+                                            your new wood desktop. If your desktop does crack or split, we're happy to send
+                                            you a repair kit to fill the affected areas. If potentially repairing your wood
+                                            desktop isn't something you're comfortable with, we recommend that you take a
+                                            look at our
+                                            <a href="http://www.upliftdesk.com/stand-up-desk-with-bamboo-top/" target="_blank">Bamboo</a>,
+                                            <a href="http://www.upliftdesk.com/uplift-height-adjustable-standing-desk/" target="_blank">Eco</a>,
+                                            or <a href="http://www.upliftdesk.com/uplift-height-adjustable-standing-desk/"
+                                                target="_blank">Laminate</a> desktops instead.</p>
+                                        <p>If your desktop has already warped, please <a href="http://www.upliftdesk.com/content/wood-desktop-repair.pdf"
+                                                target="_blank">click here for instructions</a> on using our solid wood desktop
+                                            repair kit.</p>
+                                        <p>Please contact us via <a href="http://www.upliftdesk.com/contact/" target="_blank">phone, email, or chat</a>                                            if you have additional questions.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}

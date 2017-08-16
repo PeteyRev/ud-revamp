@@ -1,0 +1,547 @@
+{{#partial "page"}}
+
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+    <main class="page">
+
+        <h1 class="page-heading">{{ page.title }}</h1>
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <!--Gallery Top Nav-->
+                    <div class="row collapse expanded">
+                        <div class="small-12 medium-6 large-2 columns">
+                            <a class="smooth-scroll" href="#GalleryEco">
+                                <div class="gallery-box-top"><img src="/content/img/pages/uplift-desk-gallery-standing-desk-thumbnail.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Eco Desktops</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 medium-6 large-2 columns">
+                            <a class="smooth-scroll" href="#GalleryBamboo">
+                                <div class="gallery-box-top"><img src="/content/img/pages/uplift-desk-gallery-desk-converters-thumbnail.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Bamboo Desktops</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 medium-6 large-2 columns">
+                            <a class="smooth-scroll" href="#GallerySolidWood">
+                                <div class="gallery-box-top"><img src="/content/img/pages/uplift-desk-gallery-chairs-and-stools-thumbnail.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Solid Wood Desktops</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 medium-6 large-2 columns">
+                            <a class="smooth-scroll" href="#GalleryLShapes">
+                                <div class="gallery-box-top"><img src="/content/img/pages/uplift-desk-gallery-accessories-thumbnail.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>L-shape Desktops</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 medium-6 large-2 columns">
+                            <a class="smooth-scroll" href="#GalleryCustomApplications">
+                                <div class="gallery-box-top"><img src="/content/img/pages/uplift-desk-gallery-open-office-thumbnail.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Custom Applications</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="small-12 medium-6 large-2 columns">
+                            <a class="smooth-scroll" href="#GalleryAccessories">
+                                <div class="gallery-box-top"><img src="/content/img/pages/uplift-desk-gallery-open-office-thumbnail.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+                                        <h2>Accessories</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--Gallery Section-->
+                    <!-- Eco -->
+                    <div id="GalleryEco" class="row collapse expanded gallery-row">
+                        <h2>Eco Desktops</h2>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-2.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-2.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-3.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-3.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-4.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-4.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bamboo -->
+                    <div id="GalleryBamboo" class="row collapse expanded gallery-row">
+                        <h2>Bamboo Desktops</h2>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/adapt-converter-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/adapt-converter-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-adapt-mobile-laptop-converter-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-adapt-mobile-laptop-converter-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/adapt-converter-photo-gallery-main-3.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/adapt-converter-photo-gallery-thumb-3.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/adapt-converter-photo-gallery-main-4.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/adapt-converter-photo-gallery-thumb-4.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Solid Wood -->
+                    <div id="GallerySolidWood" class="row collapse expanded gallery-row">
+                        <h2>Solid Wood Desktops</h2>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-pursuit-ergonomic-chair-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-pursuit-ergonomic-chair-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-pursuit-ergonomic-chair-photo-gallery-main-2.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-pursuit-ergonomic-chair-photo-gallery-thumb-2.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/motion-stool-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/motion-stool-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/motion-stool-photo-gallery-main-2.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/motion-stool-photo-gallery-thumb-2.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- L-shapes -->
+                    <div id="GalleryLShapes" class="row collapse expanded gallery-row">
+                        <h2>L-shaped Desktops</h2>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/task-light-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/task-light-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/view-arm-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/view-arm-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/switch-tray-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/switch-tray-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/wire-management-kit-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/wire-management-kit-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Custom -->
+                    <div id="GalleryCustomApplications" class="row collapse expanded gallery-row">
+                        <h2>Custom Applications</h2>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accessories -->
+                    <div id="GalleryAccessories" class="row collapse expanded gallery-row">
+                        <h2>Accessories</h2>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <div class="gallery-box-btm photo-gallery-box">
+                                <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
+                                    <div class="std-overlay"></div>
+                                    <div class="center-txt">
+
+
+                                    </div>
+                                    <div class="photo-gallery-slide">
+                                        <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
+                                    </div>
+                                </a>
+                                <ul>
+                                    <!--social-links-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="PhotoImageGallery" class="modal" data-reveal>
+                        <div>
+                            <div class="product-image-gallery">
+                                <!--slides dynamically added-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--end-->
+
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base}}
