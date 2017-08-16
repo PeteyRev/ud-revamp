@@ -32,7 +32,7 @@
     position: absolute;
     top: 0;
     right: 10px;
-    @include breakpoint('medium'){
+    @media screen and (min-width: 1400px) {
         right: 22px;
     }
 }
@@ -40,14 +40,24 @@
 .cart-line--right {
     width: 1px;
     height: 63px;
+    right: 8px;
     background-color: $color-greyLightest;
     position: absolute;
     top: 0;
-    right: 8px;
+    @include breakpoint('large'){
+        right: 0px;
+    }
+    @media screen and (min-width: 1400px) {
+        
+    }
 }
 
 .product-avail-wrap {
     @include breakpoint('medium'){
         margin-left: 1rem;
     }
+}
+
+.opt-price{
+    color:$color-grey;
 }

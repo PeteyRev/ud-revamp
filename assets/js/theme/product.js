@@ -10,6 +10,7 @@ import videoGallery from './product/video-gallery';
 import cartSlider from './product/cart-slider';
 import customBuilder from './product/custom-build';
 import imageBuilder from './product/image-builder';
+import builderRules from './product/builder-custom-rules';
 import startProductTour from './product/product-tour';
 import { classifyForm } from './common/form-utils';
 
@@ -40,7 +41,7 @@ export default class Product extends PageManager {
         this.productDetails = new ProductDetails($('.productView'), this.context, window.BCData.product_attributes);
 
         videoGallery();
-
+        builderRules();
 		cartSlider();
 		imageBuilder();
 		startProductTour();
@@ -84,15 +85,38 @@ export default class Product extends PageManager {
             $('.related-products-popout').toggleClass('popout-related');
         });
 
+        //fixes width issue with sliders in modals
+        let imgSlide = '';
+        $('.productView-thumbnail').on('click', function () {
+            if($(this).siblings('.video-thumbnail').length == 0) {
+                imgSlide = $(this).data('slick-index');
+            } else {
+                imgSlide = $(this).data('slick-index') -1;
+            }
+        });
+        $(document).on('open.fndtn.reveal', '[data-reveal]', function () {
+            setTimeout(function() {
+                 $('.product-image-gallery').slick("setPosition", 0);
+                 $('.product-image-gallery').css("opacity", 1);
+                 $('.product-image-gallery').slick('slickGoTo', imgSlide);
+            }, 700);
+        });
+        $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+            setTimeout(function() {
+                 $('.product-image-gallery').css("opacity", 0);
+            }, 700);
+        });
+
+
         //top bar fast cart and see more desk
         $(document).on('scroll', function () {
-            // if ($(this).scrollTop() >= $('#fast-cart-anchor').position().top) {
+            // if ($(this).scrollTop() >= $('.productView-description').position().top) {
             //     $('.product-listing-fastcart').css('top', '52px');
             // } else {
             //     $('.product-listing-fastcart').css('top', '-6px');
             // }
 
-            if ($(this).scrollTop() >= $('#BottomRelatedProducts').position().top - 450) {
+            if ($(this).scrollTop() >= $('footer').position().top - 750) {
                 $('.related-products-popout').css('opacity', '0');
             } else {
                 $('.related-products-popout').css('opacity', '1');

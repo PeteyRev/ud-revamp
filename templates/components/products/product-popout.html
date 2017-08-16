@@ -1,7 +1,16 @@
-<ul>
-    {{#each products}}
-    <li>
-        {{> components/products/card theme_settings=../theme_settings customer=../customer}}
-    </li>
-    {{/each}}
-</ul>
+<div class="related-products-popout">
+    <div class="popout-close-icon icon">
+        <svg>
+            <use xlink:href="#icon-close" />
+        </svg>
+    </div>
+    {{#if product.related_products}}
+    <ul>
+        {{#each products}}
+        <li>
+            {{> components/products/card theme_settings=../theme_settings customer=../customer}}
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>

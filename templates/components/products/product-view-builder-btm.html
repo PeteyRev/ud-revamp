@@ -1,8 +1,8 @@
 <div class="product-thumbnail-wrapper">
     <div class="productView-thumbnails">
         {{#if product.videos.list.length}}
-            <div class="productView-thumbnail">
-                <a class="productView-thumbnail-link modal-slider video-thumbnail" data-reveal-id="ModalVideoGallery" href="#">
+            <div class="productView-thumbnail video-thumbnail">
+                <a class="productView-thumbnail-link modal-slider" data-reveal-id="ModalVideoGallery" href="#">
                     {{#each product.videos.list}}
                         {{#if @first}}
                             <img src="//i.ytimg.com/vi/{{id}}/mqdefault.jpg">
@@ -247,7 +247,7 @@
                 </div>
 
                 <div class="progress-builder">
-                    <p>Desk Build Progress </p> <span>(<span class="percent-change">0%</span> completed)</span>
+                    <p>Build Progress </p> <span>(<span class="percent-change">0%</span> completed)</span>
                     <div class="custom-progress-container">
                         <span class="meter" style="width:0%"></span>
                     </div>
@@ -264,13 +264,6 @@
     {{#if product.out_of_stock}} {{#if product.out_of_stock_message}} {{> components/common/alert-error product.out_of_stock_message}}
     {{else}} {{> components/common/alert-error (lang 'products.sold_out')}} {{/if}} {{/if}}
     </form>
-
-    <!--<div class="progress-builder">
-        <p>Desk Build Progress </p> <span>(<span class="percent-change">0%</span> completed)</span>
-        <div class="custom-progress-container">
-        <span class="meter" style="width:0%"></span>
-        </div>
-    </div>-->
 
     <div class="cart-bottom-btns">
         <div class="alertBox productAttributes-message" style="display:none">
@@ -317,7 +310,7 @@
     {{{snippet 'product_details'}}}
 </section>
 
-<article class="productView-description" {{#if schema}} itemprop="description" {{/if}}>
+<article class="productView-description full-width-l-r" {{#if schema}} itemprop="description" {{/if}}>
     <ul class="tabs" data-tab>
         <li class="tab is-active">
             <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>

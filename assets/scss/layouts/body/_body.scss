@@ -422,13 +422,13 @@ video.fullscreen-bg__video {
     .row {
         // height:700px;
     }
-    .middle-just-inner-r {
+    .middle-just-inner-r, .right-txt-section {
         padding: 0% 5% 5% 5%;
         @include breakpoint('large') {
             padding: 0% 10% 5% 5%;
         }
     }
-    .middle-just-inner-l {
+    .middle-just-inner-l, .left-txt-section {
         padding: 0% 5% 5% 5%;
         @include breakpoint('large') {
             padding: 0% 5% 5% 10%;

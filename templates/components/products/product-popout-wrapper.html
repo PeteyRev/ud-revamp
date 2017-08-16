@@ -1,0 +1,6 @@
+<div class="related-products-popout">
+    <div class="popout-close-icon icon"><svg><use xlink:href="#icon-close" /></svg></div>
+    {{#if product.related_products}}
+            {{> components/products/product-popout products=product.related_products columns=6}}
+    {{/if}}
+</div>

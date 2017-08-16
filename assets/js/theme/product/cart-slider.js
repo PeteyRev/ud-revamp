@@ -86,6 +86,11 @@ import $ from 'jquery';
             }
 
         });
+        //wraps prices in span from option txt
+        $('.product-option-txt').each(function () {
+		    let price = $(this).text().replace('(','<br><span class="opt-price">(').replace(')',')</span>')
+		    $(this).html(price);
+	    });
 
         //Appends Option selections to cart list
         $('.product-slider .form-field .form-radio').change(function() {

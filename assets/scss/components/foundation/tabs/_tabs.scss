@@ -8,13 +8,23 @@
 //
 // -----------------------------------------------------------------------------
 
+.tabs {
+    clear: both;
+}
+
 .tab {
     border-top: $tab-active-border;
-    float: none;
-
+    float: left;
     @include breakpoint("medium") {
         border-top-color: $tab-title-border-color;
-        float: left;
+    }
+
+    a {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background-color: $color-black;
+        color:$color-white;
+        margin: 0 1rem;
     }
 
     &.is-active {
@@ -37,7 +47,9 @@
     padding: spacing("half") + spacing("quarter") 0;
     text-align: center;
     text-decoration: $tab-title-text-decoration;
-
+    &:hover{
+        color:$color-white;
+    }
     @include breakpoint("small") {
         text-align: left;
     }
@@ -45,6 +57,11 @@
     @include breakpoint("medium") {
         padding: spacing("half") spacing("single");
     }
+}
+
+.tab.is-active .tab-title {
+    color: #fff;
+    background-color: #808285;
 }
 
 

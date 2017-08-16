@@ -128,10 +128,15 @@
 
 .learn-more-vid {
     margin-bottom: 1rem;
+    overflow: hidden;
     .youtube {
-        height: 300px;
-        width: 534px;
+        height: 185px;
+        width: 338px;
         margin: 0 auto;
+        @include breakpoint("small"){
+            height: 300px;
+            width: 534px;
+        }
     }
     iframe {
         display: block;
@@ -186,7 +191,7 @@
 }
 
 .gallery-box-top {
-    height: 285px;
+    overflow: hidden;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -224,7 +229,7 @@
     position: relative;
     background-size: cover;
     background-position: center;
-    margin: 0 2px;
+    margin: 0 2px 4px;
     .center-txt svg {
         transition: .3s ease;
         opacity: 0;

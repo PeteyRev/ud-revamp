@@ -34,6 +34,11 @@
 
 .button--transparent{
     color: $color-black;
+    &:hover{
+        svg{
+            fill:#666666 !important;
+        }
+    }
 }
 
 .button--blue:hover{
