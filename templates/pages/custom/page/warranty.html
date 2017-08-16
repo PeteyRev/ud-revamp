@@ -1,0 +1,124 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <section>
+                        <div class="ssmall-12 medium-10 large-8 column row">
+                            <div class="middle-just-inner-l">
+                                <h1>UPLIFT DESK WARRANTY</h1>
+                                <p>Each one of our UPLIFT Desk products is covered by a limited warranty, based on our confidence
+                                    in the superior quality of our frames, motors, electronics, desktops and accessories.</p>
+                                <h3>What is covered?</h3>
+                                <ul>
+                                    <li><strong>UPLIFT Desk frames:</strong> we stand behind our high quality frames, electronics,
+                                        and motors. We cover any defects or malfunctions in the desk frame including the
+                                        motor, metal/aluminum components, controller, switch, electronics and mechanisms.</li>
+                                    <li><strong>UPLIFT desktops:</strong> we cover any desktops that are rendered unusable as
+                                        a result of a manufacturer's defect or damage in shipping.</li>
+                                    <li><strong>UPLIFT accessories:</strong> we warrant that our accessories are free from any
+                                        defects in materials or workmanship.
+                                    </li>
+                                </ul>
+                                <h3>What is not covered?</h3>
+                                <p>This warranty does not cover any problems which result from improper set-up, unauthorized
+                                    modification, normal wear and tear, abuse, or <em>force majeure</em>, such as hurricane
+                                    or floods.</p>
+                                <p>Imperfections that occur naturally, such as those sometimes found in reclaimed or solid woods,
+                                    do not qualify for repairs or replacements. Regardless of how carefully you use, or how
+                                    well you care for your desktop, it will eventually begin to show age and wear.</p>
+                                <p>Also, consequential (the cost of repairing or replacing other property damaged in the event
+                                    of our product malfunctioning) and incidental (loss of time, loss of use) damages are
+                                    not recoverable under this warranty. Some states do not allow the exclusion or limitation
+                                    of incidental or consequential damages, so the above limitation or exclusion may not
+                                    apply to you.</p>
+                                <h3>How long does the coverage last?</h3>
+                                <p>Coverage begins on the day you receive your order, warranted to the original owner only,
+                                    and lasts the full term listed below.</p>
+                                <strong>Warranty for UPLIFT Desks received after March 10, 2015</strong>
+                                <ul>
+                                    <li>7 years for desk base: motor, frame, controller, switch, electronics and mechanisms</li>
+                                    <li>7 years for desktop: repair or replacement if top is rendered unusable as the result
+                                        of a defect or damage in shipping
+                                    </li>
+                                    <li>Extension of the term above available: 12 years from date of receipt for an additional
+                                        cost</li>
+                                </ul>
+                                <strong>Warranty for UPLIFT Desks received between October 15, 2013 and March 10, 2015</strong>
+                                <ul>
+                                    <li>5 years on frame, motor, controller, switch and mechanisms</li>
+                                </ul>
+                                <strong>Warranty for UPLIFT Desks received before October 15, 2013</strong>
+                                <ul>
+                                    <li>5 years on frame and non-moving metal parts</li>
+                                    <li>2 years on motor, controller, switch and mechanisms</li>
+                                </ul>
+                                <strong>Other UPLIFT-branded products</strong>
+                                <ul>
+                                    <li>7-year warranty: casters, Motion stool</li>
+                                    <li>5-year warranty: keyboard trays, CPU holders, monitor arms, laptop mounts, standing mats,
+                                        corner sleeves and modesty panels</li>
+                                    <li>3-year warranty: treadmill mat</li>
+                                    <li>2-year warranty: desk converters</li>
+                                    <li>1-year warranty: advanced wire management kit, clamp-on surge protector, desk drawer,
+                                        USB hubs, two-drawer mobile pedestal and LED task light</li>
+                                </ul>
+                                <h3>What we will do</h3>
+                                <p>In the rare event that something does go wrong with any of your UPLIFT products, just let
+                                    us know. We will replace items or parts at no cost to you, and ship them via standard
+                                    ground service anywhere in the lower 48 United States for free. Expedited shipping is
+                                    available at your expense. If you are outside the US48, you will be responsible for shipping
+                                    charges only, regardless of method.</p>
+                                <p>Warranty support for UPLIFT solid wood desktops includes expert advice from our woodworker
+                                    on how to care for your custom desktop, as well as assessment of any issues that may
+                                    arise. You will also play a big part in the life of your custom wood desktop. Handmade
+                                    wood furniture requires some basic maintenance on your part to keep it in tip-top shape
+                                    and looking great for years to come.</p>
+                                <p>The UPLIFT Limited Warranty covers only parts, not labor.</p>
+                                <h3>How to get service</h3>
+                                <p>Call us at 1-800-349-3839 for warranty support. You can also email us at <a href="mailto:info@upliftdesk.com">info@upliftdesk.com</a>.
+                                    When you contact us, please have your order number handy for quicker service.&nbsp;If
+                                    you bought from one of our resellers, please provide your proof of purchase.</p>
+                                <h3>What if I'm outside the warranty coverage?</h3>
+                                <p>Damage not covered under warranty may be repaired for a reasonable fee. We also offer discounts
+                                    if you&rsquo;d like a quote on a new model to replace an out-of-warranty item.</p>
+                                <h3>How does state law apply?</h3>
+                                <p>This warranty gives you specific legal rights, and you may also have other rights which vary
+                                    from state to state.</p>
+                            </div>
+                        </div>
+                    </section>
+        </div>
+        {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}

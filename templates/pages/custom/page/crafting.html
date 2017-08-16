@@ -1,0 +1,117 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
+
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Craft in Comfort</h2>
+                                        p>When you commit to a crafting project, it's easy to get immersed in your work. Before you know it, you've been crocheting,
+                                        scrapbooking and sewing your way to back and eye strain, fatigue and repetitive motion
+                                        injuries that make you want to put down the knitting needles for good. Crafting should
+                                        be an enjoyable activity, so why do so many projects get cut short?</p>
+                                        <a href="http://www.upliftdesk.com/uplift-height-adjustable-standing-desk/" target="_blank"> <button class="button button--primary">build your craft desk</button> </a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Ergonomic Support</h2>
+                                        <p>Craft and create your biggest projects at one of our UPLIFT stand up adjustable-height
+                                            desks for hours of ergonomic support that will keep you moving and your creativity
+                                            soaring. Our functional and stylish desks are perfect for sewing, quilting, jewelry
+                                            making - you name it. Whatever space you need, we have you covered with desktops
+                                            ranging in size from 42" to 80" wide and 24" or 30" in depth.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Advantageous Accessories</h2>
+                                        <p>Lengthy crafting sessions will be no problem once you're sitting, standing or perching
+                                            at one of our adjustable height desks. Stand in comfort for hours on our ergonomic
+                                            rubberized standing mat, relieving stress on joints and pressure points. Add
+                                            an UPLIFT LED Task Light to assist you in even the most detail-oriented projects.
+                                            With 35,000 hours of light to keep you working through even the biggest projects,
+                                            its flexible arm can adjust to light up any craft you have in front of you. Adjust
+                                            brightness and light color with the touch of a button, keeping your hands free
+                                            for more important work.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Uplift Your Crafts</h2>
+                                        <p>If you're a die hard crafter, now is the time to upgrade your workspace with the
+                                            UPLIFT adjustable-height desk to bring your work to the next level and keep your
+                                            body in the right position while you work. It's a winning combination for crafters
+                                            and makers everywhere. The ergonomic crafting revolution is here.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}

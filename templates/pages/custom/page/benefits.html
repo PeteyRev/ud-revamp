@@ -1,0 +1,149 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <div class="full-width-l-r">
+                        <div class="hero-top">
+                            <img src="http://via.placeholder.com/1903x370">
+                            <div class="hero-top-title">
+                                <h1 class="page-heading">{{ page.title }}</h1>
+                            </div>
+                        </div>
+
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>How much do you sit?</h2>
+                                        <p>Modern office life is full of conveniences that make our workday easier. Email, chat,
+                                            remote meetings, Skype - all this and more have made it simpler than ever to
+                                            communicate with one another and get the job done. But there&rsquo;s a huge drawback:
+                                            we&rsquo;re sitting too much. In recent years, scientists have studied the effects
+                                            of what they&rsquo;re calling &ldquo;prolonged sitting&rdquo; or &ldquo;sitting
+                                            disease,&rdquo; and the news isn&rsquo;t good. Prolonged sitting is clearly and
+                                            indisputably linked to diabetes, heart disease, cancer, premature death, musculoskeletal
+                                            disorders, disrupted metabolic functions, obesity, and depression. What&rsquo;s
+                                            more, the health impact of prolonged sitting is the same regardless of other
+                                            factors such as whether you smoke, exercise, or are overweight. The bottom line
+                                            (no pun intended) is that prolonged sitting is bad for everyone.</p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Benefits of standing</h2>
+                                        <p>Fortunately, you can stop the cycle of sitting simply by changing your workstation.
+                                            The health benefits of using an adjustable height desk are numerous:</p>
+                                        <ul>
+                                            <li>An average 54% reduction in musculoskeletal pain</li>
+                                            <li>An average productivity boost of 42%</li>
+                                            <li>Lessening of fatigue, confusion, and tension</li>
+                                            <li>Improved energy, focus, productivity, collaboration, and creativity</li>
+                                            <li>Reduced risk of obesity, heart disease, diabetes, cancer, and depression</li>
+                                            <li>Increased calorie burn while standing - 50 calories per hour</li>
+                                        </ul>
+                                        <a href="http://lifehacker.com/five-best-standing-desks-1528244287" target="_blank"> <button class="button button--primary">Lifehacker: 5 Best Standing Desks</button> </a>                                        <a href="http://www.forbes.com/sites/rodgerdeanduncan/2015/04/09/stand-up-it-improves-your-health-mood-energy-and-productivity/#481d774e1375"
+                                            target="_blank"> <button class="button button--primary">Forbes: Stand Up!</button> </a>                                        <a href="http://www.huffingtonpost.com/robbie-vorhaus/im-still-standing-working_b_7547470.html"
+                                            target="_blank"> <button class="button button--primary">Huffington Post: I'm Still Standing</button> </a>                                        <a href="http://www.latimes.com/health/la-he-healthy-workplace-desks-20140222-story.html#ixzz2uFOK2AGX"
+                                            target="_blank"> <button class="button button--primary">Los Angeles Times: Alternatives to sitting</button> </a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row blue-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>Did you know?</h2>
+                                        <p>Employers, did you know that back pain is the leading cause of work-related disability
+                                            in people under 45, and is responsible for $1 billion spent per year in workers&rsquo;
+                                            comp and medical expenses? Back pain also results in 93 million lost work days
+                                            each year. Clearly, a sit-stand desk is beneficial not only for the workers who
+                                            use them, but for a company&rsquo;s bottom line. Two-thirds of office workers
+                                            wish their companies offered sit-stand workstations, and 82% of workers believe
+                                            they would be more productive using a sit-stand desk. This is a case where everyone
+                                            wins. Employees are happier and healthier, and companies save money on medical
+                                            costs and missed work days, as well as enjoy a boost from more productive workers.
+                                            Join the sit-stand revolution to see how much better you feel and how much more
+                                            you can get done!
+                                        </p>
+                                        <a href="http://www.upliftdesk.com/uplift-height-adjustable-standing-desk/" target="_blank"> <button class="button button--primary">Start building an UPLIFT Desk now</button> </a>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/gray-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row expanded collapse flex-row white-bg">
+                                <div class="small-12 large-5 columns middle-just">
+                                    <div class="middle-just-inner-l">
+                                        <h2>References</h2>
+                                        <p>Davis, K.G. and Kotowski, S.E. <a href="http://www.ncbi.nlm.nih.gov/pubmed/25490805"
+                                                target="_blank">"Postural Variability: An Effective Way to Reduce Musculoskeletal Discomfort in Office Work."</a>                                            Human Factors: The Journal of the Human Factors and Ergonomics Society.</p>
+                                        <p>Hamilton et al. <a href="http://www.ncbi.nlm.nih.gov/pubmed/17827399" target="_blank">"Role of Low Energy Expenditure and Sitting in Obesity, Metabolic Syndrome, Type 2 Diabetes, and Cardiovascular Disease."</a>                                            American Diabetes Association.</p>
+                                        <p>Healy et al. &ldquo;Reducing Sitting Time in Office Workers: Efficacy and Acceptability
+                                            of Sit-Stand Workstations.&rdquo; Journal of Science and Medicine in Sport.</p>
+                                        <p>Hedge, A. and Ray, E.J. <a href="http://ergo.human.cornell.edu/Conferences/HFES04/EHAWHFES04.pdf"
+                                                target="_blank">&ldquo;Effects of an Electronic Height-Adjustable Worksurface on Self-Assessed Musculoskeletal Discomfort and Productivity Among Computer Workers.&rdquo;</a>                                            Proceedings of the Human Factors and Ergonomics Society.</p>
+                                        <p>Henson et al. <a href="http://www.ncbi.nlm.nih.gov/pubmed/23456209" target="_blank">"Associations of Objectively Measured Sedentary Behaviour and Physical Activity with Markers of Cardiometabolic Health."</a>                                            Diabetologia.</p>
+                                        <p>Knight, A.P. and Maer, M. <a href="http://spp.sagepub.com/content/5/8/910.abstract"
+                                                target="_blank">"Get Up, Stand Up: The Effects of a Non-Sedentary Workspace on Information Elaboration and Group Performance."</a>                                            Journal of Social Psychological and Personality Science.</p>
+                                        <p>Pronk et al. <a href="http://www.cdc.gov/pcd/issues/2012/11_0323.htm" target="_blank">&ldquo;Reducing Occupational Sitting Time and Improving Worker Health: The Take-a-Stand Project, 2011.&rdquo;</a>                                            Preventing Chronic Disease.</p>
+                                        <p>Shikdar, A. and Al-Hadhrami, M. &ldquo;Evaluation of a Low-Cost Ergonomically Designed
+                                            Adjustable Assembly Work Station.&rdquo; International Journal of Industrial
+                                            and Systems Engineering.</p>
+                                        <p>Victorian Health Promotion Foundation. <a href="https://www.sacoss.org.au/sites/default/files/public/documents/Reducing_Sitting_Workplace_Summary.pdf"
+                                                target="_blank">&ldquo;Reducing Prolonged Sitting in the Workplace: An Evidence Review, Summary Report.&rdquo;</a></p>
+                                    </div>
+                                </div>
+                                <div class="small-12 large-7 columns text-right">
+                                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/white-blank-placeholder-image.jpg"}}">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}

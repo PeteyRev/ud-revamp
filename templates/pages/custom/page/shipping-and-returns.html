@@ -1,0 +1,215 @@
+{{#partial "page"}}
+
+    <main class="page">
+
+
+        {{#if page.sub_pages}}
+            <nav class="navBar navBar--sub">
+                <ul class="navBar-section account-navigation">
+                    {{#each page.sub_pages}}
+                        <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+                    {{/each}}
+                </ul>
+            </nav>
+        {{/if}}
+
+        <div class="page-content">
+            {{#replace '%%Syndicate%%' page.content}}
+                {{> components/page/rss_feed}}
+                {{else}}
+
+                    <section>
+                        <div class="small-12 medium-10 large-8 columns white-bg row expanded">
+                            <div class="middle-just-inner-l">
+                                <h1>Shipping and Returns</h1>
+                                <p>On this page, you will find more information about your order shipping and fulfillment process.
+                                    You will also find our returns policy for UPLIFT products, and other brands we offer.</p>
+                                <p>Most orders go into production as soon as the order is placed. Please call us immediately
+                                    if you would like to make changes to your order. We will make every effort to make the
+                                    changes before the order ships, but order changes will reset the lead time on the order
+                                    as the process for your order will restart. If changes need to be made after an order
+                                    is shipped, there will be additional shipping costs involved.</p>
+                                <h3 class="blue"><a href="http://www.upliftdesk.com/contact/" target="_blank">If you have critical changes to your order, we highly recommend you call 800-349-3839 for immediate service.</a></h3>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="small-12 medium-10 large-8 columns blue-bg row expanded">
+                            <div class="middle-just-inner-l">
+                                <h1>Shipping Policies and Methods</h1>
+                                <h3>Our Free Shipping Policy</h3>
+                                <p>Every UPLIFT Desk ships for free to commercial and residential locations in the United States
+                                    (lower 48). Please allow additional processing and shipping time for any holidays. Most
+                                    desks 72" wide or less will ship ground. If your desktop is wider than 72" or made of
+                                    solid wood, the desk will ship via freight truck. Standard free freight shipping includes
+                                    loading dock or curbside service; you will be in charge of bringing the individually
+                                    boxed items inside. Upgraded delivery options are also available, as described below.
+                                    Once you place your order, we'll contact you to make sure we arrange the most appropriate
+                                    free shipping method based on your needs, if required.</p>
+                                <h3>Next Day, 2nd Day and 3rd Day Shipping</h3>
+                                <p>Some items are eligible for faster shipping speeds. Please note that this will not affect
+                                    your order's processing time, only the amount of time the order spends in transit. To
+                                    see the latest estimate of when your order will ship, consult your shopping cart.</p>
+                                <h3>Room of Choice Delivery Only - Only Available in California</h3>
+                                <p>Select this method, and one of our white glove agents will deliver your items to the room
+                                    of your choice in your business or residence. We will arrange these services for you
+                                    at a flat rate of $199 per desk. In the rare case that additional charges are needed
+                                    to ship this order via this method, we will contact you first. <strong>Please note: choosing this method will add 1.5 to 2 weeks to your order's transit time.</strong></p>
+                                <h3>Room of Choice Delivery with Installation - Available in lower 48, other than California</h3>
+                                <p>Select this method, and one of our white glove agents will install your desk for you. We
+                                    are usually able to arrange these services for you at a flat rate. In the rare case that
+                                    additional charges are needed to ship this order via this method, we will contact you
+                                    first. <strong>Please note: choosing this method will add 1.5 to 2 weeks to your order's transit time. Accessory and/or treadmill installation will incur an additional fee, as detailed below, and includes installation of all accessories purchased on the desk listing (treadmll incurs an additional fee). Please note that most of the chairs that are purchasable on the desk listings are shipped fully assembled, and only need to be unboxed when they arrive. If you need unboxing/box removal services, please let us know that when you place the order.</strong></p>
+                                <h3>National (Lower 48, other than California)</h3>
+                                <ul>
+                                    <li><strong>$299:</strong> 2-leg desk installation</li>
+                                    <li><strong>$399:</strong> 3-leg and 4-leg desk installation</li>
+                                    <li><strong>$99:</strong> Treadmill installation (with desk installation)</li>
+                                    <li><strong>$99:</strong> All other accessory installation (with desk installation)</li>
+                                </ul>
+                                <h3>Dallas and Houston Metro Areas</h3>
+                                <ul>
+                                    <li><strong>$149:</strong> 2-leg desk installation</li>
+                                    <li><strong>$249:</strong> 3-leg and 4-leg desk installation</li>
+                                    <li><strong>$99:</strong> Treadmill installation (with desk installation)</li>
+                                    <li><strong>$99:</strong> All other accessory installation (with desk installation)</li>
+                                </ul>
+                                <h3>Local (Within an 85 mile radius of Austin, including San Antonio)</h3>
+                                <ul>
+                                    <li><strong>$89:</strong> 2-leg, 3-leg, and 4-leg desk installation</li>
+                                    <li><strong>$59:</strong> Treadmill installation (with desk installation)</li>
+                                    <li><strong>$59:</strong> All other accessory installation (with desk installation)</li>
+                                </ul>
+                                <h3>Alaska or Hawaii Shipping</h3>
+                                <p>If you are shipping to Alaska or Hawaii we can still ship to your residence or commercial
+                                    location. Shipping will be calculated at checkout, and we will contact you after you
+                                    place your order with shipping information and costs for orders that cannot be calculated
+                                    online. A less expensive option is to purchase a <a href="http://www.upliftdesk.com/adjustable-height-frames/">frame only</a>,
+                                    which ships from our warehouse the same or next day, and use a top that you buy locally.</p>
+                                <h3>International Shipping</h3>
+                                <p>UPLIFT Desk offers international shipping of nearly all products to Canada. We also offer
+                                    international shipping to countries other than Canada if ordering over $2,000 of UPLIFT
+                                    Desk products. APOs outside of Canada fall under this international shipping policy.
+                                    Desktops are not shipped outside the United States or Canada, so if you want a full sit-stand
+                                    desk, we suggest that you buy <a href="http://www.upliftdesk.com/adjustable-height-frames/">UPLIFT base frames only</a>                                    (over $2,000 worth) and source your desktops locally. For international orders, we may
+                                    require a wire transfer for payment at our discretion, and taxes and brokerage fees will
+                                    apply.</p>
+                                <p>International shipping rates are determined on a case-by-case basis, with the exception of
+                                    Canada <a href="#canadaship">(see below)</a>. You may call us at <a href="tel:512-614-3152">512-614-3152</a>                                    or <a href="tel:800-349-3839">800-349-3839</a> to get a shipping quote and place your
+                                    order. If you prefer to order online, we will contact you with shipping information and
+                                    costs after the order is placed.</p>
+                                <p>Alternatively, we can always ship for free to your freight forwarder in the United States.
+                                    If you have additional questions about freight forwarding or international shipping please
+                                    <a href="http://www.upliftdesk.com/contact/">contact us</a>.</p>
+                                <ul id="canadaship">
+                                    <li><strong>Shipping to Canada</strong> - Desks shipped to Canada will either ship via freight
+                                        for a flat rate of $249 or with FedEx Ground to Canada with rates based on items
+                                        ordered. Shipping cost estimates are not always accurate, and a member of our team
+                                        will reach out to confirm your order. Large, multiple desk orders may ship freight.
+                                        Accessories and frames without tops can be ordered directly through the website as
+                                        well. To save on shipping costs on your desk, frame, or accessory order, you may
+                                        want to use a border mail service like <a href="https://www.kinek.com/" target="_blank">Kinek</a>,
+                                        which reduces shipping and brokerage fees. That way you can take advantage of free
+                                        shipping to the lower 48 United States. Shipping to Canada may be available with
+                                        extra fees, depending on the shipping method chosen. FedEx Ground to Canada must
+                                        pay for taxes and brokerage fees, while FedEx International Economy and International
+                                        Priority must pay for only the taxes. Duties and taxes are assessed by the Canadian
+                                        government and may vary by province and locality. In most cases, we do not collect
+                                        and/or pre-pay duties, goods and services tax or other taxes or fees.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="small-12 medium-10 large-8 columns white-bg row expanded">
+                            <div class="middle-just-inner-l">
+                                <h1>Return Policy</h1>
+                                <p>We think you&rsquo;ll love your new UPLIFT desk but sometimes it just doesn&rsquo;t work
+                                    out. If you decide to send your desk back, you can do so with no restocking fees on single
+                                    UPLIFT desks with standard GREENGUARD-certified laminate, Eco and Eco Curve, 1&rdquo;
+                                    thick bamboo, or reclaimed wood desktops, and single UPLIFT frame-only orders. You will
+                                    just have to let us know that you are planning to return the item within 30 days of receiving
+                                    your desk and we will issue a Return Merchandise Authorization (RMA) number. Unfortunately,
+                                    solid wood tops and custom laminates are made to order and therefore not returnable.
+                                    However, you may return the frame only if you would like. If you are in the market for
+                                    multiple desks, please order one desk first to test out our product. Returns on multiple-desk
+                                    orders will be assessed a restocking fee. Accessories purchased with the desk are subject
+                                    to the non-desk return policy listed below.</p>
+                                <ul>
+                                    <li>No restocking fee is applied for the return of a single desk frame or a single desk with
+                                        a standard laminate, Eco or Eco Curve, 1" thick bamboo, or reclaimed wood desktop.
+                                    </li>
+                                    <li>You will not be charged for the baseline outbound freight cost. This does not apply to
+                                        freight service add-ons such as Room of Choice Delivery, Installation, or Non-Contiguous
+                                        US Delivery.</li>
+                                    <li>You'll be responsible for shipping the products to the return address provided with the
+                                        RMA number.</li>
+                                </ul>
+                                <h3>Returns for non-desk UPLIFT-branded products</h3>
+                                <ul>
+                                    <li>A 10 percent restocking fee will be deducted from the refund amount for all opened products.
+                                    </li>
+                                    <li>Outbound shipping costs will be deducted from the refund amount.</li>
+                                    <li>You'll be responsible for shipping the products to the return address provided with the
+                                        RMA number.</li>
+                                </ul>
+                                <h3>General information for all returns</h3>
+                                <ul>
+                                    <li>RMA number must be requested within 30 days of receipt of product.</li>
+                                    <li>An RMA number is required for all returns. Please do not return any items without first
+                                        receiving your RMA number.</li>
+                                    <li>You are responsible for shipping the products to the return address provided with the
+                                        RMA number. For full desks, this will require coordinating with a freight company.
+                                    </li>
+                                    <li>All returned items must be disassembled and repackaged as they were originally received.
+                                        Items not returned in this condition may be subject to additional fees.</li>
+                                    <li>We strongly suggest using a traceable and insurable shipping method when making your
+                                        return. We are not responsible for returns lost or damaged in transit.</li>
+                                    <li>While we're happy to work with you and can, in most cases, offer discounts on bulk orders,
+                                        we suggest that you order one to test before an order for multiples of the same item.
+                                        We do not accept returns on bulk orders.</li>
+                                </ul>
+                                <h3>What's NOT returnable?</h3>
+                                <ul>
+                                    <li>Gift certificates</li>
+                                    <li>Clearance items</li>
+                                    <li>Custom laminate and solid wood desks (the desk frame is returnable as described above)</li>
+                                    <li>Open box certified merchandise</li>
+                                    <li>Mats</li>
+                                    <li>Bulk orders</li>
+                                    <li><a href="http://www.upliftdesk.com/knoll-life/">Knoll products</a></li>
+                                </ul>
+                                <h3>Cancellations</h3>
+                                <ul>
+                                    <li>Most orders, with the exception of custom work, ship quickly, so please let us know immediately
+                                        if you decide to cancel your order.</li>
+                                    <li>There are no cancellation fees for standard items cancelled before shipment.</li>
+                                    <li>If the item has already shipped, it is subject to our standard return policy.</li>
+                                    <li>Wood tops and custom laminate tops are subject to a cancellation fee if we have already
+                                        started manufacturing them.
+                                    </li>
+                                </ul>
+                                <h3>Coupons</h3>
+                                <p>Coupons, discounts, and special offers cannot be combined.</p>
+                                <button id="return-form-btn" class="button button--primary">Start Return</button>
+                            </div>
+                        </div>
+                    </section>
+            {{/replace}}
+        </div>
+
+        {{#if page.feed}}
+            <ul>
+                {{#each page.feed}}
+                    <li>
+                        <h6><a href="{{url}}" target="_blank">{{title}}</a></h6>
+                        <p>{{content}}</p>
+                    </li>
+                {{/each}}
+            </ul>
+        {{/if}}
+    </main>
+
+{{/partial}}
+
+{{> layout/base-full-width}}
