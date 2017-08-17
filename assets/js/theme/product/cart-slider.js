@@ -105,11 +105,6 @@ import $ from 'jquery';
                 })
         });
 
-        //clicks first option in each opt set, and sets review slide key value
-        $('.form-options-wrapper').each(function(){
-            $(this).find('input:first').click();
-        });
-
         $(window).load(function(){
 
             //cleaner load so it doesnt look fragmented

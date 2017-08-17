@@ -87,10 +87,6 @@
     }
 }
 
-dl.productView-info {
-    display: none;
-}
-
 .productView-title {
     color: #353332;
     font-size: 20px;
@@ -336,21 +332,26 @@ dl.productView-info {
 
 //Product pop out
 .related-products-popout {
+    text-align: center;
     display:none;
     position: fixed;
     left: -210px;
-    top: 40%;
+    top: 30%;
     background-color: $color-white;
     box-shadow:0 0 9px 0 rgba(58, 58, 58, 0.35);
     width: 210px;
     padding: 1rem;
     transition: .3s ease;
     z-index: 5;
+    h5 {
+        margin: 0;
+        line-height: 1.2;
+    }
     @include breakpoint('large'){
         display: block;
     }
     @media screen and (min-width: 1400px) {
-        top: 30%;
+        top: 20%;
     }
     .popout-close-icon {
         right: -7px;

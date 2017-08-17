@@ -397,16 +397,17 @@ svg.learn-more-small {
     }
     ul {
         margin: 0;
+        height: 235px;
+        overflow-y: scroll;
         li {
+            vertical-align: text-top;
             display: inline-block;
-            padding:.3rem .2rem .1rem 0;
+            padding:.3rem .2rem .3rem 0;
+            line-height: 1.2;
             cursor: pointer;
             width: 49%;
             font-size: 15px;
             color: $color-grey;
-            @include breakpoint("small"){
-                width: 31%;
-            }
         }
         li:last-child {
             color: $color-blue;
@@ -682,10 +683,6 @@ article.productView-description {
     li {
         margin-bottom: 2rem;
     }
-}
-
-#tab-description>.row {
-    min-height: 500px;
 }
 
 article.productView-description .tab-content {

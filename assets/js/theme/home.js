@@ -47,6 +47,35 @@ export default class Home extends PageManager {
             },
             offset: '50%'
         })
+        const waypoints5 = $('.animate-5').waypoint({
+            handler: function (direction) {
+                $('.animate-5 .hide-down-txt').addClass('show-up-anim');
+                $('.animate-5 img').addClass('slide-right-anim');
+            },
+            offset: '50%'
+        })
+        const waypoints6 = $('.animate-6').waypoint({
+            handler: function (direction) {
+                $('.animate-6 .hide-down-txt').addClass('show-up-anim');
+                $('.animate-6 img').addClass('slide-right-anim');
+            },
+            offset: '50%'
+        })
+
+        const waypoints7 = $('.animate-7').waypoint({
+            handler: function (direction) {
+                $('.animate-7 .hide-down-txt').addClass('show-up-anim');
+                $('.animate-7 img').addClass('slide-right-anim');
+            },
+            offset: '50%'
+        })
+        const waypoints8 = $('.animate-8').waypoint({
+            handler: function (direction) {
+                $('.animate-8 .hide-down-txt').addClass('show-up-anim');
+                $('.animate-8 img').addClass('slide-left-anim');
+            },
+            offset: '50%'
+        })
 
         next();
     }

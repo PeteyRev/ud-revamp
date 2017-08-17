@@ -41,9 +41,9 @@ export default class Product extends PageManager {
         this.productDetails = new ProductDetails($('.productView'), this.context, window.BCData.product_attributes);
 
         videoGallery();
-        builderRules();
 		cartSlider();
 		imageBuilder();
+        builderRules();
 		startProductTour();
         customBuilder();
 
@@ -145,6 +145,10 @@ export default class Product extends PageManager {
 
     after(next) {
         this.productReviewHandler();
+        //clicks first option in each opt set, triggers custom rules and image builder
+        $('.form-options-wrapper').each(function(){
+            $(this).find('input:first').click();
+        });
 
         next();
     }

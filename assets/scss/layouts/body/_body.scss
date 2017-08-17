@@ -58,14 +58,54 @@
 
 .hero-top {
     position: relative;
+    background: #f6f7f7; 
+    @include breakpoint('small'){
+   
+    }
+    img
+    {
+        display:none;
+        @include breakpoint('large'){
+            display:block;
+        }
+    }
+    .white-txt{
+        h2, p{
+            @include breakpoint('large'){
+                color:$color-white;
+            }
+        }
+    }
     .hero-top-title {
-        width: 34%;
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
+        padding: 0% 5% 5% 5%;
+        @include breakpoint('large'){
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+        }
+        @media screen and (min-width: 1400px) {
+            width: 34%;
+        }
+    }
+    .hero-top-title-right {
+        padding: 0% 5% 5% 5%;
+        @include breakpoint('large'){
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+        }
+        @media screen and (min-width: 1400px) {
+            width: 34%;
+        }
+
     }
     h1{
         font-size: 50px;
@@ -103,6 +143,10 @@
     }
 }
 
+.margin-top-2{
+    margin-top:2rem;
+}
+
 .home-bg-img{
     display: block;
     width: 100%;
@@ -126,6 +170,7 @@ video.fullscreen-bg__video {
     z-index: 1;
     position: relative;
     overflow: hidden;
+    background:$color-white;
 }
 
 .full-width {

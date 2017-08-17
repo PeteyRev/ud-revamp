@@ -21,13 +21,7 @@
 // -----------------------------------------------------------------------------
 
 .heroCarousel {
-    margin-bottom: (spacing("double") + spacing("single"));
-    margin-top: -(spacing("single")); // 3
-
-    @include breakpoint("medium") {
-        margin-top: -(spacing("single") + spacing("base")); // 3
-    }
-
+    margin-bottom: 0;
     .js & { // 2
         max-height: remCalc(0);
         opacity: 0;

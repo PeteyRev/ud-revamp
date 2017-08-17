@@ -1,16 +1,19 @@
-<div class="related-products-popout">
-    <div class="popout-close-icon icon">
-        <svg>
-            <use xlink:href="#icon-close" />
-        </svg>
+{{#if product.related_products}}
+    <div class="related-products-popout">
+        <div class="popout-close-icon icon">
+            <svg>
+                <use xlink:href="#icon-close" />
+            </svg>
+        </div>
+        <p>Want more desktop options?</p>
+        <ul>
+            {{#each products}}
+            <li>
+                {{> components/products/card theme_settings=../theme_settings customer=../customer}}
+            </li>
+            {{/each}}
+        </ul>
+
+        <a href="/adjustable-height-desks/">Click here to see our other desks</a>
     </div>
-    {{#if product.related_products}}
-    <ul>
-        {{#each products}}
-        <li>
-            {{> components/products/card theme_settings=../theme_settings customer=../customer}}
-        </li>
-        {{/each}}
-    </ul>
-    {{/if}}
-</div>
+{{/if}}
