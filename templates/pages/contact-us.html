@@ -1,11 +1,9 @@
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<!--{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}-->
 
 <main class="page">
-
-    <h1 class="page-heading">{{page.title}}</h1>
-
+    <!--<h1 class="page-heading">{{page.title}}</h1>-->
     {{#if page.sub_pages}}
         <nav class="navBar">
             <ul class="navBar-section">
@@ -16,18 +14,15 @@
         </nav>
     {{/if}}
 
-    <div class="page-content page-content--centered">
         {{#if forms.contact.success}}
             {{{lang 'forms.contact_us.successful' shopPath=urls.home}}}
         {{else}}
-            <p>{{{page.content}}}</p>
-            {{> components/page/contact-us-form}}
+            {{{page.content}}}
+            <div class="page-content page-content--centered">{{> components/page/contact-us-form}}</div>
         {{/if}}
-
-    </div>
 
 </main>
 
 {{/partial}}
 
-{{> layout/base}}
+{{> layout/base-full-width}}

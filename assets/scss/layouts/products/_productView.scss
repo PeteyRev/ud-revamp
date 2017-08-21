@@ -79,10 +79,6 @@ $box-radius: 3px;
     }
 }
 
-.disable-opt {
-    opacity: .6;
-}
-
 .form-options-wrapper {
     padding: 1rem 1rem 0 1rem;
     height: 284px;
@@ -380,7 +376,6 @@ svg.learn-more-small {
     position: absolute;
     -webkit-transform: translateY(-100%);
     transform: translateY(-83%);
-    padding: 1rem 1rem 0rem;
     background-color: #f6f7f7;
     z-index: 0;
     box-shadow: $box-shadow;
@@ -388,17 +383,24 @@ svg.learn-more-small {
     opacity: 0;
     transition: .2s ease-in;
     h4 {
-        margin: 0 0 .5rem;
+        margin: 0rem;
         font-size: 19px;
+        background: #fff;
+        padding: 1rem;
+        box-shadow: 0 0 9px 0 rgba(58, 58, 58, 0.35);
     }
     p {
         text-align: center;
-        margin: .7rem 0 1rem;
+        padding: .7rem 0 1rem;
+        background-color: #fff;
+        margin: 0;
+        box-shadow: 0 0 9px 0 rgba(58, 58, 58, 0.35);
     }
     ul {
         margin: 0;
         height: 235px;
         overflow-y: scroll;
+        padding: 1rem;
         li {
             vertical-align: text-top;
             display: inline-block;
@@ -488,6 +490,38 @@ svg.img-arrow-right {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     top: 50%;
+}
+
+.disable-opt {
+     label.disable-opt, figure {
+    opacity: .6;
+}
+}
+
+span.disable-txt-overylay {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    opacity: .6;
+    z-index: 1;
+    background:$color-white;
+    cursor: default;
+}
+
+
+.disable-txt {
+    cursor: default;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 
@@ -586,6 +620,8 @@ img.active {
     z-index: 3;
 }
 
+.kpd-wrapper,
+.side-modesty-left,
 .cpu-wrapper,
 .gest-shell,
 .gest-wrap,
@@ -596,9 +632,11 @@ img.active {
     z-index: 2 !important;
 }
 
+.privacy-hardware-wrapper,
+.side-privacy-wrapper-left,
 .monitor-wrapper,
 .freedom-no-hr {
-    z-index: 4;
+    z-index: 4 !important;
 }
 
 .casters-wrapper-4,
@@ -614,7 +652,6 @@ img.active {
     z-index: 4;
 }
 
-.kpd-wrapper,
 .casters-wrapper {
     z-index: 1;
 }
@@ -916,6 +953,12 @@ div#cart-preview-dropdown {
     top: -53px;
 }
 
+.right-txt-section .youtube {
+    height: 273px;
+    width: 80%;
+    margin: 0 auto;
+}
+
 #product-reviews {
     clear: both;
 }
@@ -933,6 +976,7 @@ ul.options-tab-list {
         margin: 0 .3rem 1rem;
         text-align: center;
         a {
+            color:initial;
             text-decoration: none;
             font-weight: 700;
         }

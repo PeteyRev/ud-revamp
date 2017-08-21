@@ -227,6 +227,7 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
 }
 
 .cart-item-brand {
+    display:none;
     color: color("greys", "light");
     margin-bottom: spacing("eighth");
 }
