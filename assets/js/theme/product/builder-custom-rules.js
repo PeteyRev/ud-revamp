@@ -122,7 +122,7 @@ export default function builderRules() {
                 //privacy
                 privacySize = "64x22";
                 hideAllOpts(acousticPanelset)
-                showOpts(acousticPanelset, ["3106", "3107", "3108", "3109", "3110", "3102", "3103", "3104", "3114"]);
+                showOpts(acousticPanelset, ["3106", "3107", "3108", "3109", "3110", "3102", "3103", "3104"]);
             }
             if (newSelection === '80x24' || newSelection === '80x30') {
                 //Reclaimed Teak & Bamboo & Black Eco Curve
@@ -138,7 +138,7 @@ export default function builderRules() {
                 //privacy
                 privacySize = "72x22";
                 hideAllOpts(acousticPanelset)
-                showOpts(acousticPanelset, ["3106", "3107", "3108", "3109", "3110", "3102", "3103", "3104", "3114"]);
+                showOpts(acousticPanelset, ["3114", "3115", "3116", "3117", "3118", "3119", "3111", "3112", "3113"]);
             }
 
             $(modestySet).each(function () {
@@ -154,7 +154,6 @@ export default function builderRules() {
             $(acousticPanelset).each(function () {
                 if ($(this).find('input').prop('checked')) {
                     var privacyColor = $(this).find('.product-option-txt').attr('data-sku').split('22').pop();
-                    console.log("KIT021~" + privacySize + privacyColor)
                     $(acousticPanelset).each(function () {
                         var thisSize = $(this).find('.product-option-txt').attr('data-sku');
                         if (thisSize === "KIT021~" + privacySize + privacyColor) {

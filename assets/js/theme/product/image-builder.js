@@ -8,7 +8,9 @@ export default function imageBuilder() {
 
 	//Items to be selected but not shown, and func to show/hide div containing them
 	const SnSitems = ['Teak Desk Organizer Set','Teak Credenza','Treadmill', 'Discounted Chair', 'Wire Management', 
-	'Extended Warranty', 'Promotional Item', 'Solid Wood Care Kit','Temporary Desktop', 'Frame Style','Frame Width'];
+	'Extended Warranty', 'Promotional Item', 'Solid Wood Care Kit','Temporary Desktop', 'Frame Style','Frame Width',
+	'Modesty Panel for Main Side', 'Modesty Panel for Extension Side','Back Acoustic Privacy Panel for Main Side',
+	'Back Acoustic Privacy Panel for Extension Side'];
 
 	function showSnSbox() {
 		if ($("#sel-not-shown ul li").length >= 1 && $(window).width() >= 1200) {
@@ -74,7 +76,7 @@ export default function imageBuilder() {
                     $this.removeClass('active').addClass('hide');
                     var newImg = $this .attr('data-name');
                     var newExt = $this.attr('data-ext');
-                    if (newSelection === newImg && curExt === newExt) {
+                    if (newSelection == newImg && curExt == newExt) {
                     if (!$this.hasClass('lazyload')){
                             $this.addClass('lazyload');
                         }
@@ -127,9 +129,10 @@ export default function imageBuilder() {
         
 
 		//on size change, searches through each desk img set and hides each picture, revealing the correct sized option if active
-		if (imgSet === "Desktop Size") {
+		if (imgSet === "Desktop Size" && !document.getElementById('LSHAPE')) {
         	sizeChange($this,imgSet,newSelection,curWidth,curDepth);
 		}
+
 		if (imgSet === "Extension Side") {
         	extensionChange($this,imgSet,newSelection);
 		}
@@ -140,9 +143,8 @@ export default function imageBuilder() {
 			$('.Promotional.Item img').removeClass('hide').addClass('active');
 			showSnSbox();
 		}
-
         //selected but not shown function
-		if(SnSitems.indexOf(imgSet) > 0 && newSelection != "UPL145~unboxed") {
+		if(SnSitems.indexOf(imgSet) > -1 && newSelection != "UPL145~unboxed") {
 
 			let name = $(this).next().find('.product-option-txt').text();
 			if (!$('#sel-not-shown ul li').hasClass(imgSet) && (name.indexOf('No') < 0 || name.indexOf('Standard') < 0)) {

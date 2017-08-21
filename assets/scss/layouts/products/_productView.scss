@@ -23,7 +23,7 @@
     position: relative;
     .socialLinks {
         margin-bottom: 19px;
-        clear:both;
+        clear: both;
     }
     @include grid-column(12);
     padding-left: spacing("base");
@@ -45,7 +45,8 @@
         float: right; // width: grid-calc(6, $total-columns);
         width: 50%;
     }
-    @include breakpoint("large") { // width: grid-calc(6, $total-columns);
+    @include breakpoint("large") {
+        // width: grid-calc(6, $total-columns);
         width: 41%;
     }
 }
@@ -139,8 +140,7 @@ $box-radius: 3px;
     margin: 0 auto;
     clear: both;
     padding-bottom: 1rem;
-
-    @include breakpoint("medium"){
+    @include breakpoint("medium") {
         width: 67%;
         padding-bottom: 0;
     }
@@ -189,35 +189,35 @@ $box-radius: 3px;
     }
 }
 
-
-.progress-builder{
-    text-align:center;
+.progress-builder {
+    text-align: center;
     padding: 0 1rem 1rem;
     background-color: $color-greyLight;
-    p{
-        margin:0px;
+    p {
+        margin: 0px;
         display: inline-block;
     }
 }
+
 .custom-progress-container {
-  position:relative;
-  @include progress-container;
-  @include radius(6px);
-  background-color: $color-white;
-  border: 1px solid $color-grey;
-  margin-bottom: 0;
-  & > span {
-    @include progress-meter($color-blue);
-    @include radius(5px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: .3s ease;
-  }
+    position: relative;
+    @include progress-container;
+    @include radius(6px);
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+    margin-bottom: 0;
+    &>span {
+        @include progress-meter($color-blue);
+        @include radius(5px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: .3s ease;
+    }
 }
 
-
-.product-arrows, .cart-edit-form-actions {
+.product-arrows,
+.cart-edit-form-actions {
     height: 65px;
     position: relative;
     border-top: $productOptions-list-border;
@@ -257,14 +257,15 @@ $box-radius: 3px;
     }
 }
 
-.product-arrows{
-    height:90px;
-    @include breakpoint('small'){
-        height:65px;
+.product-arrows {
+    height: 90px;
+    @include breakpoint('small') {
+        height: 65px;
     }
-    .button--blue, .button--transparent  {
+    .button--blue,
+    .button--transparent {
         top: 35%;
-        @include breakpoint('small'){
+        @include breakpoint('small') {
             top: 50%;
         }
     }
@@ -286,20 +287,20 @@ input#form-action-addToCart {
     position: absolute;
     left: 50%;
     top: 117%;
-    width:92%;
+    width: 92%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
-    @include breakpoint('small'){
+    @include breakpoint('small') {
         top: 50%;
-        width:auto;
+        width: auto;
     }
 }
 
 .options-map-button {
     position: absolute;
-    width:100%;
+    width: 100%;
     text-align: center;
     left: 50%;
     top: 85%;
@@ -313,11 +314,10 @@ input#form-action-addToCart {
     font-weight: $fontWeight-medium;
     cursor: pointer;
     font-family: $fontFamily-headings;
-    @include breakpoint("small"){
-            top: 50%;
-            width: auto;
+    @include breakpoint("small") {
+        top: 50%;
+        width: auto;
     }
-
 }
 
 li.productOptions-list-item:hover {
@@ -387,14 +387,12 @@ svg.learn-more-small {
         font-size: 19px;
         background: #fff;
         padding: 1rem;
-        box-shadow: 0 0 9px 0 rgba(58, 58, 58, 0.35);
     }
     p {
         text-align: center;
         padding: .7rem 0 1rem;
         background-color: #fff;
         margin: 0;
-        box-shadow: 0 0 9px 0 rgba(58, 58, 58, 0.35);
     }
     ul {
         margin: 0;
@@ -404,7 +402,7 @@ svg.learn-more-small {
         li {
             vertical-align: text-top;
             display: inline-block;
-            padding:.3rem .2rem .3rem 0;
+            padding: .3rem .2rem .3rem 0;
             line-height: 1.2;
             cursor: pointer;
             width: 49%;
@@ -422,10 +420,10 @@ svg.learn-more-small {
     }
 }
 
-.product-tour{
-    display:none;
-    @include breakpoint('medium'){
-        display:inline-block;
+.product-tour {
+    display: none;
+    @include breakpoint('medium') {
+        display: inline-block;
     }
 }
 
@@ -444,8 +442,8 @@ a.productView-thumbnail-link.modal-slider img {
 
 div#ProductImageGallery {
     width: 100%;
-    @include breakpoint('medium'){
-        width: 63.5%;  
+    @include breakpoint('medium') {
+        width: 63.5%;
     }
     background: transparent;
 }
@@ -493,9 +491,10 @@ svg.img-arrow-right {
 }
 
 .disable-opt {
-     label.disable-opt, figure {
-    opacity: .6;
-}
+    label.disable-opt,
+    figure {
+        opacity: .6;
+    }
 }
 
 span.disable-txt-overylay {
@@ -504,10 +503,9 @@ span.disable-txt-overylay {
     height: 100%;
     opacity: .6;
     z-index: 1;
-    background:$color-white;
+    background: $color-white;
     cursor: default;
 }
-
 
 .disable-txt {
     cursor: default;
@@ -524,11 +522,10 @@ span.disable-txt-overylay {
     z-index: 2;
 }
 
-
 .productView-rating .icon {
     height: 1rem;
     width: 1rem;
-    @include breakpoint('medium'){
+    @include breakpoint('medium') {
         height: 1.14286rem;
         width: 1.14286rem;
     }
@@ -554,7 +551,7 @@ span.disable-txt-overylay {
 }
 
 #sel-not-shown {
-    display:none;
+    display: none;
     position: absolute;
     margin-top: .5rem;
     float: left;
@@ -656,18 +653,16 @@ img.active {
     z-index: 1;
 }
 
-
 //tabs
 article.productView-description {
-    .tabs, .accessory-tabs {
+    .tabs,
+    .accessory-tabs {
         width: 80%;
         margin: 0 auto;
-        @include breakpoint('medium'){
+        @include breakpoint('medium') {
             width: 100%;
         }
-        @include breakpoint('large'){
-
-        }
+        @include breakpoint('large') {}
         @media screen and (min-width: 1400px) {
             width: 80%;
         }
@@ -676,22 +671,18 @@ article.productView-description {
         margin-bottom: 1px;
         width: 100%;
         border-top: none;
-        @include breakpoint('small'){
-
-        }
-        @include breakpoint('medium'){
+        @include breakpoint('small') {}
+        @include breakpoint('medium') {
             margin-bottom: 0px;
             width: 20%;
         }
-        @include breakpoint('large'){
-
-        }
+        @include breakpoint('large') {}
     }
     .accessory-tabs li {
         margin-bottom: 1px;
         width: 100%;
         border-top: none;
-        @include breakpoint('medium'){
+        @include breakpoint('medium') {
             margin-bottom: 0px;
             width: 25%;
         }
@@ -724,10 +715,13 @@ article.productView-description {
 
 article.productView-description .tab-content {
     padding-top: 0;
+    .product-video-row {
+        padding-top: 2.5rem;
+    }
 }
 
-#tab-description h2{
-    @include breakpoint('medium'){
+#tab-description h2 {
+    @include breakpoint('medium') {
         margin-top: 0;
     }
 }
@@ -736,22 +730,25 @@ article.productView-description .tab-content {
     margin-bottom: 1rem;
 }
 
-#tab-options, #tab-specs-assembly, #tab-faq, #tab-warranty{
+#tab-options,
+#tab-specs-assembly,
+#tab-faq,
+#tab-warranty {
     padding: 0 5%;
 }
+
 div#tab-specs-assembly .youtube {
     height: 185px;
-    @include breakpoint('small'){
+    @include breakpoint('small') {
         height: 330px;
     }
-    @include breakpoint('medium'){
+    @include breakpoint('medium') {
         height: 246px;
     }
     @media screen and (min-width: 1400px) {
         height: 330px;
     }
 }
-
 
 .right-img-section {
     text-align: right;
@@ -953,10 +950,15 @@ div#cart-preview-dropdown {
     top: -53px;
 }
 
-.right-txt-section .youtube {
-    height: 273px;
-    width: 80%;
-    margin: 0 auto;
+.right-txt-section {
+    iframe {
+        float: right;
+    }
+    .youtube {
+        height: 273px;
+        width: 90%;
+        float: right;
+    }
 }
 
 #product-reviews {
@@ -976,7 +978,7 @@ ul.options-tab-list {
         margin: 0 .3rem 1rem;
         text-align: center;
         a {
-            color:initial;
+            color: initial;
             text-decoration: none;
             font-weight: 700;
         }
@@ -997,10 +999,10 @@ ul.cart-bottom-icons {
         span {
             position: relative;
             left: .4rem;
-            display:block;
+            display: block;
             font-size: 13px;
-            @include breakpoint('medium'){
-                display:inline-block;
+            @include breakpoint('medium') {
+                display: inline-block;
             }
         }
     }
