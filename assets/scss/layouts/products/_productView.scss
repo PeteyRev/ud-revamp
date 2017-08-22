@@ -373,6 +373,7 @@ svg.learn-more-small {
 }
 
 .options-map-wrapper {
+    width: 100%;
     position: absolute;
     -webkit-transform: translateY(-100%);
     transform: translateY(-83%);
@@ -505,6 +506,11 @@ span.disable-txt-overylay {
     z-index: 1;
     background: $color-white;
     cursor: default;
+}
+
+p.top-size-ex {
+    position: absolute;
+    left: 0;
 }
 
 .disable-txt {
