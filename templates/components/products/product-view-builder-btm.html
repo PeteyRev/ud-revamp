@@ -88,7 +88,10 @@
                                 {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
                             </a>
                         {{else}}
-                            {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
+                            <a href="{{product.url}}{{#if is_ajax}}#writeReview{{/if}}"{{#unless is_ajax }}data-reveal-id="modal-review-form"{{/unless}}>
+                                Write review
+                            </a>
+                            {{> components/products/modals/writeReview}}
                         {{/if}}
                     </span> {{/if}}
                         <a href="#faq-tabs" class="smooth-tab-open faq-link"><span></span> FAQs</a>

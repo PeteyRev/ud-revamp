@@ -16,7 +16,7 @@ product:
     {{/each}}
 
     <div itemscope itemtype="http://schema.org/Product">
-        {{> components/products/product-view-builder-top schema=true}}
+        {{> components/products/product-view-builder-top}}
             <figure class="productView-image"
                     data-image-gallery-main
                     data-zoom-image="{{getImage product.main_image 'zoom_size' (cdn theme_settings.default_image_product)}}"
@@ -29,7 +29,7 @@ product:
             </figure>
 
 
-        {{> components/products/product-view-builder-btm}}
+        {{> components/products/product-view-builder-btm schema=true}}
 
         {{#if product.videos.list.length}}
             {{> components/products/videos product.videos}}
