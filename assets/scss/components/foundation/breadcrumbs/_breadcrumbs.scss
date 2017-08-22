@@ -22,7 +22,7 @@
         color: #3a3a3a;
     }
 
-    @include breakpoint("small") {
+    @include breakpoint("large") {
         display: block; // 1
     }
 }

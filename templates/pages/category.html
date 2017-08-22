@@ -20,7 +20,9 @@ category:
 {{#if category.image}}
     <img src="{{getImage category.image 'zoom_size'}}">
 {{/if}}
-<h1 class="page-heading">{{category.name}}</h1>
+<div class="category-head-wrapper">
+    <h1 class="page-heading">{{category.name}}</h1>
+</div>
 {{{snippet 'categories'}}}
 <div class="page">
     <aside class="page-sidebar" id="faceted-search-container" style="display:none">
@@ -36,10 +38,11 @@ category:
     </main>
 </div>
 
-{{{category.description}}}
+
 
 {{/partial}}
 
-{{> layout/base}}
+{{> layout/base-category}}
+
 
 

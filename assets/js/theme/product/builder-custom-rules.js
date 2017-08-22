@@ -19,6 +19,7 @@ export default function builderRules() {
         })
     }
     function disableOpt(id, txt) {
+        $('[data-product-attribute-value=' + id + ']').find('.disable-txt, .disable-txt-overylay').remove();
         $('#attribute_' + id).prop('disabled', true);
         $('[data-product-attribute-value=' + id + ']').addClass('disable-opt');
         $('[data-product-attribute-value=' + id + ']').prev().find('input').click();
@@ -70,7 +71,7 @@ export default function builderRules() {
                 enableOpt('3163');
                 enableOpt('3164');
                 //CPU
-                disableOpt('1552', 'Unavailable in 42" tops');
+                disableOpt('1552', 'CPU holder only available on 60"-80" wide desktops');
                 //modesty
                 size = '42';
                 hideAllOpts(modestySet)
@@ -89,7 +90,7 @@ export default function builderRules() {
                 enableOpt('3163');
                 enableOpt('3164');
                 //CPU
-                disableOpt('1552', 'Unavailable in 42" tops');
+                disableOpt('1552', 'CPU holder only available on 60"-80" wide desktops');
                 //modesty
                 size = '48';
                 hideAllOpts(modestySet)
@@ -118,7 +119,7 @@ export default function builderRules() {
                 hideAllOpts(acousticPanelset)
                 showOpts(acousticPanelset, ["3096", "3097", "3098", "3099", "3100", "3101", "3093", "3094", "3095"]);
             }
-            if (newSelection === '70x24' || newSelection === '72x30') {
+            if (newSelection === '72x24' || newSelection === '72x30') {
                 //Reclaimed Teak & Bamboo & Black Eco Curve & Mesquite
                 enableOpt('1496');
                 enableOpt('1520');

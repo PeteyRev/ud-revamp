@@ -49,7 +49,6 @@ export default class Product extends PageManager {
 		imageBuilder();
         builderRules();
 		startProductTour();
-        customBuilder();
 
         //hides option tab and tour on accessory listings
         if ($('#tab-options').length === 0){
@@ -84,7 +83,7 @@ export default class Product extends PageManager {
         //popout related products
         setTimeout(function() {
             $('.related-products-popout').addClass('popout-related');
-        }, 3000);
+        }, 6000);
         $('.popout-close-icon').on('click', () => {
             $('.related-products-popout').toggleClass('popout-related');
         });
@@ -153,6 +152,7 @@ export default class Product extends PageManager {
         $('.form-options-wrapper').each(function(){
             $(this).find('input:first').click();
         });
+        customBuilder();
 
         next();
     }

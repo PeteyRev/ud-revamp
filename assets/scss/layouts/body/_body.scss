@@ -494,9 +494,12 @@ video.fullscreen-bg__video {
     .hero-header-line {
         height: 2px;
         background-color: $color-grey;
-        width: 100%;
-        position: absolute;
-        top: 15px;
+    width: 95%;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
     }
     h2 {
         display: inline-block;
