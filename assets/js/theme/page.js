@@ -29,11 +29,11 @@ export default class Page extends PageManager {}
         ).focus();
         return false;
     }
-    const tweetShare = 'onClick=' + "shareMe('http://twitter.com/intent/tweet?status=Check+out+these+pictures+@www.thehumansolution.com/uplift-photo-gallery/')";
+    const tweetShare = 'onClick=' + "shareMe('http://twitter.com/intent/tweet?status=Check+out+these+pictures+@www.upliftdesk.com/photo-gallery/')";
     const pintShare = 'onClick=' +
-        "shareMe('http://pinterest.com/pin/create/bookmarklet/?media=https://cdn3.bigcommerce.com/s-l85bzww3lo/product_images/uploaded_images/ecoDesktopGirl.jpg&is_video=false&url=www.thehumansolution.com/uplift-photo-gallery/')";
-    const faceShare = 'onClick=' + "shareMe('http://www.facebook.com/sharer/sharer.php?u=www.thehumansolution.com/uplift-photo-gallery');";
-    const googShare = 'onClick=' + "shareMe('https://plus.google.com/share?url=www.thehumansolution.com/uplift-photo-gallery');";
+        "shareMe('http://pinterest.com/pin/create/bookmarklet/?media=https://cdn3.bigcommerce.com/s-l85bzww3lo/product_images/uploaded_images/ecoDesktopGirl.jpg&is_video=false&url=www.upliftdesk.com/photo-gallery/')";
+    const faceShare = 'onClick=' + "shareMe('http://www.facebook.com/sharer/sharer.php?u=www.upliftdesk.com/photo-gallery');";
+    const googShare = 'onClick=' + "shareMe('https://plus.google.com/share?url=www.upliftdesk.com/photo-gallery');";
 
     const galleryShare = 
         '<li ' + tweetShare + '>' + '<svg><use xlink:href="#icon-twitter" /></svg>' + '</li>' +

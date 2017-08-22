@@ -16,11 +16,11 @@ product:
     {{/each}}
 
     <div itemscope itemtype="http://schema.org/Product">
-        {{> components/products/product-view-builder-top schema=true}}
+        {{> components/products/product-view-builder-top}}
 
             {{> components/products/upl933-eco-l-shape-desk-builder-images}}
 
-        {{> components/products/product-view-builder-btm}}
+        {{> components/products/product-view-builder-btm schema=true}}
 
         {{#if product.videos.list.length}}
             {{> components/products/videos product.videos}}

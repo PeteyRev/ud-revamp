@@ -26,6 +26,7 @@ export default function builderRules() {
     }
 
     function disableOptSwatch(id, txt) {
+        $('[data-product-attribute-value=' + id + ']').find('.disable-txt, .disable-txt-overylay').remove();
         $('#attribute_' + id).prop('disabled', true);
         $('[data-product-attribute-value=' + id + ']').prepend('<span class="disable-txt-overylay"></span>')
         $('[data-product-attribute-value=' + id + ']').prepend('<span class="disable-txt">'+txt+'</span>')
@@ -61,10 +62,13 @@ export default function builderRules() {
             let size;
             let privacySize;
             if (newSelection === '42x24' || newSelection === '42x30') {
-                //Reclaimed Teak & Bamboo & Black Eco Curve
+                //Reclaimed Teak & Bamboo & Black Eco Curve & Mesquite
                 enableOpt('1496');
                 enableOpt('1520');
                 enableOpt('1517');
+                enableOpt('1537');
+                enableOpt('3163');
+                enableOpt('3164');
                 //CPU
                 disableOpt('1552', 'Unavailable in 42" tops');
                 //modesty
@@ -77,10 +81,13 @@ export default function builderRules() {
                 showOpts(acousticPanelset, ["3084", "3085", "3086", "3087", "3088", "3089", "3090", "3091", "3092"]);
             }
             if (newSelection === '48x24' || newSelection === '48x30') {
-                //Reclaimed Teak & Bamboo & Black Eco Curve
+                //Reclaimed Teak & Bamboo & Black Eco Curve & Mesquite
                 enableOpt('1496');
                 enableOpt('1520');
                 enableOpt('1517');
+                enableOpt('1537');
+                enableOpt('3163');
+                enableOpt('3164');
                 //CPU
                 disableOpt('1552', 'Unavailable in 42" tops');
                 //modesty
@@ -93,10 +100,13 @@ export default function builderRules() {
                 showOpts(acousticPanelset, ["3084", "3085", "3086", "3087", "3088", "3089", "3090", "3091", "3092"]);
             }
             if (newSelection === '60x24' || newSelection === '60x30') {
-                //Reclaimed Teak & Bamboo & Black Eco Curve
+                //Reclaimed Teak & Bamboo & Black Eco Curve & Mesquite
                 enableOpt('1496');
                 enableOpt('1520');
                 enableOpt('1517');
+                enableOpt('1537');
+                enableOpt('3163');
+                enableOpt('3164');
                 //CPU
                 enableOpt('1552');
                 //modesty
@@ -109,10 +119,13 @@ export default function builderRules() {
                 showOpts(acousticPanelset, ["3096", "3097", "3098", "3099", "3100", "3101", "3093", "3094", "3095"]);
             }
             if (newSelection === '70x24' || newSelection === '72x30') {
-                //Reclaimed Teak & Bamboo & Black Eco Curve
+                //Reclaimed Teak & Bamboo & Black Eco Curve & Mesquite
                 enableOpt('1496');
                 enableOpt('1520');
                 enableOpt('1517');
+                enableOpt('1537');
+                enableOpt('3163');
+                enableOpt('3164');
                 //CPU
                 enableOpt('1552');
                 //modesty
@@ -125,10 +138,13 @@ export default function builderRules() {
                 showOpts(acousticPanelset, ["3106", "3107", "3108", "3109", "3110", "3102", "3103", "3104"]);
             }
             if (newSelection === '80x24' || newSelection === '80x30') {
-                //Reclaimed Teak & Bamboo & Black Eco Curve
+                //Reclaimed Teak & Bamboo & Black Eco Curve & Mesquite
                 disableOptSwatch('1496', 'Size unavailable in Teak tops');
                 disableOptSwatch('1520', 'Size unavailable in Bamboo Curve tops');
                 disableOptSwatch('1517', 'Size unavailable in Black Eco Curve tops');
+                disableOptSwatch('1537', 'Size unavailable in Mesquite tops');
+                disableOptSwatch('3163', 'Size unavailable in Mesquite tops');
+                disableOptSwatch('3164', 'Size unavailable in Mesquite tops');
                 //CPU
                 enableOpt('1552');
                 //modesty
@@ -180,7 +196,6 @@ export default function builderRules() {
         if (imgSet === 'Desktop Style') {
 
             if (newSelection === 'teak') {
-                //disables drawer
                 disableOptSwatch('2863', 'Size unavailable in Teak tops');
             } else {
                 enableOpt('2863');
@@ -190,7 +205,6 @@ export default function builderRules() {
         if (imgSet === 'Desktop Style') {
 
             if (newSelection === 'bambooEE') {
-                //disables drawer
                 disableOptSwatch('1374', 'Size unavailable in Bamboo Curve tops');
             } else {
                 enableOpt('1374');
@@ -200,10 +214,20 @@ export default function builderRules() {
         if (imgSet === 'Desktop Style') {
 
             if (newSelection === 'UVblackEE') {
-                //disables drawer
                 disableOptSwatch('2823', 'Size unavailable in Black Eco Curve tops');
             } else {
                 enableOpt('2823');
+            }
+        }
+        //Mesquite top rule
+        if (imgSet === 'Desktop Style') {
+
+            if (newSelection === 'mesquite' || newSelection === 'mesquite-B1S' || newSelection === 'mesquite-B2S') {
+                disableOptSwatch('2857', 'Size unavailable in mesquite tops');
+                disableOptSwatch('2858', 'Size unavailable in mesquite tops');
+            } else {
+                enableOpt('2857');
+                enableOpt('2858');
             }
         }
 

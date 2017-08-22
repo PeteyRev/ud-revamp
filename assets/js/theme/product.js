@@ -29,6 +29,10 @@ export default class Product extends PageManager {
             }
         });
 
+        //adds review numbers
+        const faqs = $('.faq-list li').length;
+        $('.faq-link span').html(faqs);
+
         next();
     }
 
