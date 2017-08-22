@@ -10,7 +10,7 @@ export default function imageBuilder() {
 	const SnSitems = ['Teak Desk Organizer Set','Teak Credenza','Treadmill', 'Discounted Chair', 'Wire Management', 
 	'Extended Warranty', 'Promotional Item', 'Solid Wood Care Kit','Temporary Desktop', 'Frame Style','Frame Width',
 	'Modesty Panel for Main Side', 'Modesty Panel for Extension Side','Back Acoustic Privacy Panel for Main Side',
-	'Back Acoustic Privacy Panel for Extension Side'];
+	'Back Acoustic Privacy Panel for Extension Side', 'L-shape Side Modesty Panel', 'L-shape Side Acoustic Privacy Panel'];
 
 	function showSnSbox() {
 		if ($("#sel-not-shown ul li").length >= 1 && $(window).width() >= 1200) {
