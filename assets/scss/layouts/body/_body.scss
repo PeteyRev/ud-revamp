@@ -15,7 +15,8 @@
     }
 }
 
-.full-width-wrapper, .full-width-template .container {
+.full-width-wrapper,
+.full-width-template .container {
     max-width: 2000px;
     margin: 0 auto;
     padding: 0;
@@ -58,27 +59,34 @@
 
 .hero-top {
     position: relative;
-    background: #f6f7f7; 
-    @include breakpoint('small'){
-   
-    }
-    img
-    {
-        display:none;
-        @include breakpoint('large'){
-            display:block;
+    background: #f6f7f7;
+    @include breakpoint('small') {}
+    img {
+        display: none;
+        @include breakpoint('large') {
+            display: block;
         }
     }
-    .white-txt{
-        h2, p{
-            @include breakpoint('large'){
-                color:$color-white;
+    .white-txt {
+        h2,
+        p {
+            @include breakpoint('large') {
+                color: $color-white;
             }
         }
     }
+.hero-top-title.hero-top-white-bg {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0 2rem 1rem;
+}
+
+
     .hero-top-title {
         padding: 0% 5% 5% 5%;
-        @include breakpoint('large'){
+        @include breakpoint('medium') {
+            padding: 0%;
+        }
+        @include breakpoint('large') {
             width: 50%;
             position: absolute;
             top: 50%;
@@ -93,7 +101,10 @@
     }
     .hero-top-title-right {
         padding: 0% 5% 5% 5%;
-        @include breakpoint('large'){
+        @include breakpoint('medium') {
+            padding: 0%;
+        }
+        @include breakpoint('large') {
             width: 50%;
             position: absolute;
             top: 50%;
@@ -105,27 +116,37 @@
         @media screen and (min-width: 1400px) {
             width: 34%;
         }
-
+        .youtube{
+            height:350px;
+        }
     }
-    h1{
+    h1 {
         font-size: 50px;
-        color:$color-white;
+        color: $color-white;
         line-height: 1.2;
         font-weight: 400;
     }
 }
 
-
+.full-width-img-bg {
+    .hero-top-title,
+    .hero-top-title-right {
+        @include breakpoint('medium') {
+            padding: 0 2%;
+        }
+        @include breakpoint('large') {
+            padding: 0;
+        }
+    }
+}
 
 .fullscreen-bg {
     position: relative;
     position: fixed;
     width: 100%;
-    background-color: #454545;
-     @include breakpoint('medium') {
+    @include breakpoint('medium') {
         margin-top: -9.7rem;
     }
-
 }
 
 .home-page-body {
@@ -136,25 +157,31 @@
 }
 
 .home-parallax {
-    height: 75vh;
-    @include breakpoint('medium') {
-        height: 80vh;
+    height: 85vh;
+    @include breakpoint('small') {
+        height: 71vh;
         background: none;
+    }
+    @include breakpoint('medium') {
+        height: 60vh;
+    }
+    @media screen and (min-width: 1400px) {
+        height: 80vh;
     }
 }
 
-.margin-top-2{
-    margin-top:2rem;
+.margin-top-2 {
+    margin-top: 2rem;
 }
 
-.home-bg-img{
+.home-bg-img {
     display: block;
     width: 100%;
     background: url(http://www.upliftdesk.com/content/home-background.jpg);
     background-size: cover;
     height: 650px;
     @include breakpoint('medium') {
-        display:none;
+        display: none;
     }
 }
 
@@ -162,7 +189,7 @@ video.fullscreen-bg__video {
     width: 100%;
     display: none;
     @include breakpoint('medium') {
-        display:inline-block;
+        display: inline-block;
     }
 }
 
@@ -170,7 +197,7 @@ video.fullscreen-bg__video {
     z-index: 1;
     position: relative;
     overflow: hidden;
-    background:$color-white;
+    background: $color-white;
 }
 
 .full-width {
@@ -249,7 +276,7 @@ video.fullscreen-bg__video {
     transform: translate(-50%, -50%);
     z-index: 1;
     color: #fff;
-    @include breakpoint('large'){
+    @include breakpoint('large') {
         top: 40%;
     }
     span {
@@ -346,13 +373,13 @@ video.fullscreen-bg__video {
     height: 130px;
     max-width: 88%;
     margin: 0 auto;
-    @include breakpoint('small'){
+    @include breakpoint('small') {
         height: 255px;
     }
-    @include breakpoint('medium'){
+    @include breakpoint('medium') {
         height: 340px;
     }
-    @include breakpoint('large'){
+    @include breakpoint('large') {
         height: 440px;
     }
     .frame-animate-inner {
@@ -467,13 +494,15 @@ video.fullscreen-bg__video {
     .row {
         // height:700px;
     }
-    .middle-just-inner-r, .right-txt-section {
+    .middle-just-inner-r,
+    .right-txt-section {
         padding: 0% 5% 5% 5%;
         @include breakpoint('large') {
             padding: 0% 10% 5% 5%;
         }
     }
-    .middle-just-inner-l, .left-txt-section {
+    .middle-just-inner-l,
+    .left-txt-section {
         padding: 0% 5% 5% 5%;
         @include breakpoint('large') {
             padding: 0% 5% 5% 10%;
@@ -494,12 +523,12 @@ video.fullscreen-bg__video {
     .hero-header-line {
         height: 2px;
         background-color: $color-grey;
-    width: 95%;
-    position: absolute;
-    top: 15px;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+        width: 95%;
+        position: absolute;
+        top: 15px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
     }
     h2 {
         display: inline-block;

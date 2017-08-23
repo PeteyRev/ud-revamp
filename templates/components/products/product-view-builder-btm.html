@@ -248,13 +248,14 @@
                     <div class="options-map-button">JUMP TO AN OPTION</div>
 
                 </div>
-
+                {{#if product.options.length '>' 2}}
                 <div class="progress-builder">
                     <p>Build Progress </p> <span>(<span class="percent-change">0%</span> completed)</span>
                     <div class="custom-progress-container">
                         <span class="meter" style="width:0%"></span>
                     </div>
                 </div>
+                {{/if}}
         </div>
     </div>
     {{#if product.event_date}} {{> components/products/event-date}} {{/if}}

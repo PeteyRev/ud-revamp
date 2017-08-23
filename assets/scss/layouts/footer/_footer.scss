@@ -151,6 +151,15 @@
     .socialLinks .socialLinks-item {
         margin-bottom: 0.35714rem;
         margin-right: 3.2rem;
+        @include breakpoint("small"){
+           margin-right: 3rem;
+        }
+        @include breakpoint("medium"){
+            margin-right: 2.3rem;
+        }
+        @include breakpoint("large"){
+            margin-right: 3.2rem;
+        }
     }
     .socialLinks--alt .icon {
         height: 2.5rem;

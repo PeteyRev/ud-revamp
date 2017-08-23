@@ -237,9 +237,18 @@
     }
     .youtube {
         display: block;
-        width: 556px;
-        height: 313px;
         margin-bottom: 1px;
+        width: 100%;
+        height: 177px;
+        @include breakpoint('medium') {
+            height: 177px;
+        }
+        @include breakpoint('large') {
+            height: 250px;
+        }
+        @media screen and (min-width: 1400px) {
+            height: 289px;
+        }
     }
     iframe {
         display: block;
@@ -248,6 +257,7 @@
 
 .left-nav-wrap,
 .nav-text-wrap {
+    width: 80%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -256,9 +266,14 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 1;
+    @include breakpoint('large') {
+        width: auto;
+    }
     h2 {
         margin: 0;
         color: $color-white;
+        text-align: center;
+        transition:.6s ease;
     }
 }
 
@@ -270,43 +285,24 @@
     .resource-top {
         margin-bottom: 2px;
         position: relative;
-        overflow: hidden;
-        img{
-            transition: .6s ease;
-        }
-        &:hover {
-            img{
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            -moz-transform: scale(1.2);
-            -o-transform: scale(1.2);
-            }
-        }
     }
 }
 
-.resource-bottom{
-            position: relative;
-        overflow: hidden;
-        img{
-            transition: .6s ease;
-        }
-        &:hover {
-            img{
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            -moz-transform: scale(1.2);
-            -o-transform: scale(1.2);
-            }
-        }
+.resource-bottom {
+    position: relative;
+}
+
+.resource-top:hover h2, .resource-bottom:hover h2  {
+    color: $color-blue;
 }
 
 .nav-block-half {
     position: relative;
     display: inline-block;
-    width: 49.66%;
+    width: 49.4316%;
+    @media screen and (min-width: 1400px) {
+        width: 49.4916%;
+    }
     .nav-text-wrap {
         width: 80%;
         text-align: center;

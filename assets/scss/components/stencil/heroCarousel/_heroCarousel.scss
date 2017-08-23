@@ -129,7 +129,7 @@
     font-size: fontSize("small");
     margin-top: 0;
 
-    @include breakpoint("medium") {
+    @include breakpoint("large") {
         font-size: fontSize("hero");
     }
 }
