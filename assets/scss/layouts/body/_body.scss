@@ -510,6 +510,35 @@ video.fullscreen-bg__video {
     }
 }
 
+section.review-sliders-wrap {
+    padding: 5rem 0;
+}
+
+.reviews-video .youtube {
+    height: 400px;
+    width: 90%;
+}
+
+.review-slider {
+    margin-top: 2rem;
+    text-align: center;
+    button{
+        background:$color-grey !important;
+    }
+    p{
+        font-size:18px;
+    }
+    .slick-slide img{
+        display:inline-block;
+    }
+.slick-dots li button {
+    border: 1px solid $color-grey;
+}
+.slick-dots li.slick-active button::before {
+    background: $color-black;
+}
+}
+
 //category pages
 .category-head-wrapper {
     h1 {
@@ -519,7 +548,7 @@ video.fullscreen-bg__video {
 
 .category-hero-bottom {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: -1rem;
     .hero-header-line {
         height: 2px;
         background-color: $color-grey;

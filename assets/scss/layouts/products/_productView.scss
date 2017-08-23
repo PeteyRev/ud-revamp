@@ -513,6 +513,13 @@ p.top-size-ex {
     left: 0;
 }
 
+p.preorder-txt {
+    padding: .75rem 1rem;
+    text-align: center;
+    margin: 0;
+    background-color: rgba(234, 234, 19, 0.68);
+}
+
 .disable-txt {
     background: rgba(255, 255, 255, 0.9);
     cursor: default;
@@ -615,7 +622,7 @@ img.active {
     opacity: 1
 }
 
-.keyboard-wrapper,
+.keyboard-wrapper img,
 .absolute.arm-wrapper {
     z-index: 3
 }
@@ -653,7 +660,7 @@ img.active {
 
 .corner-sleeve,
 .light-wrapper {
-    z-index: 4;
+    z-index: 4 !important;
 }
 
 .casters-wrapper {
