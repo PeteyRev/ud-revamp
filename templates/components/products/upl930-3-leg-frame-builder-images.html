@@ -1,4 +1,4 @@
-<div class="desk-build-wrapper">
+<div id="LSHAPE" class="desk-build-wrapper">
     {{> components/products/product-tour}}
     <div class="desk-build-images">
         <img src="{{cdn "webdav:img/desk-build-images/desk-build-blank-white.jpg"}}">
@@ -17,7 +17,7 @@
         </div>
         <div class="absolute casters-wrapper desk-img-set" data-set="Casters">
             <img data-name="UPL126~set" data-ext="L" class="hide" data-src="{{cdn "webdav:img/desk-build-images/casters/3-leg-build-casters-left.png"}}">
-            
+
         </div>
         <div class="absolute keyboard-wrapper desk-img-set" data-set="Keyboard Tray">
             <img data-name="UPL144~large~1-1.5" data-ext="L" class="hide" data-src="{{cdn "webdav:img/desk-build-images/kbtrays/3-leg-build-keyboard-tray-large-left.png"}}">
@@ -40,8 +40,7 @@
             <img data-name="ACC301~laptopmount" data-ext="L" class="hide" data-src="{{cdn "webdav:img/desk-build-images/monitorarms/3-leg-build-view-monitor-arm-single-laptop-left.png"}}">
         </div>
         <div class="absolute light-wrapper desk-img-set" data-set="Task Light">
-            <img data-name="ACC146~blk" data-ext="L" class="hide" data-src="{{cdn "webdav:img/desk-build-images/tasklight/3-leg-build-black-light-left.png"}}">
-            <img data-name="ACC146~wht" data-ext="L" class="hide" data-src="{{cdn "webdav:img/desk-build-images/tasklight/3-leg-build-white-light-left.png"}}">
+            {{> components/products/3-leg-task-light}}
         </div>
         <div class="absolute cpu-wrapper desk-img-set" data-set="CPU Holder">
             <img data-name="CPU128" data-ext="L" class="hide" data-src="{{cdn "webdav:img/desk-build-images/cpuholder/3-leg-build-cpu-holder-left.png"}}">
