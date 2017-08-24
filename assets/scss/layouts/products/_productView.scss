@@ -669,6 +669,14 @@ img.active {
 
 //tabs
 article.productView-description {
+    .standard-left-right{
+        @include breakpoint('medium') {
+
+        }
+        @include breakpoint('medium') {
+            
+        }
+    }
     .tabs,
     .accessory-tabs {
         width: 80%;
