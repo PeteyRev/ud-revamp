@@ -80,3 +80,13 @@ export default class Page extends PageManager {}
         infinite: false 
     });
 
+    $(".review-slider").slick({
+        dots: true,
+        arrows: false,
+        mobileFirst: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        infinite: false 
+    });
+

@@ -79,6 +79,10 @@ header.header.search-is-open.scroll-header {
         span{
             font-weight: $fontWeight-bold;
         }
+        a{
+            color:$color-white;
+            text-decoration: none;
+        }
         
     }
     .chat-contact, .phone-contact {
@@ -130,7 +134,7 @@ header.header.search-is-open.scroll-header {
     //     width: 60%;
     // }
     .dropdown--quickSearch.is-open{
-        top: 48px !important;
+        top: 65px !important;
     }
 }
 
