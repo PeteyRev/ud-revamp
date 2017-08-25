@@ -72,6 +72,8 @@ export default function builderRules() {
                 enableOpt('3164');
                 //CPU
                 disableOpt('1552', 'CPU holder only available on 60"-80" wide desktops');
+                //Promo
+                disableOpt('1575', 'This promo only available on 48" tops or larger');
                 //modesty
                 size = '42';
                 hideAllOpts(modestySet)
@@ -91,6 +93,8 @@ export default function builderRules() {
                 enableOpt('3164');
                 //CPU
                 disableOpt('1552', 'CPU holder only available on 60"-80" wide desktops');
+                //Promo
+                enableOpt('1575');
                 //modesty
                 size = '48';
                 hideAllOpts(modestySet)
@@ -110,6 +114,8 @@ export default function builderRules() {
                 enableOpt('3164');
                 //CPU
                 enableOpt('1552');
+                //Promo
+                enableOpt('1575');
                 //modesty
                 size = '60';
                 hideAllOpts(modestySet)
@@ -129,6 +135,8 @@ export default function builderRules() {
                 enableOpt('3164');
                 //CPU
                 enableOpt('1552');
+                //Promo
+                enableOpt('1575');
                 //modesty
                 size = '72';
                 hideAllOpts(modestySet)
@@ -148,6 +156,8 @@ export default function builderRules() {
                 disableOptSwatch('3164', 'Size unavailable in Mesquite tops');
                 //CPU
                 enableOpt('1552');
+                //Promo
+                enableOpt('1575');
                 //modesty
                 size = '72';
                 hideAllOpts(modestySet)
