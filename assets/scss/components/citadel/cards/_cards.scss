@@ -104,6 +104,10 @@
     @include breakpoint("small") {
 
     }
+    .price-section span.price.price--rrp {
+        display: none;
+    }
+
 }
 
 
