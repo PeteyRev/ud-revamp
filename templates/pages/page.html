@@ -1,10 +1,10 @@
 {{#partial "page"}}
 
-{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<!--{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}-->
 
 <main class="page">
 
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <!--<h1 class="page-heading">{{ page.title }}</h1>-->
 
     {{#if page.sub_pages}}
     <nav class="navBar navBar--sub">
@@ -16,7 +16,7 @@
     </nav>
     {{/if}}
 
-    <div class="page-content">
+    <!--<div class="page-content">-->
         {{#replace '%%Syndicate%%' page.content}}
             {{> components/page/rss_feed}}
         {{else}}
@@ -25,7 +25,7 @@
 <p>{{{page.content}}}</p>
 
         {{/replace}}
-    </div>
+    <!--</div>-->
 
     {{#if page.feed}}
         <ul>
@@ -41,10 +41,7 @@
 
 {{/partial}}
 
-{{> layout/base}}
-
-
-
+{{> layout/base-full-width}}
 
 
 
