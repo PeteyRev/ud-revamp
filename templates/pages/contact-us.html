@@ -18,8 +18,14 @@
             {{{lang 'forms.contact_us.successful' shopPath=urls.home}}}
         {{else}}
             {{{page.content}}}
-            <div class="page-content page-content--centered">{{> components/page/contact-us-form}}</div>
+            <div class="page-content page-content--centered static-page-form-wrapper">{{> components/page/contact-us-form}}</div>
         {{/if}}
+
+        <div id="IframeLocation" class="reveal-modal large modal videoModal" data-reveal="">
+            <div class="flex-video">
+                <iframe width="900" height="500" frameborder="0" data-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJi1p2u4Rhl3UWXyj16vQZ62ptHGZwoTU&aq=UPLIFT+Desk+2139+West+Anderson+Lane,+Austin,+Texas&amp;hl=en&amp;t=v&amp;hnear=2139+West+Anderson+Lane,+Austin,+Texas"></iframe>
+            </div>
+        </div>
 
 </main>
 

@@ -98,9 +98,21 @@
         }
     }
     .hero-top-title-center {
+        padding: 5%;
+        @include breakpoint('medium') {
+        padding: 0;
         position: absolute;
         left: 50%;
         top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        }
+    }
+    .hero-top-title-center-top {
+        position: absolute;
+        left: 50%;
+        top: 10%;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%)

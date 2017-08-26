@@ -200,9 +200,6 @@
                         <label class="top form-label form-label--alternate">Order Review</label>
                         <div class="form-options-wrapper">
                             {{#if product.can_purchase}} {{> components/products/add-to-cart}} {{/if}}
-                            {{#if product.options.length '===' 0}}
-                                <img src="https://s3.amazonaws.com/uploads.hipchat.com/611742/4230160/418emXvEayOFefA/Kid%20Genchur.jpg">
-                            {{/if}}
                             <ul class="cart-review-slides">
                                 {{#each product.options}}
                                 <li data-slide="{{@index}}"><span class="review-key">{{display_name}}</span><span class="review-value"></span></li>
