@@ -150,7 +150,7 @@ export default function menuFactory(selector = `[data-${PLUGIN_KEY}]`) {
         });
     });
 
-    //opens tabs for fast tabs and review
+    //smooth scroll for anchor tags
 	$('.smooth-scroll').on('click', function (e) {
 		e.preventDefault()
         let smoothLink = $(this).attr('href');
