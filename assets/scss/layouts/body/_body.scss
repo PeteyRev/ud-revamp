@@ -73,7 +73,7 @@
     .white-txt {
         h2,
         p {
-            @include breakpoint('large') {
+            @include breakpoint('medium') {
                 color: $color-white;
             }
         }
@@ -81,7 +81,7 @@
     .hero-top-title {
         padding: 0% 5% 5% 5%;
         @include breakpoint('medium') {
-
+            padding: 0% 5% 0% 5%;
             width: 100%;
             position: absolute;
             top: 50%;
@@ -94,7 +94,7 @@
             left: 5%;
         }
         @media screen and (min-width: 1400px) {
-            width: 34%;
+            //width: 34%;
         }
     }
     .hero-top-title-center {
@@ -121,18 +121,18 @@
         padding: 0% 5% 5% 5%;
         @include breakpoint('medium') {
             padding: 0%;
-        }
-        @include breakpoint('large') {
-            width: 50%;
+            width: 100%;
             position: absolute;
             top: 50%;
-            right: 5%;
             transform: translateY(-50%);
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
         }
+        @include breakpoint('large') {
+            right: 5%;
+        }
         @media screen and (min-width: 1400px) {
-            width: 34%;
+            // width: 34%;
         }
         .youtube {
             height: 350px;
@@ -164,6 +164,7 @@
         }
         @include breakpoint('large') {
             padding: 0;
+            width:34%;
         }
     }
 }
@@ -520,18 +521,43 @@ video.fullscreen-bg__video {
     .row {
         // height:700px;
     }
-    .middle-just-inner-r,
-    .right-txt-section {
+    .middle-just-inner-r {
         padding: 0% 5% 5% 5%;
         @include breakpoint('large') {
             padding: 0% 10% 5% 5%;
         }
+        @media screen and (min-width: 1400px) {
+            padding: 0% 20% 5% 5%;
+        }
     }
-    .middle-just-inner-l,
-    .left-txt-section {
+    .right-txt-section {
+        padding: 0% 5% 5% 5%;
+        p:last-child {
+            margin: 0;
+        }
+        @include breakpoint('large') {
+            padding: 0% 10% 0% 5%;
+        }
+        @media screen and (min-width: 1400px) {
+            padding: 0% 12% 0% 5%;
+        }
+    }
+    .middle-just-inner-l {
         padding: 0% 5% 5% 5%;
         @include breakpoint('large') {
             padding: 0% 5% 5% 10%;
+        }
+        @media screen and (min-width: 1400px) {
+            padding: 0% 5% 5% 20%;
+        }
+    }
+    .left-txt-section{
+        padding: 0% 5% 5% 5%;
+        @include breakpoint('large') {
+            padding: 0% 5% 0% 10%;
+        }
+        @media screen and (min-width: 1400px) {
+            padding: 0% 5% 0% 12%;
         }
     }
 }
@@ -541,8 +567,20 @@ section.review-sliders-wrap {
 }
 
 .reviews-video .youtube {
-    height: 400px;
-    width: 90%;
+    height: 200px;
+    width: 100%;
+    @include breakpoint('medium') {
+        height: 400px;
+        width: 90%;
+    }
+    @include breakpoint('large') {
+        height: 280px;
+        width: 90%;
+    }
+    @media screen and (min-width: 1400px) {
+        height: 400px;
+        width: 90%;
+    }
 }
 
 .review-slider {

@@ -739,7 +739,10 @@ article.productView-description .tab-content {
     padding-top: 0;
     padding-bottom: 0;
     .product-full-txt,.product-video-row {
-        padding-top: 2.5rem;
+        @include breakpoint('medium') {
+            padding-top: 2.5rem;
+            padding-bottom: 2rem;
+        }
     }
 }
 
@@ -989,7 +992,6 @@ div#cart-preview-dropdown {
     }
     .youtube {
         height: 185px;
-        margin-bottom: 2rem;
         @include breakpoint('medium') {
             height: 273px;
         }

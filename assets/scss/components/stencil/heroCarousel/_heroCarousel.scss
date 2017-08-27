@@ -68,8 +68,8 @@
 
         // scss-lint:disable SelectorDepth, NestingDepth
         li button{
-            background:rgba(255, 255, 255, 0.9);
-            border:1px solid rgba(255, 255, 255, 0.9);
+            background:$color-grey;
+            border:1px solid $color-grey;
         }
         li.slick-active button::before {
             background: $color-blue;
