@@ -1,11 +1,10 @@
 {{#partial "page"}}
 
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 
     <main class="page">
 
-        <h1 class="page-heading">{{ page.title }}</h1>
-
+        <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
         {{#if page.sub_pages}}
             <nav class="navBar navBar--sub">
                 <ul class="navBar-section account-navigation">
@@ -15,6 +14,20 @@
                 </ul>
             </nav>
         {{/if}}
+        <section>
+            <div class="row expanded collapse flex-row white-bg">
+                <div class="small-12 large-5 columns middle-just">
+                    <div class="middle-just-inner-l">
+                        <h1>Video Gallery</h1>
+                        <p>If you're looking for reviews of UPLIFT Desks, testimonials from users, examples of how to set up
+                            your workspace or installation or troubleshooting help, you've come to the right place.</p>
+                    </div>
+                </div>
+                <div class="small-12 large-7 columns text-right">
+                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/video-gallery-page-bamboo-desk.jpg"}}">
+                </div>
+            </div>
+        </section>
 
         <div class="page-content">
             {{#replace '%%Syndicate%%' page.content}}

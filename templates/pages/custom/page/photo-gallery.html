@@ -1,10 +1,10 @@
 {{#partial "page"}}
 
-    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
 
     <main class="page">
 
-        <h1 class="page-heading">{{ page.title }}</h1>
+        <!-- <h1 class="page-heading">{{ page.title }}</h1> -->
 
         {{#if page.sub_pages}}
             <nav class="navBar navBar--sub">
@@ -15,7 +15,23 @@
                 </ul>
             </nav>
         {{/if}}
-
+        <section>
+            <div class="row expanded collapse flex-row white-bg">
+                <div class="small-12 large-5 columns middle-just">
+                    <div class="middle-just-inner-l">
+                        <h1>Photo Gallery</h1>
+                        <p>We can’t help but want to show off our UPLIFT desks, and we think you will too. With an eye for craftsmanship
+                            and an education in ergonomics engineering, Jon Paulsen, CPE, has produced unparalleled products
+                            in the UPLIFT line. Take a look for yourself and you will see that our low prices don’t mean
+                            you have to compromise on high-end finishes and a solid build. Just don’t blame us when you decide
+                            to outfit your entire office with UPLIFT.</p>
+                    </div>
+                </div>
+                <div class="small-12 large-7 columns text-right">
+                    <img class="lazyload" data-src="{{cdn "webdav:img/pages/photo-gallery-page-monitor-arms.jpg"}}">
+                </div>
+            </div>
+        </section>
         <div class="page-content">
             {{#replace '%%Syndicate%%' page.content}}
                 {{> components/page/rss_feed}}
@@ -93,8 +109,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-1.jpg">
@@ -110,8 +126,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-2.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-2.jpg">
@@ -127,8 +143,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-3.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-3.jpg">
@@ -144,8 +160,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-photo-gallery-main-4.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-photo-gallery-thumb-4.jpg">
@@ -165,8 +181,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/adapt-converter-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/adapt-converter-photo-gallery-thumb-1.jpg">
@@ -182,8 +198,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-adapt-mobile-laptop-converter-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-adapt-mobile-laptop-converter-photo-gallery-thumb-1.jpg">
@@ -199,8 +215,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/adapt-converter-photo-gallery-main-3.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/adapt-converter-photo-gallery-thumb-3.jpg">
@@ -216,8 +232,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/adapt-converter-photo-gallery-main-4.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/adapt-converter-photo-gallery-thumb-4.jpg">
@@ -237,8 +253,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-pursuit-ergonomic-chair-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-pursuit-ergonomic-chair-photo-gallery-thumb-1.jpg">
@@ -254,8 +270,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-pursuit-ergonomic-chair-photo-gallery-main-2.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-pursuit-ergonomic-chair-photo-gallery-thumb-2.jpg">
@@ -271,8 +287,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/motion-stool-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/motion-stool-photo-gallery-thumb-1.jpg">
@@ -288,8 +304,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/motion-stool-photo-gallery-main-2.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/motion-stool-photo-gallery-thumb-2.jpg">
@@ -309,8 +325,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/task-light-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/task-light-photo-gallery-thumb-1.jpg">
@@ -326,8 +342,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/view-arm-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/view-arm-photo-gallery-thumb-1.jpg">
@@ -343,8 +359,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/switch-tray-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/switch-tray-photo-gallery-thumb-1.jpg">
@@ -360,8 +376,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/wire-management-kit-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/wire-management-kit-photo-gallery-thumb-1.jpg">
@@ -377,8 +393,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/cpu-holder-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/cpu-holder-photo-gallery-thumb-1.jpg">
@@ -394,8 +410,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/desk-mat-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/desk-mat-photo-gallery-thumb-1.jpg">
@@ -411,8 +427,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/dual-arm-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/dual-arm-photo-gallery-thumb-1.jpg">
@@ -428,8 +444,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/grommet-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/grommet-photo-gallery-thumb-1.jpg">
@@ -445,8 +461,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/large-tray-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/large-tray-photo-gallery-thumb-1.jpg">
@@ -462,8 +478,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/single-arm-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/single-arm-photo-gallery-thumb-1.jpg">
@@ -479,8 +495,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/switch-tray-photo-gallery-main-3.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/switch-tray-photo-gallery-thumb-3.jpg">
@@ -496,8 +512,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/task-light-photo-gallery-main-2.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/task-light-photo-gallery-thumb-2.jpg">
@@ -513,8 +529,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/view-arm-photo-gallery-main-2.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/view-arm-photo-gallery-thumb-2.jpg">
@@ -530,8 +546,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/wire-management-kit-photo-gallery-main-2.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/wire-management-kit-photo-gallery-thumb-2.jpg">
@@ -547,8 +563,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/advanced-keypad-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/advanced-keypad-photo-gallery-thumb-1.jpg">
@@ -564,8 +580,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/corner-sleeve-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/corner-sleeve-photo-gallery-thumb-1.jpg">
@@ -585,8 +601,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-acoustic-privacy-panels-photo-gallery-main-1.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-acoustic-privacy-panels-photo-gallery-thumb-1.jpg">
@@ -602,8 +618,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-acoustic-privacy-panels-photo-gallery-main-3.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-acoustic-privacy-panels-photo-gallery-thumb-3.jpg">
@@ -619,8 +635,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-acoustic-privacy-panels-photo-gallery-main-5.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-acoustic-privacy-panels-photo-gallery-thumb-5.jpg">
@@ -636,8 +652,8 @@
                                 <a href="#" data-reveal-id="PhotoImageGallery" data-big-image="/content/img/photo-gal/uplift-acoustic-privacy-panels-photo-gallery-main-8.jpg">
                                     <div class="std-overlay"></div>
                                     <div class="center-txt">
-                                                                                    
-                                        
+
+
                                     </div>
                                     <div class="photo-gallery-slide">
                                         <img class="lazyload" alt="this is the caption" data-src="/content/img/photo-gal/uplift-acoustic-privacy-panels-photo-gallery-thumb-8.jpg">
