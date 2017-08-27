@@ -7,7 +7,7 @@ export default function imageBuilder() {
     let $deskImgSet = $('.desk-img-set');
 
 	//Items to be selected but not shown, and func to show/hide div containing them
-	const SnSitems = ['Teak Desk Organizer Set','Teak Credenza','Treadmill', 'Discounted Chair', 'Wire Management', 
+	const SnSitems = ['Teak Desk Organizer Set','Teak Credenza','Treadmill', 'Discounted Chair or Stool', 'Wire Management', 
 	'Extended Warranty', 'Promotional Item', 'Solid Wood Care Kit','Temporary Desktop', 'Frame Style','Frame Width',
 	'Modesty Panel for Main Side', 'Modesty Panel for Extension Side','Back Acoustic Privacy Panel for Main Side',
 	'Back Acoustic Privacy Panel for Extension Side', 'L-shape Side Modesty Panel', 'L-shape Side Acoustic Privacy Panel'];
