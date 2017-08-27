@@ -11,11 +11,11 @@ export default class Page extends PageManager {}
 
         if ($(this).hasClass('gallery-box-btm')){
 
-            $(this).find('a').attr('data-reveal-id',ytId)
+            //$(this).find('a').attr('data-reveal-id',ytId)
 
-            let videoModal = '<div id="' + ytId + '"' + 'class="reveal-modal large modal videoModal" data-reveal aria-labelledby="videoModalTitle" aria-hidden="true" role="dialog"><div class="flex-video"><iframe width="900" height="500" data-src=' + '"https://www.youtube.com/embed/' + ytId + '"' + 'class="lazyload" frameborder="0" allowfullscreen></iframe></div></div>'
+            // let videoModal = '<div id="' + ytId + '"' + 'class="reveal-modal large modal videoModal" data-reveal aria-labelledby="videoModalTitle" aria-hidden="true" role="dialog"><div class="flex-video"><iframe width="900" height="500" data-src=' + '"https://www.youtube.com/embed/' + ytId + '"' + 'class="lazyload" frameborder="0" allowfullscreen></iframe></div></div>'
 
-            $('.body').append(videoModal)
+            // $('.body').append(videoModal)
         }
 
     });

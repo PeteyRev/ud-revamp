@@ -377,7 +377,7 @@ svg.learn-more-small {
     position: absolute;
     -webkit-transform: translateY(-100%);
     transform: translateY(-83%);
-    background-color: #f6f7f7;
+    background-color: $color-white;
     z-index: 0;
     box-shadow: $box-shadow;
     border-radius: $box-radius;
@@ -386,14 +386,17 @@ svg.learn-more-small {
     h4 {
         margin: 0rem;
         font-size: 19px;
-        background: #fff;
+        background-color: $color-greyLight;
         padding: 1rem;
+        text-align: center;
     }
     p {
         text-align: center;
-        padding: .7rem 0 1rem;
-        background-color: #fff;
+        padding: 1rem .5rem;
+        background-color: $color-greyLight;
         margin: 0;
+        font-weight: 600;
+        font-size: 13px;
     }
     ul {
         margin: 0;

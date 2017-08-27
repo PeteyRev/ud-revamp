@@ -106,6 +106,7 @@
 }
 
 .youtube {
+    transition:.6s ease;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -114,6 +115,9 @@
     .video-play-icon {
         @include absoluteVertHor;
         cursor: pointer;
+    }
+    &:hover{
+        opacity: .6;
     }
 }
 
@@ -196,6 +200,9 @@
     background-size: cover;
     background-position: center;
     margin: 0 2px 2px;
+    img{
+        transition:.6s ease;
+    }
     h2 {
         font-size: 30px;
         color: $color-white;
@@ -204,8 +211,8 @@
         transition: .5s ease;
     }
     &:hover {
-        h2 {
-            color: stencilColor("icon-color-hover");
+        img {
+            opacity: .6;
         }
     }
 }

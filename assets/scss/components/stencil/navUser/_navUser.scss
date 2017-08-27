@@ -218,6 +218,9 @@
     .modal-content {
         display: flex;
     }
+    img{
+        transition:.6s ease;
+    }
     .nav-left-block {
         position: relative;
         display: inline-block;
@@ -292,8 +295,8 @@
     position: relative;
 }
 
-.resource-top:hover h2, .resource-bottom:hover h2  {
-    color: $color-blue;
+.resource-top:hover img, .resource-bottom:hover img  {
+    opacity: .6;
 }
 
 .nav-block-half {

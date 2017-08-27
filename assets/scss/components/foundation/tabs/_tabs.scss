@@ -13,10 +13,10 @@
 }
 
 .tab {
-    border-top: $tab-active-border;
-    float: left;
+    //border-top: $tab-active-border;
     @include breakpoint("medium") {
         border-top-color: $tab-title-border-color;
+        float: left;
     }
 
     a {
