@@ -1,6 +1,13 @@
 {{#partial "page"}}
 <div class="page">
 
+<script>
+fbq('track', 'AddToCart', {
+    value: "%%GLOBAL_CartTotal%%",
+    currency: 'USD'
+});
+</script>
+
     <main class="page-content" data-cart>
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 

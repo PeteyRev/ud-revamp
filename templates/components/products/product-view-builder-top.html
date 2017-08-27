@@ -1,3 +1,10 @@
+<script>
+fbq('track', 'ViewContent', {
+    value: "%%GLOBAL_ProductPrice%%",
+    currency: 'USD'
+ });
+</script>
+
 <div class="productView">
     {{#each product.reviews.messages}}
         {{#if error}}
